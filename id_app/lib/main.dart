@@ -11,6 +11,9 @@ class id_card extends StatefulWidget {
 }
 
 class _id_cardState extends State<id_card> {
+  
+  int grand_prix_wins = 15;
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,6 +25,16 @@ class _id_cardState extends State<id_card> {
         centerTitle: true,
         backgroundColor: Colors.blue[500],
         elevation: 0,
+      ),
+
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          setState(() {
+            grand_prix_wins += 1;
+          });
+        },
+        child: Icon(Icons.add),
+        backgroundColor: Colors.blue[500],
       ),
 
       body: Padding(
@@ -139,7 +152,7 @@ class _id_cardState extends State<id_card> {
             ),
 
             Text(
-              '15',
+              '$grand_prix_wins',
               style: TextStyle(
                 color: Colors.white,
                 letterSpacing: 2,
@@ -185,7 +198,6 @@ class _id_cardState extends State<id_card> {
               width: 200
               ),
             ),
-
           ],
         ),
       ),
