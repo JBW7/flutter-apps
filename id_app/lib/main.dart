@@ -72,6 +72,33 @@ class _id_cardState extends State<id_card> {
             ),
 
             Text(
+              'DRIVER NUMBER',
+              style: TextStyle(
+                color: Colors.white,
+                letterSpacing: 2,
+                fontSize: 18
+              ),
+            ),
+
+            SizedBox(
+              height: 10
+            ),
+
+            Text(
+              '33',
+              style: TextStyle(
+                color: Colors.white,
+                letterSpacing: 2,
+                fontSize: 28,
+                fontWeight: FontWeight.bold
+              ),
+            ),
+
+            SizedBox(
+              height: 30
+            ),
+
+            Text(
               'AGE (2021)',
               style: TextStyle(
                 color: Colors.white,
@@ -85,7 +112,34 @@ class _id_cardState extends State<id_card> {
             ),
 
             Text(
-              '24 Years Old',
+              '24',
+              style: TextStyle(
+                color: Colors.white,
+                letterSpacing: 2,
+                fontSize: 28,
+                fontWeight: FontWeight.bold
+              ),
+            ),
+
+            SizedBox(
+              height: 30
+            ),
+            
+            Text(
+              'GRAND PRIX WINS',
+              style: TextStyle(
+                color: Colors.white,
+                letterSpacing: 2,
+                fontSize: 18
+              ),
+            ),
+
+            SizedBox(
+              height: 10
+            ),
+
+            Text(
+              '15',
               style: TextStyle(
                 color: Colors.white,
                 letterSpacing: 2,
