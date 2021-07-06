@@ -22,6 +22,47 @@ class _quote_listState extends State<quote_list> {
     Quote (author: "Elon Musk", text: "When something is important enough you do it even if the odds are not in your favor"),
   ];
 
+  Widget quote_template (quote) {
+    return Card(
+      margin: EdgeInsets.fromLTRB(16, 16, 16, 0),
+      child: Padding(
+        padding: const EdgeInsets.all(12),
+        child: Column(
+        children: <Widget>[
+
+          Text(
+            quote.text,
+            style: TextStyle(
+              fontSize: 18,
+              color: Colors.black
+            ),
+          ),
+          
+          SizedBox(
+            height: 6,
+            child: const DecoratedBox(
+              decoration: const BoxDecoration(
+                color: Colors.black
+              ),
+            ),
+          ),
+
+          Text(
+            quote.author,
+            style: TextStyle(
+              fontSize: 14,
+              color: Colors.black
+            ),
+          )
+
+        ],
+      ),
+
+      )
+      
+    );
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +78,7 @@ class _quote_listState extends State<quote_list> {
 
       body: Column(
         
-        children: quotes.map((quote) => Text('${quote.text} - ${quote.author}')).toList(),
+        children: quotes.map((quote) => quote_template(quote)).toList(),
       ),
       
     );
