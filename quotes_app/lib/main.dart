@@ -28,6 +28,7 @@ class _quote_listState extends State<quote_list> {
       child: Padding(
         padding: const EdgeInsets.all(12),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
 
           Text(
@@ -42,7 +43,7 @@ class _quote_listState extends State<quote_list> {
             height: 6,
             child: const DecoratedBox(
               decoration: const BoxDecoration(
-                color: Colors.black
+                color: Colors.white
               ),
             ),
           ),
@@ -51,10 +52,24 @@ class _quote_listState extends State<quote_list> {
             quote.author,
             style: TextStyle(
               fontSize: 14,
-              color: Colors.black
+              color: Colors.black,
             ),
-          )
+          ),
+          
+          SizedBox(
+            height: 8,
+            child: const DecoratedBox(
+              decoration: const BoxDecoration(
+                color: Colors.white
+              )
+            ),
+          ),
 
+          FlatButton.icon(
+            onPressed: () {},
+            label: Text ("delete quote"),
+            icon: Icon(Icons.delete),
+          )
         ],
       ),
 
