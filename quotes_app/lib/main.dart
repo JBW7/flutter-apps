@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'quote.dart';
 
 void main() {
   runApp(MaterialApp(
-    home: quote_list()
+    home: quote_list(),
+    theme: ThemeData(fontFamily: 'Lato'),
 
   ));
 }
@@ -14,17 +16,18 @@ class quote_list extends StatefulWidget {
 
 class _quote_listState extends State<quote_list> {
   
-  List <String> quotes = [
-    "It always seems impossible until it's done",
-    "Failure is not the opposite of success, it's a part of success",
-    "When something is important enough you do it even if the odds are not iy your favor",
+  List <Quote> quotes = [
+    Quote (author: "Nelson Mandela", text: "It always seems impossible until it's done"),
+    Quote (author: "Ayrtonn Senna", text: "If you no longer go for a gap that exists, you are no longer a racing driver"),
+    Quote (author: "Elon Musk", text: "When something is important enough you do it even if the odds are not in your favor"),
   ];
+
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
 
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.white,
 
       appBar: AppBar(
         backgroundColor: Colors.blue[500],
@@ -33,9 +36,8 @@ class _quote_listState extends State<quote_list> {
       ),
 
       body: Column(
-        children: <Widget>[
-
-        ],
+        
+        children: quotes.map((quote) => Text('${quote.text} - ${quote.author}')).toList(),
       ),
       
     );
