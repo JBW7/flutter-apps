@@ -12,9 +12,10 @@ class _loadingState extends State<loading> {
 
 void get_data() async {
 
-  Response response = await get(Uri.parse('https://jsonplaceholder.typicode.com/todos/1'));
+  // make the request to api
+  Response response = await get(Uri.parse('http://worldtimeapi.org/api/timezone/America/New_York'));
   Map data = jsonDecode(response.body);
-  print(data['title']);
+  print(data);
   }
 
   @override
