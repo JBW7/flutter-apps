@@ -30,6 +30,7 @@ class world_time {
     }
     catch (e) {
       print('Caught Error: $e');
+      time = 'Could not get time data';
     }
 
     
