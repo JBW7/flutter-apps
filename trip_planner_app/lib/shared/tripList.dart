@@ -36,13 +36,13 @@ class _TripListState extends State<TripList> {
       onTap: () {
         Navigator.push(context, MaterialPageRoute(builder: (context) => Details(trip: trip)));
       },
-      contentPadding: EdgeInsets.all(25),
+      contentPadding: EdgeInsets.all(35),
       title: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Text('${trip.nights} nights',
-              style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: Colors.blue[300])),
-          Text(trip.title, style: TextStyle(fontSize: 20, color: Colors.grey[600])),
+              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.blue[300])),
+          Text(trip.title, style: TextStyle(fontSize: 24, color: Colors.grey[600])),
         ],
       ),
       leading: ClipRRect(
