@@ -13,7 +13,9 @@ class ScreenTitle extends StatelessWidget {
         style: TextStyle(fontSize: 36, color: Colors.white, fontWeight: FontWeight.bold),
       ),
       tween: Tween<double>(begin: 0, end: 1),
-      duration: Duration(milliseconds: 500),
+      duration: Duration(milliseconds: 750),
+      curve: Curves.easeIn,
+
       builder: (BuildContext context, double _val, Widget child) {
         return Opacity(
           opacity: _val,
