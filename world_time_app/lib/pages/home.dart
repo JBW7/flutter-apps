@@ -34,7 +34,10 @@ class _homeState extends State<home> {
                 icon: Icon(Icons.edit_location),
                 label: Text ('Edit Location'),
               ),
-              SizedBox(height: 20),
+              
+              SizedBox(
+                height: 20),
+              
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
@@ -46,6 +49,16 @@ class _homeState extends State<home> {
                     ),
                   )
                 ],
+              ),
+              SizedBox(
+                height: 20,
+              ),
+
+              Text(
+                data ['time'],
+                style: TextStyle(
+                  fontSize: 66,
+                ),
               )
             ],
           ),
