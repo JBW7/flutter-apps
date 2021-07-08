@@ -7,8 +7,15 @@ class home extends StatefulWidget {
 }
 
 class _homeState extends State<home> {
+
+  Map data = {};
+
   @override
   Widget build(BuildContext context) {
+
+    data = ModalRoute.of(context).settings.arguments;
+    print(data);
+
     return Scaffold(
 
       body: SafeArea(
