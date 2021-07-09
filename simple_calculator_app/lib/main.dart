@@ -17,8 +17,9 @@ double button_width = 100;
 double button_height = 100;
 double button_font_size = 26;
 int button_bgcolor_value = 800;
+
 var answer = '';
-var user_input = ''; 
+var user_input = '' ; 
 
 
 class home extends StatefulWidget {
@@ -29,15 +30,12 @@ class home extends StatefulWidget {
 }
 
 class _homeState extends State<home> {
-  @override
-  
-  String equation = '0';
-  String result = '0';
-  String expression = '0';
-  
-  button_pressed(String button_text) {
 
-  }
+  var user_input = '';
+  var answer = '';
+
+  @override
+
   
   Widget build(BuildContext context) {
     return Scaffold(
@@ -82,7 +80,7 @@ class _homeState extends State<home> {
                     Padding(
                       padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
                       child: Text(
-                        'equation',
+                        user_input,
                         style: TextStyle(
                           fontSize: 20,
                           color: Colors.grey[100]
@@ -109,6 +107,8 @@ class _homeState extends State<home> {
 
 
 
+
+
           //buttons
           // 1st row
           Row(
@@ -124,7 +124,12 @@ class _homeState extends State<home> {
                   width: button_width,
 
                   child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      setState(() {
+                        user_input = '';
+                        answer = '0';
+                      });
+                    },
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(Colors.grey[button_bgcolor_value]),
                     ),
@@ -143,7 +148,7 @@ class _homeState extends State<home> {
                 ),
               ),
 
-              // ± button
+              // ⌫ button
               Padding(
                 padding: const EdgeInsets.fromLTRB(0, 7, 4, 0),
                 child: SizedBox(
@@ -151,14 +156,18 @@ class _homeState extends State<home> {
                   width: button_width,
 
                   child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      setState(() {
+                        user_input = user_input.substring(0, user_input.length - 1);
+                      });
+                    },
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(Colors.grey[button_bgcolor_value]),
                     ),
 
                     child:
                     Text(
-                      '±',
+                      '⌫',
                       style: TextStyle(
                         color: Colors.blue[700],
                         fontSize: button_font_size,
@@ -177,7 +186,11 @@ class _homeState extends State<home> {
                   height: button_height,
                   width: button_width,
                   child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      setState(() {
+                        user_input += '%';
+                      });
+                    },
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(Colors.grey[button_bgcolor_value]),
                     ),
@@ -237,10 +250,12 @@ class _homeState extends State<home> {
                 child: SizedBox(
                   height: button_height,
                   width: button_width,
-
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                   child: TextButton(
                     onPressed: () {
-                      //button_pressed(button_text)
+                      setState(() {
+                        user_input += '7';
+                      });
                     },
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(Colors.grey[button_bgcolor_value]),
@@ -267,7 +282,11 @@ class _homeState extends State<home> {
                   width: button_width,
 
                   child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      setState(() {
+                        user_input += '8';
+                      });
+                    },
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(Colors.grey[button_bgcolor_value]),
                     ),
@@ -292,7 +311,11 @@ class _homeState extends State<home> {
                   height: button_height,
                   width: button_width,
                   child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      setState(() {
+                        user_input += '9';
+                      });
+                    },
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(Colors.grey[button_bgcolor_value]),
                     ),
@@ -353,7 +376,11 @@ class _homeState extends State<home> {
                   width: button_width,
 
                   child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      setState(() {
+                        user_input += '4';
+                      });
+                    },
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(Colors.grey[button_bgcolor_value]),
                     ),
@@ -379,7 +406,11 @@ class _homeState extends State<home> {
                   width: button_width,
 
                   child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      setState(() {
+                        user_input += '5';
+                      });
+                    },
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(Colors.grey[button_bgcolor_value]),
                     ),
@@ -404,7 +435,11 @@ class _homeState extends State<home> {
                   height: button_height,
                   width: button_width,
                   child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      setState(() {
+                        user_input += '6';
+                      });
+                    },
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(Colors.grey[button_bgcolor_value]),
                     ),
@@ -465,7 +500,11 @@ class _homeState extends State<home> {
                   width: button_width,
 
                   child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      setState(() {
+                        user_input += '7';
+                      });
+                    },
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(Colors.grey[button_bgcolor_value]),
                     ),
@@ -491,7 +530,11 @@ class _homeState extends State<home> {
                   width: button_width,
 
                   child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      setState(() {
+                        user_input += '2';
+                      });
+                    },
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(Colors.grey[button_bgcolor_value]),
                     ),
@@ -516,7 +559,11 @@ class _homeState extends State<home> {
                   height: button_height,
                   width: button_width,
                   child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      setState(() {
+                        user_input += '3';
+                      });
+                    },
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(Colors.grey[button_bgcolor_value]),
                     ),
@@ -577,7 +624,11 @@ class _homeState extends State<home> {
                   width: button_width,
 
                   child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      setState(() {
+                        user_input += '3';
+                      });
+                    },
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(Colors.grey[button_bgcolor_value]),
                     ),
@@ -628,7 +679,9 @@ class _homeState extends State<home> {
                   height: button_height,
                   width: 204,
                   child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      equal_pressed()
+                    },
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(Colors.blue[700]),
                     ),
@@ -654,8 +707,9 @@ class _homeState extends State<home> {
       ),
     );
   }
+  // equal pressed function
+  void equal_pressed() {}
+
 }
-
-
 
 
