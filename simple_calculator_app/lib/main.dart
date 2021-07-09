@@ -26,7 +26,16 @@ class _homeState extends State<home> {
   Widget build(BuildContext context) {
     return Scaffold(
 
-
+      appBar: AppBar(
+        centerTitle: true,
+        backgroundColor: Colors.black,
+        title: Text(
+          'Calculator',
+          style: TextStyle(
+            color: Colors.white,
+          ),
+        ),
+      ),
 
 
       body: Column(
