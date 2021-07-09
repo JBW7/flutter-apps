@@ -8,6 +8,9 @@ void main() {
   ));
 }
 
+
+
+
 // button dimensions
 double button_width = 100;
 double button_height = 100;
@@ -68,7 +71,7 @@ class _homeState extends State<home> {
                     Text(
                       '23922342342',
                       style: TextStyle(
-                        fontSize: 24,
+                        fontSize: 30,
                         color: Colors.grey[200],
                       ),
                     ),
@@ -622,9 +625,6 @@ class _homeState extends State<home> {
         ],
 
       ),
-
-
-      
     );
   }
 }
