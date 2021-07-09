@@ -55,11 +55,11 @@ class _homeState extends State<home> {
 
 
       body: Column(
-        //crossAxisAlignment: CrossAxisAlignment.stretch,
+  
 
         children: <Widget>[
           
-          // answer container
+          // input container
           Container(
             height: 150,
             margin: EdgeInsets.fromLTRB(7, 20, 7, 0),
@@ -74,7 +74,7 @@ class _homeState extends State<home> {
               children: [
                 Column(
 
-                  // answer output
+                  // output
                   children: <Widget>[
                     
                     Padding(
