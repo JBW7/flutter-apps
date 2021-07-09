@@ -26,6 +26,8 @@ class _homeState extends State<home> {
   Widget build(BuildContext context) {
     return Scaffold(
 
+      backgroundColor: Colors.black,
+
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: Colors.black,
@@ -46,9 +48,9 @@ class _homeState extends State<home> {
           // answer container
           Container(
             height: 150,
-            margin: EdgeInsets.fromLTRB(7, 50, 7, 0),
+            margin: EdgeInsets.fromLTRB(7, 20, 7, 0),
             decoration: BoxDecoration(
-              color: Colors.blue[500]
+              color: Colors.black
             ),
 
             child: Row(
@@ -60,11 +62,13 @@ class _homeState extends State<home> {
 
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
 
+                  // answer output
                   children: [
                     Text(
                       '23922342342',
                       style: TextStyle(
                         fontSize: 20,
+                        color: Colors.white,
                       ),
                     ),
                   ],
