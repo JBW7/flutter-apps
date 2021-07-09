@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:math_expressions/math_expressions.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -16,6 +17,8 @@ double button_width = 100;
 double button_height = 100;
 double button_font_size = 26;
 int button_bgcolor_value = 800;
+var answer = '';
+var user_input = ''; 
 
 
 class home extends StatefulWidget {
@@ -27,6 +30,15 @@ class home extends StatefulWidget {
 
 class _homeState extends State<home> {
   @override
+  
+  String equation = '0';
+  String result = '0';
+  String expression = '0';
+  
+  button_pressed(String button_text) {
+
+  }
+  
   Widget build(BuildContext context) {
     return Scaffold(
 
@@ -64,15 +76,28 @@ class _homeState extends State<home> {
               children: [
                 Column(
 
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-
                   // answer output
-                  children: [
-                    Text(
-                      '23922342342',
-                      style: TextStyle(
-                        fontSize: 30,
-                        color: Colors.grey[200],
+                  children: <Widget>[
+                    
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
+                      child: Text(
+                        'equation',
+                        style: TextStyle(
+                          fontSize: 20,
+                          color: Colors.grey[100]
+                        ),
+                      ),
+                    ),
+                    
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(0, 25, 0, 0),
+                      child: Text(
+                        'answer',
+                        style: TextStyle(
+                          fontSize: 35,
+                          color: Colors.grey[200],
+                        ),
                       ),
                     ),
                   ],
@@ -214,7 +239,9 @@ class _homeState extends State<home> {
                   width: button_width,
 
                   child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      //button_pressed(button_text)
+                    },
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(Colors.grey[button_bgcolor_value]),
                     ),
