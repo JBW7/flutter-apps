@@ -67,6 +67,7 @@ class _homeState extends State<home> {
 
 
           //buttons
+          // 2nd row
           Row(
 
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -74,7 +75,7 @@ class _homeState extends State<home> {
             children: [
               // C button
               Padding(
-                padding: const EdgeInsets.fromLTRB(10, 10, 4, 10),
+                padding: const EdgeInsets.fromLTRB(10, 10, 4, 0),
                 child: SizedBox(
                   height: button_height,
                   width: button_width,
@@ -99,7 +100,7 @@ class _homeState extends State<home> {
 
               // ± button
               Padding(
-                padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
+                padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
                 child: SizedBox(
                   height: button_height,
                   width: button_width,
@@ -124,7 +125,7 @@ class _homeState extends State<home> {
 
               // % button
               Padding(
-                padding: const EdgeInsets.fromLTRB(4, 10, 4, 10),
+                padding: const EdgeInsets.fromLTRB(4, 10, 4, 0),
                 child: SizedBox(
                   height: button_height,
                   width: button_width,
@@ -148,7 +149,114 @@ class _homeState extends State<home> {
               
               // + button
               Padding(
-                padding: const EdgeInsets.fromLTRB(0, 10, 10, 10),
+                padding: const EdgeInsets.fromLTRB(0, 10, 10, 0),
+                child: SizedBox(
+                  height: button_height,
+                  width: button_width,
+
+                  child: TextButton(
+                    onPressed: () {},
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(Colors.grey[500]),
+                    ),
+
+                    child:
+                    Text(
+                      '+',
+                      style: TextStyle(
+                        color: Colors.grey[200],
+                      ),
+                      
+                      )
+                  ),
+                ),
+              ),
+            ],
+          ),
+
+          // 2st row
+          Row(
+
+            crossAxisAlignment: CrossAxisAlignment.start,
+
+            children: [
+              // 7 button
+              Padding(
+                padding: const EdgeInsets.fromLTRB(10, 5, 4, 10),
+                child: SizedBox(
+                  height: button_height,
+                  width: button_width,
+
+                  child: TextButton(
+                    onPressed: () {},
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(Colors.grey[500]),
+                    ),
+
+                    child:
+                    Text(
+                      '7',
+                      style: TextStyle(
+                        color: Colors.grey[200],
+                      ),
+                      
+                      )
+                  ),
+                ),
+              ),
+
+              // 8 button
+              Padding(
+                padding: const EdgeInsets.fromLTRB(0, 4, 0, 10),
+                child: SizedBox(
+                  height: button_height,
+                  width: button_width,
+
+                  child: TextButton(
+                    onPressed: () {},
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(Colors.grey[500]),
+                    ),
+
+                    child:
+                    Text(
+                      '8',
+                      style: TextStyle(
+                        color: Colors.grey[200],
+                      ),
+                      
+                      )
+                  ),
+                ),
+              ),
+
+              // 9 button
+              Padding(
+                padding: const EdgeInsets.fromLTRB(4, 4, 4, 10),
+                child: SizedBox(
+                  height: button_height,
+                  width: button_width,
+                  child: TextButton(
+                    onPressed: () {},
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(Colors.grey[500]),
+                    ),
+
+                    child:
+                    Text(
+                      '9',
+                      style: TextStyle(
+                        color: Colors.grey[200],
+                      ),
+                      
+                      )
+                  ),
+                ),
+              ),
+              
+              // + button
+              Padding(
+                padding: const EdgeInsets.fromLTRB(0, 4, 10, 0),
                 child: SizedBox(
                   height: button_height,
                   width: button_width,
