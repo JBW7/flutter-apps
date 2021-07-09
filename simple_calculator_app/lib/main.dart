@@ -83,7 +83,8 @@ class _homeState extends State<home> {
                         user_input,
                         style: TextStyle(
                           fontSize: 20,
-                          color: Colors.grey[100]
+                          color: Colors.grey[100],
+                          letterSpacing: 1,
                         ),
                       ),
                     ),
@@ -217,7 +218,11 @@ class _homeState extends State<home> {
                   width: button_width,
 
                   child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      setState(() {
+                        user_input += ' ÷ ';
+                      });
+                    },
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(Colors.grey[button_bgcolor_value]),
                     ),
@@ -341,14 +346,18 @@ class _homeState extends State<home> {
                   width: button_width,
 
                   child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      setState(() {
+                        user_input += ' x ';
+                      });
+                    },
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(Colors.grey[button_bgcolor_value]),
                     ),
 
                     child:
                     Text(
-                      'x',
+                      ' x ',
                       style: TextStyle(
                         color: Colors.blue[700],
                         fontSize: button_font_size,
@@ -465,7 +474,11 @@ class _homeState extends State<home> {
                   width: button_width,
 
                   child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      setState(() {
+                        user_input += ' - ';
+                      });
+                    },
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(Colors.grey[button_bgcolor_value]),
                     ),
@@ -502,7 +515,7 @@ class _homeState extends State<home> {
                   child: TextButton(
                     onPressed: () {
                       setState(() {
-                        user_input += '7';
+                        user_input += '1';
                       });
                     },
                     style: ButtonStyle(
@@ -589,7 +602,11 @@ class _homeState extends State<home> {
                   width: button_width,
 
                   child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      setState(() {
+                        user_input += ' + ';
+                      });
+                    },
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(Colors.grey[button_bgcolor_value]),
                     ),
@@ -680,7 +697,7 @@ class _homeState extends State<home> {
                   width: 204,
                   child: TextButton(
                     onPressed: () {
-                      equal_pressed()
+                      equal_pressed();
                     },
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(Colors.blue[700]),
@@ -707,6 +724,14 @@ class _homeState extends State<home> {
       ),
     );
   }
+  
+  bool isOperator(String x) {
+    if (x == '/' || x == 'x' || x == '-' || x == '+' || x == '=') {
+      return true;
+    }
+    return false;
+  }
+  
   // equal pressed function
   void equal_pressed() {}
 
