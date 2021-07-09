@@ -92,7 +92,7 @@ class _homeState extends State<home> {
                     Padding(
                       padding: const EdgeInsets.fromLTRB(0, 25, 0, 0),
                       child: Text(
-                        'answer',
+                        answer,
                         style: TextStyle(
                           fontSize: 35,
                           color: Colors.grey[200],
@@ -733,7 +733,18 @@ class _homeState extends State<home> {
   }
   
   // equal pressed function
-  void equal_pressed() {}
+  void equal_pressed() {
+    String finaluserinput = user_input;
+    finaluserinput = user_input.replaceAll('x', '*');
+  
+    Parser p = Parser();
+    Expression exp = p.parse(finaluserinput);
+    ContextModel cm = ContextModel();
+    double eval = exp.evaluate(EvaluationType.REAL, cm);
+    setState(() {
+      answer = eval.toString();
+    });
+  }
 
 }
 
