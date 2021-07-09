@@ -11,7 +11,8 @@ void main() {
 // button dimensions
 double button_width = 100;
 double button_height = 100;
-double button_font_size = 20;
+double button_font_size = 26;
+int button_bgcolor_value = 800;
 
 
 class home extends StatefulWidget {
@@ -34,7 +35,7 @@ class _homeState extends State<home> {
         title: Text(
           'Calculator',
           style: TextStyle(
-            color: Colors.white,
+            color: Colors.grey[200],
           ),
         ),
       ),
@@ -67,8 +68,8 @@ class _homeState extends State<home> {
                     Text(
                       '23922342342',
                       style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.white,
+                        fontSize: 24,
+                        color: Colors.grey[200],
                       ),
                     ),
                   ],
@@ -97,15 +98,16 @@ class _homeState extends State<home> {
                   child: TextButton(
                     onPressed: () {},
                     style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(Colors.grey[500]),
+                      backgroundColor: MaterialStateProperty.all(Colors.grey[button_bgcolor_value]),
                     ),
 
                     child:
                     Text(
                       'C',
                       style: TextStyle(
-                        color: Colors.grey[200],
+                        color: Colors.red[400],
                         fontSize: button_font_size,
+                        fontWeight: FontWeight.bold
                       ),
                       
                       )
@@ -123,15 +125,16 @@ class _homeState extends State<home> {
                   child: TextButton(
                     onPressed: () {},
                     style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(Colors.grey[500]),
+                      backgroundColor: MaterialStateProperty.all(Colors.grey[button_bgcolor_value]),
                     ),
 
                     child:
                     Text(
                       '±',
                       style: TextStyle(
-                        color: Colors.grey[200],
+                        color: Colors.blue[700],
                         fontSize: button_font_size,
+                        fontWeight: FontWeight.bold
                       ),
                       
                       )
@@ -148,15 +151,16 @@ class _homeState extends State<home> {
                   child: TextButton(
                     onPressed: () {},
                     style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(Colors.grey[500]),
+                      backgroundColor: MaterialStateProperty.all(Colors.grey[button_bgcolor_value]),
                     ),
 
                     child:
                     Text(
                       '%',
                       style: TextStyle(
-                        color: Colors.grey[200],
+                        color: Colors.blue[700],
                         fontSize: button_font_size,
+                        fontWeight: FontWeight.bold,
                       ),
                       
                       )
@@ -174,15 +178,16 @@ class _homeState extends State<home> {
                   child: TextButton(
                     onPressed: () {},
                     style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(Colors.grey[500]),
+                      backgroundColor: MaterialStateProperty.all(Colors.grey[button_bgcolor_value]),
                     ),
 
                     child:
                     Text(
                       '÷',
                       style: TextStyle(
-                        color: Colors.grey[200],
+                        color: Colors.blue[700],
                         fontSize: button_font_size,
+                        fontWeight: FontWeight.bold
                       ),
                       
                       )
@@ -208,7 +213,7 @@ class _homeState extends State<home> {
                   child: TextButton(
                     onPressed: () {},
                     style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(Colors.grey[500]),
+                      backgroundColor: MaterialStateProperty.all(Colors.grey[button_bgcolor_value]),
                     ),
 
                     child:
@@ -234,7 +239,7 @@ class _homeState extends State<home> {
                   child: TextButton(
                     onPressed: () {},
                     style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(Colors.grey[500]),
+                      backgroundColor: MaterialStateProperty.all(Colors.grey[button_bgcolor_value]),
                     ),
 
                     child:
@@ -259,7 +264,7 @@ class _homeState extends State<home> {
                   child: TextButton(
                     onPressed: () {},
                     style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(Colors.grey[500]),
+                      backgroundColor: MaterialStateProperty.all(Colors.grey[button_bgcolor_value]),
                     ),
 
                     child:
@@ -285,15 +290,16 @@ class _homeState extends State<home> {
                   child: TextButton(
                     onPressed: () {},
                     style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(Colors.grey[500]),
+                      backgroundColor: MaterialStateProperty.all(Colors.grey[button_bgcolor_value]),
                     ),
 
                     child:
                     Text(
                       'x',
                       style: TextStyle(
-                        color: Colors.grey[200],
+                        color: Colors.blue[700],
                         fontSize: button_font_size,
+                        fontWeight: FontWeight.bold
                       ),
                       
                       )
@@ -319,7 +325,7 @@ class _homeState extends State<home> {
                   child: TextButton(
                     onPressed: () {},
                     style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(Colors.grey[500]),
+                      backgroundColor: MaterialStateProperty.all(Colors.grey[button_bgcolor_value]),
                     ),
 
                     child:
@@ -345,7 +351,7 @@ class _homeState extends State<home> {
                   child: TextButton(
                     onPressed: () {},
                     style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(Colors.grey[500]),
+                      backgroundColor: MaterialStateProperty.all(Colors.grey[button_bgcolor_value]),
                     ),
 
                     child:
@@ -370,7 +376,7 @@ class _homeState extends State<home> {
                   child: TextButton(
                     onPressed: () {},
                     style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(Colors.grey[500]),
+                      backgroundColor: MaterialStateProperty.all(Colors.grey[button_bgcolor_value]),
                     ),
 
                     child:
@@ -396,15 +402,16 @@ class _homeState extends State<home> {
                   child: TextButton(
                     onPressed: () {},
                     style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(Colors.grey[500]),
+                      backgroundColor: MaterialStateProperty.all(Colors.grey[button_bgcolor_value]),
                     ),
 
                     child:
                     Text(
                       '-',
                       style: TextStyle(
-                        color: Colors.grey[200],
+                        color: Colors.blue[700],
                         fontSize: button_font_size,
+                        fontWeight: FontWeight.bold
                       ),
                       
                       )
@@ -430,7 +437,7 @@ class _homeState extends State<home> {
                   child: TextButton(
                     onPressed: () {},
                     style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(Colors.grey[500]),
+                      backgroundColor: MaterialStateProperty.all(Colors.grey[button_bgcolor_value]),
                     ),
 
                     child:
@@ -456,7 +463,7 @@ class _homeState extends State<home> {
                   child: TextButton(
                     onPressed: () {},
                     style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(Colors.grey[500]),
+                      backgroundColor: MaterialStateProperty.all(Colors.grey[button_bgcolor_value]),
                     ),
 
                     child:
@@ -481,7 +488,7 @@ class _homeState extends State<home> {
                   child: TextButton(
                     onPressed: () {},
                     style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(Colors.grey[500]),
+                      backgroundColor: MaterialStateProperty.all(Colors.grey[button_bgcolor_value]),
                     ),
 
                     child:
@@ -507,15 +514,16 @@ class _homeState extends State<home> {
                   child: TextButton(
                     onPressed: () {},
                     style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(Colors.grey[500]),
+                      backgroundColor: MaterialStateProperty.all(Colors.grey[button_bgcolor_value]),
                     ),
 
                     child:
                     Text(
                       '+',
                       style: TextStyle(
-                        color: Colors.grey[200],
+                        color: Colors.blue[700],
                         fontSize: button_font_size,
+                        fontWeight: FontWeight.bold
                       ),
                       
                       )
@@ -541,7 +549,7 @@ class _homeState extends State<home> {
                   child: TextButton(
                     onPressed: () {},
                     style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(Colors.grey[500]),
+                      backgroundColor: MaterialStateProperty.all(Colors.grey[button_bgcolor_value]),
                     ),
 
                     child:
@@ -567,7 +575,7 @@ class _homeState extends State<home> {
                   child: TextButton(
                     onPressed: () {},
                     style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(Colors.grey[500]),
+                      backgroundColor: MaterialStateProperty.all(Colors.grey[button_bgcolor_value]),
                     ),
 
                     child:
@@ -592,7 +600,7 @@ class _homeState extends State<home> {
                   child: TextButton(
                     onPressed: () {},
                     style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(Colors.grey[500]),
+                      backgroundColor: MaterialStateProperty.all(Colors.blue[700]),
                     ),
 
                     child:
