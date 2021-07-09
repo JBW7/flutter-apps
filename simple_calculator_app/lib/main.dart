@@ -8,6 +8,11 @@ void main() {
   ));
 }
 
+// button dimensions
+double button_width = 100;
+double button_height = 100;
+
+
 class home extends StatefulWidget {
 
 
@@ -25,6 +30,7 @@ class _homeState extends State<home> {
 
         children: <Widget>[
           
+          // answer container
           Container(
             height: 150,
             margin: EdgeInsets.fromLTRB(10, 50, 10, 0),
@@ -54,22 +60,121 @@ class _homeState extends State<home> {
             ),
 
           ),
-          
-          TextButton(
-            onPressed: () {},
-            style: ButtonStyle(
-              backgroundColor: MaterialStateProperty.all(Colors.grey[500]),
-            ),
 
-            child:
-            Text(
-              '1',
-              style: TextStyle(
-                color: Colors.grey[200],
+
+
+
+
+
+          //buttons
+          Row(
+
+            crossAxisAlignment: CrossAxisAlignment.start,
+
+            children: [
+              // C button
+              Padding(
+                padding: const EdgeInsets.fromLTRB(10, 10, 4, 10),
+                child: SizedBox(
+                  height: button_height,
+                  width: button_width,
+
+                  child: TextButton(
+                    onPressed: () {},
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(Colors.grey[500]),
+                    ),
+
+                    child:
+                    Text(
+                      'C',
+                      style: TextStyle(
+                        color: Colors.grey[200],
+                      ),
+                      
+                      )
+                  ),
+                ),
+              ),
+
+              // ± button
+              Padding(
+                padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
+                child: SizedBox(
+                  height: button_height,
+                  width: button_width,
+
+                  child: TextButton(
+                    onPressed: () {},
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(Colors.grey[500]),
+                    ),
+
+                    child:
+                    Text(
+                      '±',
+                      style: TextStyle(
+                        color: Colors.grey[200],
+                      ),
+                      
+                      )
+                  ),
+                ),
+              ),
+
+              // % button
+              Padding(
+                padding: const EdgeInsets.fromLTRB(4, 10, 4, 10),
+                child: SizedBox(
+                  height: button_height,
+                  width: button_width,
+                  child: TextButton(
+                    onPressed: () {},
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(Colors.grey[500]),
+                    ),
+
+                    child:
+                    Text(
+                      '%',
+                      style: TextStyle(
+                        color: Colors.grey[200],
+                      ),
+                      
+                      )
+                  ),
+                ),
               ),
               
-              )
-          )
+              // + button
+              Padding(
+                padding: const EdgeInsets.fromLTRB(0, 10, 10, 10),
+                child: SizedBox(
+                  height: button_height,
+                  width: button_width,
+
+                  child: TextButton(
+                    onPressed: () {},
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(Colors.grey[500]),
+                    ),
+
+                    child:
+                    Text(
+                      '+',
+                      style: TextStyle(
+                        color: Colors.grey[200],
+                      ),
+                      
+                      )
+                  ),
+                ),
+              ),
+            ],
+          ),
+
+          
+
         ],
 
       ),
