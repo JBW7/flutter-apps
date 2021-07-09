@@ -26,6 +26,9 @@ class _homeState extends State<home> {
   Widget build(BuildContext context) {
     return Scaffold(
 
+
+
+
       body: Column(
         //crossAxisAlignment: CrossAxisAlignment.stretch,
 
@@ -34,7 +37,7 @@ class _homeState extends State<home> {
           // answer container
           Container(
             height: 150,
-            margin: EdgeInsets.fromLTRB(10, 50, 10, 0),
+            margin: EdgeInsets.fromLTRB(7, 50, 7, 0),
             decoration: BoxDecoration(
               color: Colors.blue[500]
             ),
@@ -64,9 +67,6 @@ class _homeState extends State<home> {
 
 
 
-
-
-
           //buttons
           // 1st row
           Row(
@@ -76,7 +76,7 @@ class _homeState extends State<home> {
             children: [
               // C button
               Padding(
-                padding: const EdgeInsets.fromLTRB(10, 10, 4, 0),
+                padding: const EdgeInsets.fromLTRB(7, 7, 4, 0),
                 child: SizedBox(
                   height: button_height,
                   width: button_width,
@@ -102,7 +102,7 @@ class _homeState extends State<home> {
 
               // ± button
               Padding(
-                padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
+                padding: const EdgeInsets.fromLTRB(0, 7, 4, 0),
                 child: SizedBox(
                   height: button_height,
                   width: button_width,
@@ -128,7 +128,7 @@ class _homeState extends State<home> {
 
               // % button
               Padding(
-                padding: const EdgeInsets.fromLTRB(4, 10, 4, 0),
+                padding: const EdgeInsets.fromLTRB(0, 7, 4, 0),
                 child: SizedBox(
                   height: button_height,
                   width: button_width,
@@ -153,7 +153,7 @@ class _homeState extends State<home> {
               
               // / button
               Padding(
-                padding: const EdgeInsets.fromLTRB(0, 10, 10, 0),
+                padding: const EdgeInsets.fromLTRB(0, 7, 7, 0),
                 child: SizedBox(
                   height: button_height,
                   width: button_width,
@@ -187,7 +187,7 @@ class _homeState extends State<home> {
             children: [
               // 7 button
               Padding(
-                padding: const EdgeInsets.fromLTRB(10, 4, 4, 0),
+                padding: const EdgeInsets.fromLTRB(7, 4, 4, 0),
                 child: SizedBox(
                   height: button_height,
                   width: button_width,
@@ -213,7 +213,7 @@ class _homeState extends State<home> {
 
               // 8 button
               Padding(
-                padding: const EdgeInsets.fromLTRB(0, 4, 0, 0),
+                padding: const EdgeInsets.fromLTRB(0, 4, 4, 0),
                 child: SizedBox(
                   height: button_height,
                   width: button_width,
@@ -239,7 +239,7 @@ class _homeState extends State<home> {
 
               // 9 button
               Padding(
-                padding: const EdgeInsets.fromLTRB(4, 4, 4, 0),
+                padding: const EdgeInsets.fromLTRB(0, 4, 4, 0),
                 child: SizedBox(
                   height: button_height,
                   width: button_width,
@@ -264,7 +264,7 @@ class _homeState extends State<home> {
               
               // x button
               Padding(
-                padding: const EdgeInsets.fromLTRB(0, 4, 10, 0),
+                padding: const EdgeInsets.fromLTRB(0, 4, 7, 0),
                 child: SizedBox(
                   height: button_height,
                   width: button_width,
@@ -298,7 +298,7 @@ class _homeState extends State<home> {
             children: [
               // 4 button
               Padding(
-                padding: const EdgeInsets.fromLTRB(10, 4, 4, 0),
+                padding: const EdgeInsets.fromLTRB(7, 4, 4, 0),
                 child: SizedBox(
                   height: button_height,
                   width: button_width,
@@ -324,7 +324,7 @@ class _homeState extends State<home> {
 
               // 5 button
               Padding(
-                padding: const EdgeInsets.fromLTRB(0, 4, 0, 0),
+                padding: const EdgeInsets.fromLTRB(0, 4, 4, 0),
                 child: SizedBox(
                   height: button_height,
                   width: button_width,
@@ -350,7 +350,7 @@ class _homeState extends State<home> {
 
               // 6 button
               Padding(
-                padding: const EdgeInsets.fromLTRB(4, 4, 4, 0),
+                padding: const EdgeInsets.fromLTRB(0, 4, 4, 0),
                 child: SizedBox(
                   height: button_height,
                   width: button_width,
@@ -375,7 +375,7 @@ class _homeState extends State<home> {
               
               // - button
               Padding(
-                padding: const EdgeInsets.fromLTRB(0, 4, 10, 0),
+                padding: const EdgeInsets.fromLTRB(0, 4, 7, 0),
                 child: SizedBox(
                   height: button_height,
                   width: button_width,
@@ -409,7 +409,7 @@ class _homeState extends State<home> {
             children: [
               // 1 button
               Padding(
-                padding: const EdgeInsets.fromLTRB(10, 4, 4, 0),
+                padding: const EdgeInsets.fromLTRB(7, 4, 4, 0),
                 child: SizedBox(
                   height: button_height,
                   width: button_width,
@@ -435,7 +435,7 @@ class _homeState extends State<home> {
 
               // 2 button
               Padding(
-                padding: const EdgeInsets.fromLTRB(0, 4, 0, 0),
+                padding: const EdgeInsets.fromLTRB(0, 4, 4, 0),
                 child: SizedBox(
                   height: button_height,
                   width: button_width,
@@ -461,7 +461,7 @@ class _homeState extends State<home> {
 
               // 3 button
               Padding(
-                padding: const EdgeInsets.fromLTRB(4, 4, 4, 0),
+                padding: const EdgeInsets.fromLTRB(0, 4, 4, 0),
                 child: SizedBox(
                   height: button_height,
                   width: button_width,
@@ -486,7 +486,7 @@ class _homeState extends State<home> {
               
               // + button
               Padding(
-                padding: const EdgeInsets.fromLTRB(0, 4, 10, 0),
+                padding: const EdgeInsets.fromLTRB(0, 4, 7, 0),
                 child: SizedBox(
                   height: button_height,
                   width: button_width,
@@ -520,7 +520,7 @@ class _homeState extends State<home> {
             children: [
               // 0 button
               Padding(
-                padding: const EdgeInsets.fromLTRB(10, 4, 4, 0),
+                padding: const EdgeInsets.fromLTRB(7, 4, 4, 0),
                 child: SizedBox(
                   height: button_height,
                   width: button_width,
@@ -546,7 +546,7 @@ class _homeState extends State<home> {
 
               // . button
               Padding(
-                padding: const EdgeInsets.fromLTRB(0, 4, 0, 0),
+                padding: const EdgeInsets.fromLTRB(0, 4, 4, 0),
                 child: SizedBox(
                   height: button_height,
                   width: button_width,
@@ -572,7 +572,7 @@ class _homeState extends State<home> {
 
               // = button
               Padding(
-                padding: const EdgeInsets.fromLTRB(4, 4, 4, 0),
+                padding: const EdgeInsets.fromLTRB(0, 4, 4, 0),
                 child: SizedBox(
                   height: button_height,
                   width: 204,
