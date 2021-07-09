@@ -24,15 +24,46 @@ class _homeState extends State<home> {
         padding: const EdgeInsets.fromLTRB(15, 50, 15, 50),
 
         child: Column(
-          children: <Widget>[
+
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+
+          children: <Widget> [
+            
+            // container widget for the answer
             Container(
               height: 150,
               decoration: BoxDecoration(
-                color: Colors.blue[500]
+                color: Colors.blue
               ),
-            )
+
+              child: Row(
+
+                mainAxisAlignment: MainAxisAlignment.end,
+
+                children: [
+                  Column(
+
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+
+                    children: [
+                      Text(
+                        '43824937',
+                        style: TextStyle(
+                          fontSize: 20,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+
+            ),
+
+
           ],
         ),
+
+
 
       ),
 
