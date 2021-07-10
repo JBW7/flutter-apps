@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -8,6 +9,8 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
 
+  int _selectedIndex = 0; // initialize variable to get index which button is clicked
+  
   List <IconData> _icons = [ // list of clickable icon buttons from font awesome icons flutter package
     FontAwesomeIcons.plane,
     FontAwesomeIcons.bed,
@@ -17,20 +20,29 @@ class _HomeScreenState extends State<HomeScreen> {
 
   // function to build each button
   _buildIcon(int index) { // index used from list _icons
-    return Container( // used to control the overall shape and size of each button
-      height: 60.0,
-      width: 60.0,
-      decoration: BoxDecoration(
-        color: Theme.of(context).accentColor, // color of button
-        borderRadius: BorderRadius.circular(30.0) // shape of button (radius has to be 0.5 width to be a circle)
-      ),
-      
-      child: Icon( // icon inside the button
-        _icons[index],
-        size: 25.0,
-        color: Theme.of(context).primaryColor,
-      ),
+    return GestureDetector(
 
+      onTap: () {
+        setState(() {
+          _selectedIndex = index; // change _selectedIndex to the index of button pressed
+        });
+      },
+
+      child: Container( // used to control the overall shape and size of each button
+        height: 60.0,
+        width: 60.0,
+        decoration: BoxDecoration(
+          color: _selectedIndex == index ? Theme.of(context).accentColor : Color(0xFFE7EBEE), // if button pressed it will chaange color if not it will remain the same color
+          borderRadius: BorderRadius.circular(30.0) // shape of button (radius has to be 0.5 width to be a circle)
+        ),
+        
+        child: Icon( // icon inside the button
+          _icons[index],
+          size: 25.0,
+          color: _selectedIndex == index ? Theme.of(context).primaryColor : Color(0xFFB4C1C4) // if button pressed the icon will change color if not it will remain the same color
+        ),
+    
+      ),
     );
   }
 
