@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:travel_app/widgets/destination_carousel.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -55,7 +56,9 @@ class _HomeScreenState extends State<HomeScreen> {
           children: <Widget>[
             Padding(
               padding: const EdgeInsets.only(left: 20.0, right: 120.0),
-              child: Text( // screen title
+              
+              // main screen title
+              child: Text( 
                 'What Would You Like To Find?',
                 style: TextStyle(
                   fontSize: 30.0,
@@ -67,7 +70,8 @@ class _HomeScreenState extends State<HomeScreen> {
             SizedBox(
               height: 20.0, // give space between screen title and icons
             ),
-
+            
+            // Selectable Button Icon Row
             Row( // so that buttons is arranged in a single row
               mainAxisAlignment: MainAxisAlignment.spaceAround, // adds even space between each button
               
@@ -81,7 +85,14 @@ class _HomeScreenState extends State<HomeScreen> {
                 //_buildIcone(1)
                 //_buildIcone(1)
             ),
-          
+
+            SizedBox(
+              height: 20.0,
+            ),
+            
+            // Destinations carousel at destination_carousel.dart
+            DestinationCarousel(),
+            
           ],
         ),
       )
