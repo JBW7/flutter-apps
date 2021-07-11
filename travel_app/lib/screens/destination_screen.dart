@@ -21,7 +21,7 @@ class _DestinationScreenState extends State<DestinationScreen> {
     for (int i = 0; i < rating; i++) { // for loop
        stars += '⭐️ ';
     }
-    stars.trim()
+    stars.trim();
     return Text(stars);
   }
   
@@ -145,6 +145,7 @@ class _DestinationScreenState extends State<DestinationScreen> {
           ),
           Expanded( // specify length of listview (extending throughout the device)
             child: ListView.builder( // creating a activity listview
+              padding: EdgeInsets.only(top: 10.0, bottom: 15.0),
               itemCount: widget.destination.activities.length,
               itemBuilder: (BuildContext context, int index) { // so that we can build multiple widgets at the same time
                 
@@ -236,6 +237,21 @@ class _DestinationScreenState extends State<DestinationScreen> {
                               ],
                             )
                           ],
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      left: 20.0,
+                      top: 15.0,
+                      bottom: 15.0,
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(20.0),
+                        child: Image(
+                          width: 110.0,
+                          image: AssetImage(
+                            activity.imageUrl
+                          ),
+                          fit: BoxFit.cover, // fit image into position
                         ),
                       ),
                     )
