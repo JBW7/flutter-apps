@@ -12,6 +12,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
 
   int _selectedIndex = 0; // initialize variable to get index which button is clicked
+  int _currentTab = 0; // keep track of which tab is selected
   
   List <IconData> _icons = [ // list of clickable icon buttons from font awesome icons flutter package
     FontAwesomeIcons.plane,
@@ -100,6 +101,30 @@ class _HomeScreenState extends State<HomeScreen> {
 
             HotelCarousel()
             
+          ],
+        ),
+      ),
+
+      // bottom navigation bar
+      bottomNavigationBar: SizedBox(
+        child: BottomNavigationBar(
+          currentIndex: _currentTab,
+          items: [
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.search,
+                size: 30.0,
+              ),
+              label: '', // every navigation bar item must have a label
+            ),
+            
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.search,
+                size: 30.0,
+              ),
+              label: '',
+            ),
           ],
         ),
       )
