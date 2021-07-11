@@ -46,7 +46,6 @@ class DestinationCarousel extends StatelessWidget {
                 // the carousel itself
                 Container( // container to house the carousel
                   height: 300.0,
-                  color: Colors.blue,
                   child: ListView.builder( // displays carousel in a list view and allowing user to scroll through the list
                     scrollDirection: Axis.horizontal, // change scroll direction from vertical to horizontal
                     itemCount: destinations.length, // number of items based on number of destinations in destination_model.dart
@@ -55,7 +54,6 @@ class DestinationCarousel extends StatelessWidget {
                       return Container( // container to host containers for each container destination
                         margin: EdgeInsets.all(10.0),
                         width: 210.0,
-                        color: Colors.red,
                         child: Stack( // stacking allows widgets to be positioned on top of each other
                           alignment: Alignment.topCenter, // so that widget is in the center of the container
                           children: <Widget>[
