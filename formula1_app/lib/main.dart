@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Formula 1',
       home: DriverScreen(),
+      // theme: ThemeData(fontFamily: 'Rajdhani'),
     );
   }
 }
