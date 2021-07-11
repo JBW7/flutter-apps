@@ -50,7 +50,7 @@ class DestinationCarousel extends StatelessWidget {
                     scrollDirection: Axis.horizontal, // change scroll direction from vertical to horizontal
                     itemCount: destinations.length, // number of items based on number of destinations in destination_model.dart
                     itemBuilder: (BuildContext context, int index){
-                      Destination destination = destinations[index]; // assign destination to a destinaton from destinations list
+                      Destination destination = destinations[index]; // assign destination to a destinaton from destinations list from destination_model.dart
                       return Container( // container to host containers for each container destination
                         margin: EdgeInsets.all(10.0),
                         width: 210.0,
