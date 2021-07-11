@@ -20,12 +20,39 @@ class DriverListView extends StatelessWidget {
                 return Container(
                   margin: EdgeInsets.fromLTRB(8, 8, 8, 0),
                   width: 300,
-                  height: 100,
+                  height: 75,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    color: Colors.red,
+                    color: Colors.white,
                   ),
-                  
+                  child: Row(
+                    //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 15, right: 15),
+                        child: Text(
+                          driver.rank,
+                          style: TextStyle(
+                            fontSize: 22
+                          ),
+                        ),
+                      ),
+                      Container(
+                        width: 4,
+                        height: 50,
+                        color: Colors.blue[800],
+                      ),
+                      Column(
+                        children: [
+                          Text(
+                            driver.name
+                            ),
+                          Text(driver.team)
+                        ],
+                      )
+                    ],
+                  ),
+          
                 );
               },
             ),
