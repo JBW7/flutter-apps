@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:travel_app/models/destination_model.dart';
 
 class DestinationScreen extends StatefulWidget {
@@ -39,17 +40,41 @@ class _DestinationScreenState extends State<DestinationScreen> {
                   ),
                 ),
               ),
-              Row( // buttons ontop of image
-                children: <Widget>[
-                  IconButton(
-                    icon: Icon(Icons.arrow_back), // back arrow button
-                    iconSize: 30.0,
-                    color: Colors.black,
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
-                  ),
-                ],
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 40.0),
+                child: Row( // buttons ontop of image
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween, // push buttons to each side
+                  children: <Widget>[
+                    IconButton(
+                      icon: Icon(Icons.arrow_back), // back arrow button
+                      iconSize: 30.0,
+                      color: Colors.black,
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                    ),
+                    Row(
+                      children: <Widget>[
+                        IconButton(
+                          icon: Icon(Icons.search), // search button
+                          iconSize: 30.0,
+                          color: Colors.black,
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                        ),
+                        IconButton(
+                          icon: Icon(FontAwesomeIcons.sortAmountDown), // sort amount down icon
+                          iconSize: 25.0,
+                          color: Colors.black,
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
               )
             ],
           )
