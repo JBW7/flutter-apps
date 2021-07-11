@@ -14,6 +14,17 @@ class DestinationScreen extends StatefulWidget {
 }
 
 class _DestinationScreenState extends State<DestinationScreen> {
+  
+  Text _buildRatingStars(int rating) { // defining the function _buildRatingStars
+    String stars = '';
+
+    for (int i = 0; i < rating; i++) { // for loop
+       stars += '⭐️ ';
+    }
+    stars.trim()
+    return Text(stars);
+  }
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -195,7 +206,7 @@ class _DestinationScreenState extends State<DestinationScreen> {
                                 color: Colors.grey[700],
                               ),
                             ),
-                            //_buildRatingStart(activity.rating),
+                            _buildRatingStars(activity.rating), // calls the function _buildRatingStart and passing activity.rating as the parameter
                             SizedBox(
                               height: 10.0,
                             ),
