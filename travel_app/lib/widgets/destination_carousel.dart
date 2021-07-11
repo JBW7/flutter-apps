@@ -55,8 +55,8 @@ class DestinationCarousel extends StatelessWidget {
                         margin: EdgeInsets.all(10.0),
                         width: 210.0,
                         color: Colors.red,
-                        child: Stack(
-                          
+                        child: Stack( // stacking allows widgets to be positioned on top of each other
+                          alignment: Alignment.topCenter, // so that widget is in the center of the container
                           children: <Widget>[
                             Container( // each container for each destination's text
                               height: 120.0,
@@ -89,6 +89,30 @@ class DestinationCarousel extends StatelessWidget {
                                       ) 
                                   ],
                                 ),
+                              ),
+                            ),
+                            Container(
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(20.0), // so that the container have rounded corners
+                                boxShadow: [ // so that the container have a shadow under it
+                                  BoxShadow(
+                                    color: Colors.black26,
+                                    offset: Offset(0.0, 2.0), // shadow moves down 0 at the axis and 2 pixels in the y axis
+                                    blurRadius: 6.0,
+                                    )
+                                  ] 
+                              ),
+                              
+                              child: Stack(
+                                children: <Widget>[
+                                  Image( // the image of destination
+                                    height: 180.0,
+                                    width: 180.0,
+                                    image: AssetImage(destination.imageUrl), // taken from class destination from destination_model.dart
+                                    fit: BoxFit.cover,
+                                  )
+                                ],
                               ),
                             )
                           ],
