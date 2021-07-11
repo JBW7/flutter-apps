@@ -58,36 +58,39 @@ class DestinationCarousel extends StatelessWidget {
                         child: Stack( // stacking allows widgets to be positioned on top of each other
                           alignment: Alignment.topCenter, // so that widget is in the center of the container
                           children: <Widget>[
-                            Container( // each container for each destination's text
-                              height: 120.0,
-                              width: 200.0,
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(10.0), // make the text container have rounded corners
-                              ),
-                              
-                              child: Padding(
-                                padding: EdgeInsets.all(10.0), // give some spacing between text and the edge of container
+                            Positioned( // so that the text container is under the images container
+                              bottom: 15.0, // 15 pixels from the bottom of the container
+                              child: Container( // each container for each destination's text
+                                height: 120.0,
+                                width: 200.0,
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(10.0), // make the text container have rounded corners
+                                ),
                                 
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.end, // so that text is now in the bottom of the container
-                                  crossAxisAlignment: CrossAxisAlignment.start, // so that text is aligned to the left
-                                  children: <Widget>[
-                                    Text( // display number of activites in the destination taken from destination_model.dart Destinations class
-                                      '${destination.activities.length} activities', // number of activities = length of activities list in destination_model.dart activities list
-                                      style: TextStyle(
-                                        fontSize: 22.0,
-                                        fontWeight: FontWeight.w600,
-                                        letterSpacing: 1.2,
-                                      ),
-                                    ), 
-                                    Text( // display the description of activity in the destination taken from destination_model.dart Destinations class
-                                      destination.description,
-                                      style: TextStyle(
-                                        color: Colors.grey
-                                      ),
-                                      ) 
-                                  ],
+                                child: Padding(
+                                  padding: EdgeInsets.all(10.0), // give some spacing between text and the edge of container
+                                  
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.end, // so that text is now in the bottom of the container
+                                    crossAxisAlignment: CrossAxisAlignment.start, // so that text is aligned to the left
+                                    children: <Widget>[
+                                      Text( // display number of activites in the destination taken from destination_model.dart Destinations class
+                                        '${destination.activities.length} activities', // number of activities = length of activities list in destination_model.dart activities list
+                                        style: TextStyle(
+                                          fontSize: 22.0,
+                                          fontWeight: FontWeight.w600,
+                                          letterSpacing: 1.2,
+                                        ),
+                                      ), 
+                                      Text( // display the description of activity in the destination taken from destination_model.dart Destinations class
+                                        destination.description,
+                                        style: TextStyle(
+                                          color: Colors.grey
+                                        ),
+                                        ) 
+                                    ],
+                                  ),
                                 ),
                               ),
                             ),
