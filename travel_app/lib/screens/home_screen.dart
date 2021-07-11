@@ -104,29 +104,44 @@ class _HomeScreenState extends State<HomeScreen> {
           ],
         ),
       ),
-
+ 
       // bottom navigation bar
-      bottomNavigationBar: SizedBox(
-        child: BottomNavigationBar(
-          currentIndex: _currentTab,
-          items: [
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.search,
-                size: 30.0,
-              ),
-              label: '', // every navigation bar item must have a label
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _currentTab,
+
+        onTap: (int value) {
+          setState(() { // so widget tree will re run whenever tapped
+            _currentTab = value;  // so that _currentTab = value of the current index
+          });
+        },
+
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.search,
+              size: 30.0,
             ),
-            
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.search,
-                size: 30.0,
-              ),
-              label: '',
+            label: '', // every navigation bar item must have a label
+          ),
+          
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.local_pizza,
+              size: 30.0,
             ),
-          ],
-        ),
+            label: '',
+          ),
+
+          BottomNavigationBarItem(
+            icon: CircleAvatar(
+              radius: 15.0,
+              backgroundImage: NetworkImage('https://cdn5.vectorstock.com/i/1000x1000/44/49/avatar-icon-male-person-symbol-circle-user-vector-20924449.jpg') ,
+            ),
+            label: '',
+          ),
+
+          
+        ],
       )
     );
   }
