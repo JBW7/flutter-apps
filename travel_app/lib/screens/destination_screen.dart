@@ -32,11 +32,14 @@ class _DestinationScreenState extends State<DestinationScreen> {
                     )
                   ]
                 ), 
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(30.0), // rounding corners
-                  child: Image( // display image onto the screen
-                    image: AssetImage(widget.destination.imageUrl),
-                    fit: BoxFit.cover, 
+                child: Hero( // widget to animate destination picture
+                  tag: widget.destination.imageUrl, // specifiy which widget to animate
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(30.0), // rounding corners
+                    child: Image( // display image onto the screen
+                      image: AssetImage(widget.destination.imageUrl),
+                      fit: BoxFit.cover, 
+                    ),
                   ),
                 ),
               ),

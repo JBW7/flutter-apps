@@ -118,13 +118,16 @@ class DestinationCarousel extends StatelessWidget {
                                 
                                 child: Stack(
                                   children: <Widget>[
-                                    ClipRRect(
-                                      borderRadius: BorderRadius.circular(20.0),
-                                      child: Image( // the image of destination
-                                        height: 180.0,
-                                        width: 180.0,
-                                        image: AssetImage(destination.imageUrl), // taken from class destination from destination_model.dart
-                                        fit: BoxFit.cover,
+                                    Hero( // widget to animate destination picture
+                                      tag: destination.imageUrl, // specify which widget to animate
+                                      child: ClipRRect(
+                                        borderRadius: BorderRadius.circular(20.0),
+                                        child: Image( // the image of destination
+                                          height: 180.0,
+                                          width: 180.0,
+                                          image: AssetImage(destination.imageUrl), // taken from class destination from destination_model.dart
+                                          fit: BoxFit.cover,
+                                        ),
                                       ),
                                     ),
                                     Positioned( // position the text 
