@@ -148,16 +148,84 @@ class _DestinationScreenState extends State<DestinationScreen> {
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(20.0) // rounded edges
                       ),
-                      child: Column( // for details in the listview
-                        children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(activity.name),
-                              Text('\$${activity.price}'),
-                            ],
-                          ),
-                        ],
+                      child: Padding(
+                        padding: EdgeInsets.fromLTRB(100.0, 20.0, 20.0, 20.0),
+                        child: Column( // for details in the listview
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Container(
+                                  width: 140.0, // prevent text from overflowing the device and causing the error
+                                  child: Text( // name of activity
+                                    activity.name,
+                                    style: TextStyle(
+                                      fontSize: 18.0,
+                                      fontWeight: FontWeight.w600,
+                                    ),
+                                    overflow: TextOverflow.ellipsis, // will create '....' if text is too long to fit into two lines
+                                    maxLines: 2,
+                                  ),
+                                ),
+                                Column(
+                                  children: [
+                                    Text( // price of activity
+                                      '\$${activity.price}',
+                                      style: TextStyle(
+                                        fontSize: 22.0,
+                                        fontWeight: FontWeight.w600
+                                      ),
+                                    ),
+                                    Text( // per pax label under the price of the activity
+                                      'per pax',
+                                      style: TextStyle(
+                                        color: Colors.grey[700],
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                            Text(
+                              activity.type,
+                              style: TextStyle(
+                                color: Colors.grey[700],
+                              ),
+                            ),
+                            //_buildRatingStart(activity.rating),
+                            SizedBox(
+                              height: 10.0,
+                            ),
+                            Row(
+                              children: [
+                                Container( // container to host activity start times
+                                  width: 70.0,
+                                  decoration: BoxDecoration(
+                                    color: Theme.of(context).accentColor,
+                                    borderRadius: BorderRadius.circular(10.0)
+                                  ),
+                                  alignment: Alignment.center,
+                                  child: Text(activity.startTimes[0]), // the first start time
+                                ),
+                                SizedBox(
+                                  width: 10.0,
+                                ),
+                                Container( // container to host activity start times
+                                  width: 70.0,
+                                  decoration: BoxDecoration(
+                                    color: Theme.of(context).accentColor,
+                                    borderRadius: BorderRadius.circular(10.0)
+                                  ),
+                                  alignment: Alignment.center,
+                                  child: Text(activity.startTimes[1]), // the second start time
+                                )
+                              ],
+                            )
+                          ],
+                        ),
                       ),
                     )
                   ],
