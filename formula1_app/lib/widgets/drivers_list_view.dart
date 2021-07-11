@@ -42,12 +42,26 @@ class DriverListView extends StatelessWidget {
                         height: 50,
                         color: Colors.blue[800],
                       ),
+                      SizedBox(
+                        width: 10,
+                      ),
                       Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            driver.name
+                            driver.name,
+                            style: TextStyle(
+                              fontSize: 24,
+                              fontWeight: FontWeight.bold
                             ),
-                          Text(driver.team)
+                            ),
+                          Text(
+                            driver.team,
+                            style: TextStyle(
+                              fontSize: 15
+                            ),
+                          )
                         ],
                       )
                     ],
