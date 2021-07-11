@@ -78,6 +78,56 @@ class _DestinationScreenState extends State<DestinationScreen> {
                     ),
                   ],
                 ),
+              ),
+              Positioned( // give some spacing with the border of the device
+                left: 20.0, // 20 pixels from the left
+                bottom: 20.0, // 20 pixels from the bottom
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  
+                  children: <Widget> [
+                    Text( // city text above the image
+                      widget.destination.city,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 35.0,
+                        fontWeight: FontWeight.w600,
+                        letterSpacing: 1.2,
+                      ),
+                    ), 
+                    Row(
+                      
+                      children: <Widget>[
+                        Icon( // location arrow icon before the country text
+                          FontAwesomeIcons.locationArrow,
+                          size: 10.0,
+                          color: Colors.white70,
+                        ),
+                          
+                        SizedBox(
+                          width: 5.0,
+                        ),
+                          
+                        Text( // country text above the image
+                          widget.destination.country,
+                          style: TextStyle(
+                            color: Colors.white70,
+                            fontSize: 20.0,
+                          ),
+                        ),
+                      ],
+                    ) 
+                  ],
+                ),
+              ),
+              Positioned(
+                right: 20.0,
+                bottom: 20.0,
+                child: Icon(
+                  Icons.location_on,
+                  color: Colors.white70,
+                  size: 25.0,
+                ),
               )
             ],
           )
