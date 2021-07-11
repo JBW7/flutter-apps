@@ -31,6 +31,25 @@ class _DestinationScreenState extends State<DestinationScreen> {
                     )
                   ]
                 ), 
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(30.0), // rounding corners
+                  child: Image( // display image onto the screen
+                    image: AssetImage(widget.destination.imageUrl),
+                    fit: BoxFit.cover, 
+                  ),
+                ),
+              ),
+              Row( // buttons ontop of image
+                children: <Widget>[
+                  IconButton(
+                    icon: Icon(Icons.arrow_back), // back arrow button
+                    iconSize: 30.0,
+                    color: Colors.black,
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                  ),
+                ],
               )
             ],
           )
