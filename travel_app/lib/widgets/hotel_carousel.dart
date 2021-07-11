@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:travel_app/models/destination_model.dart';
+import 'package:travel_app/models/hotel_model.dart';
 
 class HotelCarousel extends StatelessWidget {
   
@@ -15,7 +14,7 @@ class HotelCarousel extends StatelessWidget {
 
                     children: [
                       Text(
-                        'Top Destinations',
+                        'Exclusive Hotels',
                         style: TextStyle(
                           fontSize: 22.0,
                           fontWeight: FontWeight.bold,
@@ -47,12 +46,12 @@ class HotelCarousel extends StatelessWidget {
                   height: 300.0,
                   child: ListView.builder( // displays carousel in a list view and allowing user to scroll through the list
                     scrollDirection: Axis.horizontal, // change scroll direction from vertical to horizontal
-                    itemCount: destinations.length, // number of items based on number of destinations in destination_model.dart
+                    itemCount: hotels.length, // number of items based on number of destinations in destination_model.dart
                     itemBuilder: (BuildContext context, int index){
-                      Destination destination = destinations[index]; // assign destination to a destinaton from destinations list
+                      Hotel hotel = hotels[index]; // assign destination to a destinaton from destinations list
                       return Container( // container to host containers for each container destination
                         margin: EdgeInsets.all(10.0),
-                        width: 210.0,
+                        width: 240.0,
                         child: Stack( // stacking allows widgets to be positioned on top of each other
                           alignment: Alignment.topCenter, // so that widget is in the center of the container
                           children: <Widget>[
@@ -60,7 +59,7 @@ class HotelCarousel extends StatelessWidget {
                               bottom: 15.0, // 15 pixels from the bottom of the container
                               child: Container( // each container for each destination's text
                                 height: 120.0,
-                                width: 200.0,
+                                width: 240.0,
                                 decoration: BoxDecoration(
                                   color: Colors.white,
                                   borderRadius: BorderRadius.circular(10.0), // make the text container have rounded corners
@@ -71,22 +70,41 @@ class HotelCarousel extends StatelessWidget {
                                   
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.end, // so that text is now in the bottom of the container
-                                    crossAxisAlignment: CrossAxisAlignment.start, // so that text is aligned to the left
+                                    crossAxisAlignment: CrossAxisAlignment.center, // so that text is aligned in the middle
                                     children: <Widget>[
                                       Text( // display number of activites in the destination taken from destination_model.dart Destinations class
-                                        '${destination.activities.length} activities', // number of activities = length of activities list in destination_model.dart activities list
+                                        hotel.name, // the name of the hotel
                                         style: TextStyle(
                                           fontSize: 22.0,
                                           fontWeight: FontWeight.w600,
                                           letterSpacing: 1.2,
                                         ),
                                       ), 
+
+
+                                      SizedBox(
+                                        height: 2.0,
+                                      ),
+
                                       Text( // display the description of activity in the destination taken from destination_model.dart Destinations class
-                                        destination.description,
+                                        hotel.address, // display the address of the hotel
                                         style: TextStyle(
                                           color: Colors.grey
                                         ),
-                                        ) 
+                                      ),
+
+                                      SizedBox(
+                                        height: 2.0,
+                                      ),
+
+                                      Text( // display the price of each hotel
+                                        '\$${hotel.price} / night',
+                                        style: TextStyle(
+                                          fontSize: 18.0,
+                                          fontWeight: FontWeight.w600,
+                                        ),
+                                      ),
+
                                     ],
                                   ),
                                 ),
@@ -105,60 +123,14 @@ class HotelCarousel extends StatelessWidget {
                                   ] 
                               ),
                               
-                              child: Stack(
-                                children: <Widget>[
-                                  ClipRRect(
-                                    borderRadius: BorderRadius.circular(20.0),
-                                    child: Image( // the image of destination
-                                      height: 180.0,
-                                      width: 180.0,
-                                      image: AssetImage(destination.imageUrl), // taken from class destination from destination_model.dart
-                                      fit: BoxFit.cover,
-                                    ),
-                                  ),
-                                  Positioned( // position the text 
-                                    left: 10.0, 
-                                    bottom: 10.0,
-
-                                    child: Column(
-                                      crossAxisAlignment: CrossAxisAlignment.start,
-                                      
-                                      children: <Widget> [
-                                        Text( // city text above the image
-                                          destination.city,
-                                          style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 24.0,
-                                            fontWeight: FontWeight.w600,
-                                            letterSpacing: 1.2,
-                                          ),
-                                        ), 
-                                        Row(
-                                          
-                                          children: <Widget>[
-                                            Icon( // location arrow icon before the country text
-                                              FontAwesomeIcons.locationArrow,
-                                              size: 10.0,
-                                              color: Colors.white,
-                                            ),
-                                  
-                                            SizedBox(
-                                              width: 5.0,
-                                            ),
-                                  
-                                            Text( // country text above the image
-                                              destination.country,
-                                              style: TextStyle(
-                                                color: Colors.white,
-                                                
-                                              ),
-                                            ),
-                                          ],
-                                        ) 
-                                      ],
-                                    ),
-                                  )
-                                ],
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(20.0),
+                                child: Image( // the image of destination
+                                  height: 180.0,
+                                  width: 220.0,
+                                  image: AssetImage(hotel.imageUrl), // taken from class destination from destination_model.dart
+                                  fit: BoxFit.cover,
+                                ),
                               ),
                             )
                           ],
