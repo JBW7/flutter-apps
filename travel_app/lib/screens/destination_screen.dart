@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:travel_app/models/activity_model.dart';
 import 'package:travel_app/models/destination_model.dart';
 
 class DestinationScreen extends StatefulWidget {
@@ -130,6 +131,39 @@ class _DestinationScreenState extends State<DestinationScreen> {
                 ),
               )
             ],
+          ),
+          Expanded( // specify length of listview (extending throughout the device)
+            child: ListView.builder( // creating a activity listview
+              itemCount: widget.destination.activities.length,
+              itemBuilder: (BuildContext context, int index) { // so that we can build multiple widgets at the same time
+                
+                Activity activity = widget.destination.activities[index]; // building the activities containers
+                return Stack( // stacked bec widgets is stacked ontop of eachother
+                  children: [
+                    Container(
+                      margin: EdgeInsets.fromLTRB(40.0, 5.0, 20.0, 5.0),
+                      height: 170.0,
+                      width: double.infinity, // meaning expand to the full width of the container
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(20.0) // rounded edges
+                      ),
+                      child: Column( // for details in the listview
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(activity.name),
+                              Text('\$${activity.price}'),
+                            ],
+                          ),
+                        ],
+                      ),
+                    )
+                  ],
+                );
+              }
+            ),
           )
         ],
       ),
