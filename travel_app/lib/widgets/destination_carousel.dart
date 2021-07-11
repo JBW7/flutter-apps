@@ -23,15 +23,20 @@ class DestinationCarousel extends StatelessWidget {
                         ),
 
                       // See all title
-                      Text(
-                        'See All',
-                        style: TextStyle(
-                          fontSize: 16.0,
-                          fontWeight: FontWeight.w600,
-                          color: Theme.of(context).primaryColor, // set color the same as the primary theme of this app
-                          letterSpacing: 1.0,
-                        ),
-                        ),
+                      GestureDetector( // making text widget clickable
+                        onTap: () {
+                          print('see all');
+                        },
+                        child: Text(
+                          'See All',
+                          style: TextStyle(
+                            fontSize: 16.0,
+                            fontWeight: FontWeight.w600,
+                            color: Theme.of(context).primaryColor, // set color the same as the primary theme of this app
+                            letterSpacing: 1.0,
+                          ),
+                          ),
+                      ),
                     ],
                   ),
                 ),
