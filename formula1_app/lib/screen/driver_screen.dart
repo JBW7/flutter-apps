@@ -14,6 +14,7 @@ class _DriverScreenState extends State<DriverScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Driver Standings'),
+        backgroundColor: Colors.blue[700],
       ),
       body: SafeArea(
         child: ListView(
