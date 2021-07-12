@@ -21,7 +21,7 @@ class DriverListView extends StatelessWidget {
                   onTap: () {
                     Navigator.push(
                       context, 
-                      MaterialPageRoute(builder: (context) => DriverBioScreen()),
+                      MaterialPageRoute(builder: (_) => DriverBioScreen(driver: driver)),
                     );
                   },
                   child: Container(
