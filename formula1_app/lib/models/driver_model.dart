@@ -12,13 +12,14 @@ class Driver {
   String fastestLap;
   String gpEntered;
   String worldchampionships;
+  String driverImageUrl;
+  String teamImageUrl;
 
   Driver({
     required this.name,
     required this.rank,
     required this.team,
     required this.points,
-    //required this.color,
     required this.number,
     required this.firstName,
     required this.lastName,
@@ -27,6 +28,8 @@ class Driver {
     required this.fastestLap,
     required this.gpEntered,
     required this.worldchampionships,
+    required this.driverImageUrl,
+    required this.teamImageUrl
   });
 }
 
@@ -44,7 +47,9 @@ List <Driver> drivers = [
     podiums: '50',
     fastestLap: '14',
     gpEntered: '128',
-    worldchampionships: '0'
+    worldchampionships: '0',
+    driverImageUrl: 'assets/images/MaxVerstappen_img.png',
+    teamImageUrl: 'assets/images/RedBull_img.png'
   ),
   Driver(
     name: 'Lewis Hamilton',
@@ -60,6 +65,8 @@ List <Driver> drivers = [
     fastestLap: '56',
     gpEntered: '275',
     worldchampionships: '7',
+    driverImageUrl: 'assets/images/LewisHamilton_img.png',
+    teamImageUrl: 'assets/images/Mercedes_img.png'
   ),
   Driver(
     name: 'Sergio Perez',
@@ -74,7 +81,9 @@ List <Driver> drivers = [
     wins: '2',
     fastestLap: '4',
     gpEntered: '202',
-    worldchampionships: '0'
+    worldchampionships: '0',
+    driverImageUrl: 'assets/images/SergioPerez_img.png',
+    teamImageUrl: 'formula1_app/assets/images/RedBull_img.png'
   ),
   Driver(
     name: 'Lando Norris',
@@ -89,7 +98,9 @@ List <Driver> drivers = [
     wins: '0',
     fastestLap: '2',
     gpEntered: '47',
-    worldchampionships: '0'
+    worldchampionships: '0',
+    driverImageUrl: 'assets/images/LandoNorris_img.png',
+    teamImageUrl: 'assets/images/Mclaren_img.png'
   ),
   Driver(
     name: 'Valtteri Bottas',
@@ -104,7 +115,9 @@ List <Driver> drivers = [
     wins: '9',
     fastestLap: '17',
     gpEntered: '166',
-    worldchampionships: '0'
+    worldchampionships: '0',
+    driverImageUrl: 'assets/images/ValtteriBottas_img.png',
+    teamImageUrl: 'assets/images/Mercedes_img.png'
   ),
   Driver(
     name: 'Charles Leclerc',
@@ -119,7 +132,9 @@ List <Driver> drivers = [
     wins: '0',
     fastestLap: '4',
     gpEntered: '68',
-    worldchampionships: '0'
+    worldchampionships: '0',
+    driverImageUrl: 'assets/images/CharlesLeclerc_img.png',
+    teamImageUrl: 'assets/images/Ferrari_img.png'
   ),
   Driver(
     name: 'Carlos Sainz',
@@ -134,7 +149,9 @@ List <Driver> drivers = [
     wins: '0',
     fastestLap: '1',
     gpEntered: '128',
-    worldchampionships: '0'
+    worldchampionships: '0',
+    driverImageUrl: 'assets/images/CarlosSainz_img.png',
+    teamImageUrl: 'assets/images/Ferrari_img.png',
   ),
   Driver(
     name: 'Daniel Ricciardo',
@@ -149,7 +166,9 @@ List <Driver> drivers = [
     wins: '7',
     fastestLap: '15',
     gpEntered: '197',
-    worldchampionships: '0'
+    worldchampionships: '0',
+    driverImageUrl: 'assets/images/DanielRicciardo_img.png',
+    teamImageUrl: 'assets/images/Mclaren_img.png',
   ),
   Driver(
     name: 'Pierre Gasly',
@@ -164,7 +183,9 @@ List <Driver> drivers = [
     wins: '1',
     fastestLap: '2',
     gpEntered: '73',
-    worldchampionships: '0'
+    worldchampionships: '0',
+    driverImageUrl: 'assets/images/PierreGasly_img.png',
+    teamImageUrl: 'assets/images/Alphatauri_img.png'
   ),
   Driver(
     name: 'Sebastian Vettel',
@@ -179,7 +200,9 @@ List <Driver> drivers = [
     wins: '53',
     fastestLap: '38',
     gpEntered: '267',
-    worldchampionships: '4'
+    worldchampionships: '4',
+    driverImageUrl: 'assets/images/SebastianVettel_img.png',
+    teamImageUrl: 'assets/images/AstonMartinRacing_img.png',
   ),
   Driver(
     name: 'Fernando Alonso',
@@ -194,7 +217,9 @@ List <Driver> drivers = [
     wins: '32',
     fastestLap: '23',
     gpEntered: '323',
-    worldchampionships: '2'
+    worldchampionships: '2',
+    driverImageUrl: 'assets/images/FernandoAlonso_img.png',
+    teamImageUrl: 'assets/images/Alpine_img.png'
   ),
   Driver(
     name: 'Lance Stroll',
@@ -209,7 +234,9 @@ List <Driver> drivers = [
     wins: '0',
     fastestLap: '0',
     gpEntered: '87',
-    worldchampionships: '0'
+    worldchampionships: '0',
+    driverImageUrl: 'assets/images/LanceStroll_img.png',
+    teamImageUrl: 'assets/images/AstonMartinRacing_img.png',
   ),
   Driver(
     name: 'Esteban Ocon',
@@ -224,7 +251,9 @@ List <Driver> drivers = [
     wins: '0',
     fastestLap: '0',
     gpEntered: '76',
-    worldchampionships: '0'
+    worldchampionships: '0',
+    driverImageUrl: 'assets/images/EstebanOcon_img.png',
+    teamImageUrl: 'assets/images/Alpine_img.png',
   ),
   Driver(
     name: 'Yuki Tsunoda',
@@ -239,7 +268,9 @@ List <Driver> drivers = [
     wins: '0',
     fastestLap: '0',
     gpEntered: '9',
-    worldchampionships: '0'
+    worldchampionships: '0',
+    driverImageUrl: 'assets/images/YukiTsunoda_img.png',
+    teamImageUrl: 'assets/images/Alphatauri_img.png',
   ),
   Driver(
     name: 'Kimi Räikkönen',
@@ -254,7 +285,9 @@ List <Driver> drivers = [
     wins: '21',
     fastestLap: '46',
     gpEntered: '341',
-    worldchampionships: '1'
+    worldchampionships: '1',
+    driverImageUrl: 'assets/images/KimiRaikonen_img.png',
+    teamImageUrl: 'assets/images/AlfaRomeo_img.png'
   ),
   Driver(
     name: 'Antonio Giovinazzi',
@@ -269,7 +302,9 @@ List <Driver> drivers = [
     wins: '0',
     fastestLap: '0',
     gpEntered: '49',
-    worldchampionships: '0'
+    worldchampionships: '0',
+    driverImageUrl: 'assets/images/AntonioGiovinazzi_img.png',
+    teamImageUrl: 'assets/images/AlfaRomeo_img.png'
   ),
   Driver(
     name: 'George Russel',
@@ -284,7 +319,9 @@ List <Driver> drivers = [
     wins: '0',
     fastestLap: '0',
     gpEntered: '47',
-    worldchampionships: '0'
+    worldchampionships: '0',
+    driverImageUrl: 'assets/images/GeorgeRussel_img.png',
+    teamImageUrl: 'assets/images/Williams_img.png'
   ),
   Driver(
     name: 'Mick Schumacher',
@@ -299,7 +336,9 @@ List <Driver> drivers = [
     wins: '0',
     fastestLap: '0',
     gpEntered: '9',
-    worldchampionships: '0'
+    worldchampionships: '0',
+    driverImageUrl: 'assets/images/MickSchumacher_img.png',
+    teamImageUrl: 'assets/images/Williams_img.png'
   ),
   Driver(
     name: 'Nikita Mazepin',
@@ -314,7 +353,9 @@ List <Driver> drivers = [
     wins: '0',
     fastestLap: '0',
     gpEntered: '9',
-    worldchampionships: '0'
+    worldchampionships: '0',
+    driverImageUrl: 'assets/images/NikitaMazepin_img.png',
+    teamImageUrl: 'assets/images/Haas_img.png',
   ),
   Driver(
     name: 'Nicholas Latifi',
@@ -329,6 +370,8 @@ List <Driver> drivers = [
     wins: '0',
     fastestLap: '0',
     gpEntered: '26',
-    worldchampionships: '0'
+    worldchampionships: '0',
+    driverImageUrl: 'assets/images/NicholasLatiffi_img.png',
+    teamImageUrl: 'assets/images/Williams_img.png',
   ),
 ];
