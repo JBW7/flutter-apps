@@ -4,6 +4,14 @@ class Driver {
   String team;
   String points;
   //String color;
+  String number;
+  String firstName;
+  String lastName;
+  String wins;
+  String podiums;
+  String fastestLap;
+  String gpEntered;
+  String worldchampionships;
 
   Driver({
     required this.name,
@@ -11,6 +19,14 @@ class Driver {
     required this.team,
     required this.points,
     //required this.color,
+    required this.number,
+    required this.firstName,
+    required this.lastName,
+    required this.wins,
+    required this.podiums,
+    required this.fastestLap,
+    required this.gpEntered,
+    required this.worldchampionships,
   });
 }
 
@@ -21,6 +37,14 @@ List <Driver> drivers = [
     team: 'Red Bull Racing',
     points: '182',
     //color: 'blue[800]'
+    number: '33',
+    firstName: 'Max ',
+    lastName: 'Verstappen',
+    wins: '15',
+    podiums: '50',
+    fastestLap: '14',
+    gpEntered: '128',
+    worldchampionships: '0'
   ),
   Driver(
     name: 'Lewis Hamilton',
@@ -28,6 +52,14 @@ List <Driver> drivers = [
     team: 'Mercedes',
     points: '150',
     //color: 'blue[800]',
+    number: '44',
+    firstName: 'Lewis ',
+    lastName: 'Hamilton',
+    wins: '98',
+    podiums: '171',
+    fastestLap: '56',
+    gpEntered: '275',
+    worldchampionships: '7',
   ),
   Driver(
     name: 'Sergio Perez',
@@ -35,13 +67,29 @@ List <Driver> drivers = [
     team: 'Red Bull Racing',
     points: '104',
     //color: 'blue[800]',
+    number: '11',
+    firstName: 'Sergio ',
+    lastName: 'Perez',
+    podiums: '12',
+    wins: '2',
+    fastestLap: '4',
+    gpEntered: '202',
+    worldchampionships: '0'
   ),
   Driver(
     name: 'Lando Norris',
     rank: '4',
     team: 'McLaren',
-    points: '101',
+    points: '11',
     //color: 'blue[800]',
+    number: '4',
+    firstName: 'Lando ',
+    lastName: 'Norris',
+    podiums: '4',
+    wins: '0',
+    fastestLap: '2',
+    gpEntered: '47',
+    worldchampionships: '0'
   ),
   Driver(
     name: 'Valtteri Bottas',
@@ -49,6 +97,14 @@ List <Driver> drivers = [
     team: 'Mercedes',
     points: '92',
     //color: 'blue[800]',
+    number: '77',
+    firstName: 'Valtteri ',
+    lastName: 'Bottas',
+    podiums: '61',
+    wins: '9',
+    fastestLap: '17',
+    gpEntered: '166',
+    worldchampionships: '0'
   ),
   Driver(
     name: 'Charles Leclerc',
@@ -56,6 +112,14 @@ List <Driver> drivers = [
     team: 'Ferrari',
     points: '62',
     //color: 'blue[800]',
+    number: '16',
+    firstName: 'Charles ',
+    lastName: 'Leclerc',
+    podiums: '12',
+    wins: '0',
+    fastestLap: '4',
+    gpEntered: '68',
+    worldchampionships: '0'
   ),
   Driver(
     name: 'Carlos Sainz',
@@ -63,6 +127,14 @@ List <Driver> drivers = [
     team: 'Ferrari',
     points: '60',
     //color: 'blue[800]',
+    number: '55',
+    firstName: 'Carlos ',
+    lastName: 'Sainz',
+    podiums: '3',
+    wins: '0',
+    fastestLap: '1',
+    gpEntered: '128',
+    worldchampionships: '0'
   ),
   Driver(
     name: 'Daniel Ricciardo',
@@ -70,6 +142,14 @@ List <Driver> drivers = [
     team: 'McLaren',
     points: '40',
     //color: 'blue[800]',
+    number: '3',
+    firstName: 'Daniel ',
+    lastName: 'Ricciardo',
+    podiums: '31',
+    wins: '7',
+    fastestLap: '15',
+    gpEntered: '197',
+    worldchampionships: '0'
   ),
   Driver(
     name: 'Pierre Gasly',
@@ -77,6 +157,14 @@ List <Driver> drivers = [
     team: 'AlphaTauri',
     points: '39',
     //color: 'blue[800]',
+    number: '10',
+    firstName: 'Pierre ',
+    lastName: 'Gasly',
+    podiums: '3',
+    wins: '1',
+    fastestLap: '2',
+    gpEntered: '73',
+    worldchampionships: '0'
   ),
   Driver(
     name: 'Sebastian Vettel',
@@ -84,6 +172,14 @@ List <Driver> drivers = [
     team: 'Aston Martin',
     points: '30',
     //color: 'blue[800]',
+    number: '5',
+    firstName: 'Sebastian ',
+    lastName: 'Vettel',
+    podiums: '122',
+    wins: '53',
+    fastestLap: '38',
+    gpEntered: '267',
+    worldchampionships: '4'
   ),
   Driver(
     name: 'Fernando Alonso',
@@ -91,6 +187,14 @@ List <Driver> drivers = [
     team: 'Alpine',
     points: '20',
     //color: 'blue[800]',
+    number: '14',
+    firstName: 'Fernando ',
+    lastName: 'Alonso',
+    podiums: '97',
+    wins: '32',
+    fastestLap: '23',
+    gpEntered: '323',
+    worldchampionships: '2'
   ),
   Driver(
     name: 'Lance Stroll',
@@ -98,6 +202,14 @@ List <Driver> drivers = [
     team: 'Aston Martin',
     points: '14',
     //color: 'blue[800]',
+    number: '18',
+    firstName: 'Lance ',
+    lastName: 'Stroll',
+    podiums: '3',
+    wins: '0',
+    fastestLap: '0',
+    gpEntered: '87',
+    worldchampionships: '0'
   ),
   Driver(
     name: 'Esteban Ocon',
@@ -105,6 +217,14 @@ List <Driver> drivers = [
     team: 'Alpine',
     points: '12',
     //color: 'blue[800]',
+    number: '31',
+    firstName: 'Esteban Ocon ',
+    lastName: 'Perez',
+    podiums: '1',
+    wins: '0',
+    fastestLap: '0',
+    gpEntered: '76',
+    worldchampionships: '0'
   ),
   Driver(
     name: 'Yuki Tsunoda',
@@ -112,6 +232,14 @@ List <Driver> drivers = [
     team: 'AlphaTauri',
     points: '9',
     //color: 'blue[800]',
+    number: '22',
+    firstName: 'Yuki ',
+    lastName: 'Tsunoda',
+    podiums: '0',
+    wins: '0',
+    fastestLap: '0',
+    gpEntered: '9',
+    worldchampionships: '0'
   ),
   Driver(
     name: 'Kimi Räikkönen',
@@ -119,6 +247,14 @@ List <Driver> drivers = [
     team: 'Alfa Romeo Racing',
     points: '1',
     //color: 'blue[800]',
+    number: '7',
+    firstName: 'Kimi  ',
+    lastName: 'Räikkönen',
+    podiums: '103',
+    wins: '21',
+    fastestLap: '46',
+    gpEntered: '341',
+    worldchampionships: '1'
   ),
   Driver(
     name: 'Antonio Giovinazzi',
@@ -126,13 +262,29 @@ List <Driver> drivers = [
     team: 'Alfa Romeo Racing',
     points: '1',
     //color: 'blue[800]',
+    number: '99',
+    firstName: 'Antonio  ',
+    lastName: 'Giovinazzi',
+    podiums: '0',
+    wins: '0',
+    fastestLap: '0',
+    gpEntered: '49',
+    worldchampionships: '0'
   ),
   Driver(
     name: 'George Russel',
     rank: '17',
-    team: 'Mercedes',
+    team: 'Williams',
     points: '0',
     //color: 'blue[800]',
+    number: '63',
+    firstName: 'George  ',
+    lastName: 'Russel',
+    podiums: '0',
+    wins: '0',
+    fastestLap: '0',
+    gpEntered: '47',
+    worldchampionships: '0'
   ),
   Driver(
     name: 'Mick Schumacher',
@@ -140,6 +292,14 @@ List <Driver> drivers = [
     team: 'Haas F1 Team',
     points: '0',
     //color: 'blue[800]',
+    number: '47',
+    firstName: 'Mick  ',
+    lastName: 'Schumacher',
+    podiums: '0',
+    wins: '0',
+    fastestLap: '0',
+    gpEntered: '9',
+    worldchampionships: '0'
   ),
   Driver(
     name: 'Nikita Mazepin',
@@ -147,6 +307,14 @@ List <Driver> drivers = [
     team: 'Haas F1 Team',
     points: '0',
     //color: 'blue[800]',
+    number: '9',
+    firstName: 'Nikita  ',
+    lastName: 'Mazepin',
+    podiums: '0',
+    wins: '0',
+    fastestLap: '0',
+    gpEntered: '9',
+    worldchampionships: '0'
   ),
   Driver(
     name: 'Nicholas Latifi',
@@ -154,5 +322,13 @@ List <Driver> drivers = [
     team: 'Williams',
     points: '0',
     //color: 'blue[800]',
+    number: '6',
+    firstName: 'Nicholas ',
+    lastName: 'Latifi',
+    podiums: '0',
+    wins: '0',
+    fastestLap: '0',
+    gpEntered: '26',
+    worldchampionships: '0'
   ),
 ];
