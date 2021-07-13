@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:formula1_app/widgets/drivers_list_view.dart';
 
 class DriverScreen extends StatefulWidget {
@@ -9,6 +10,9 @@ class DriverScreen extends StatefulWidget {
 
 
 class _DriverScreenState extends State<DriverScreen> {
+
+  int currentTab = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,6 +26,40 @@ class _DriverScreenState extends State<DriverScreen> {
             DriverListView(),
           ],
         ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: currentTab,
+
+        onTap: (int value) {
+          setState(() { 
+            currentTab = value;  
+          });
+        },
+
+
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.groups,
+              size: 30,
+              ),
+            label: ''
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.people,
+              size: 30,
+              ),
+            label: ''
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.flag,
+              size: 30,
+              ),
+            label: ''
+          )
+        ],
       ),
     );
   }
