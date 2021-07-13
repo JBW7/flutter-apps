@@ -54,52 +54,64 @@ class _ConstructorBioScreenState extends State<ConstructorBioScreen> {
                   SafeArea(
                     child: Padding(
                       padding: EdgeInsets.only(top: 30, left: 20),
-                      child: Container(
-                        height: 88,
-                        width: 400,
-                        //color: Colors.white,
-                        child: Container(
-                          child: Row(
-                            children: [
-                              Container(
-                                height: 88,
-                                width: 4,
-                                color: Colors.blue[800],
-                              ),
-                              Padding(
-                                padding: EdgeInsets.only(left: 10),
-                                child: Row(
-                                  children: [
-                                    Column(
-                                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                                      crossAxisAlignment: CrossAxisAlignment.start,
+                      child: Column(
+                        children: [
+                          Container(
+                            height: 88,
+                            width: 400,
+                            //color: Colors.white,
+                            child: Container(
+                              child: Row(
+                                children: [
+                                  Container(
+                                    height: 88,
+                                    width: 4,
+                                    color: Colors.blue[800],
+                                  ),
+                                  Padding(
+                                    padding: EdgeInsets.only(left: 10),
+                                    child: Row(
                                       children: [
-                                        Text(
-                                          widget.constructor.name,
-                                          style: TextStyle(
-                                            fontSize: 32,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.white
-                                          ),
+                                        Column(
+                                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                            Text(
+                                              widget.constructor.name,
+                                              style: TextStyle(
+                                                fontSize: 32,
+                                                fontWeight: FontWeight.bold,
+                                                color: Colors.white
+                                              ),
+                                            ),
+                                            Image(
+                                              image: AssetImage(widget.constructor.logoUrl),
+                                              height: 50,
+                                            )
+                                          ],
                                         ),
-                                        Image(
-                                          image: AssetImage(widget.constructor.logoUrl),
-                                          height: 50,
-                                        )
                                       ],
-                                    ),
-                                  ],
-                                )
-                              )
-                            ],
+                                    )
+                                  )
+                                ],
+                              ),
+                            ),
                           ),
-                        ),
+                          Padding(
+                            padding: EdgeInsets.only(left: 125.0),
+                            child: Image(
+                              image: AssetImage(widget.constructor.carUrl),
+                              height: 75,
+                            ),
+                          )
+                        ],
                       ),
                     ),
                   )
                 ], 
               ),
             ),
+            
           ],
         ),
       ),
