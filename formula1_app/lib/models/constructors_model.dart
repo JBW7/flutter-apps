@@ -12,6 +12,10 @@ class Constructor {
   String driver1Url;
   String driver2;
   String driver2Url;
+  String driver1_fname;
+  String driver1_lname;
+  String driver2_fname;
+  String driver2_lname;
   String teamChief;
   String chasis;
   String powerUnit;
@@ -30,6 +34,10 @@ class Constructor {
     required this.driver1Url,
     required this.driver2,
     required this.driver2Url,
+    required this.driver1_fname,
+    required this.driver1_lname,
+    required this.driver2_fname,
+    required this.driver2_lname,
     required this.teamChief,
     required this.chasis,
     required this.powerUnit,
@@ -52,6 +60,10 @@ List<Constructor> constructors = [
     driver2: 'Sergio Perez',
     driver1Url: 'assets/images/MaxVerstappen_img.png',
     driver2Url: 'assets/images/SergioPerez_img.png',
+    driver1_fname: 'Max ',
+    driver1_lname: 'Verstappen',
+    driver2_fname: 'Sergio ',
+    driver2_lname: 'Perez',
     teamChief: 'Christian Horner',
     chasis: 'RB16B',
     powerUnit: 'Honda'
@@ -70,6 +82,10 @@ List<Constructor> constructors = [
     driver2: 'Valtteri Bottas',
     driver1Url: 'assets/images/LewisHamilton_img.png',
     driver2Url: 'assets/images/ValtteriBottas_img.png',
+    driver1_fname: 'Lewis ',
+    driver1_lname: 'Hamilton',
+    driver2_fname: 'Valtteri ',
+    driver2_lname: 'Bottas',
     teamChief: 'Toto Wolf',
     chasis: 'W12',
     powerUnit: 'Mercedes'
@@ -88,6 +104,10 @@ List<Constructor> constructors = [
     driver2: 'Daniel Ricciardo',
     driver1Url: 'assets/images/LandoNorris_img',
     driver2Url: 'assets/images/DanielRicciardo_img.png',
+    driver1_fname: 'Lando ',
+    driver1_lname: 'Norris',
+    driver2_fname: 'Daniel ',
+    driver2_lname: 'Ricciardo',
     teamChief: 'Andreas Seidl',
     chasis: 'MCL35M',
     powerUnit: 'Mercedes'
@@ -106,6 +126,10 @@ List<Constructor> constructors = [
     driver2: 'Carlos Sainz',
     driver1Url: 'assets/images/CharlesLeclerc_img.png',
     driver2Url: 'assets/images/CarlosSainz_img',
+    driver1_fname: 'Charles ',
+    driver1_lname: 'Leclerc',
+    driver2_fname: 'Carlos ',
+    driver2_lname: 'Sainz',
     teamChief: 'Mattia Binotto',
     chasis: 'SF21',
     powerUnit: 'Ferrari'
@@ -124,6 +148,10 @@ List<Constructor> constructors = [
     driver2: 'Yuki Tsunoda',
     driver1Url: 'assets/images/PierreGasly_img.png',
     driver2Url: 'assets/images/YukiTsunoda_img.png',
+    driver1_fname: 'Pierre ',
+    driver1_lname: 'Gasly',
+    driver2_fname: 'Yuki ',
+    driver2_lname: 'Tsunoda',
     teamChief: 'Franz Tost',
     chasis: 'AT02',
     powerUnit: 'Honda'
@@ -160,6 +188,10 @@ List<Constructor> constructors = [
     driver2: 'Esteban Ocon',
     driver1Url: 'assets/images/FernandoAlonso_img.png',
     driver2Url: 'assets/images/EstebanOcon_img.png',
+    driver1_fname: 'Fernando ',
+    driver1_lname: 'Alonso',
+    driver2_fname: 'Esteban ',
+    driver2_lname: 'Ocon',
     teamChief: 'Davide Brivio',
     chasis: 'A521',
     powerUnit: 'Renault'
@@ -178,6 +210,10 @@ List<Constructor> constructors = [
     driver2: 'Antonio Giovinazzi',
     driver1Url: 'assets/images/KimiRaikonen_img.png',
     driver2Url: 'assets/images/AntonioGiovinazzi_img.png',
+    driver1_fname: 'Kimi ',
+    driver1_lname: 'Räikkönen',
+    driver2_fname: 'Antonio ',
+    driver2_lname: 'Giovinazzi',
     teamChief: 'Frédéric Vasseur',
     chasis: 'C41',
     powerUnit: 'Ferrari'
@@ -196,6 +232,10 @@ List<Constructor> constructors = [
     driver2: 'Nicholas Latifi',
     driver1Url: 'assets/images/GeorgeRussel_img.png',
     driver2Url: 'assets/images/NicholasLatiffi_img.png',
+    driver1_fname: 'George ',
+    driver1_lname: 'Russel',
+    driver2_fname: 'Nicholas ',
+    driver2_lname: 'Latifi',
     teamChief: 'Jost Capito',
     chasis: 'FW43B',
     powerUnit: 'Mercedes'
@@ -214,6 +254,10 @@ List<Constructor> constructors = [
     driver2: 'Nikita Mazepin',
     driver1Url: 'assets/images/MickSchumacher_img.png',
     driver2Url: 'assets/images/NikitaMazepin_img.png',
+    driver1_fname: 'Mick ',
+    driver1_lname: 'Schumacher',
+    driver2_fname: 'Nikita ',
+    driver2_lname: 'Mazepin',
     teamChief: 'Guenther Steiner',
     chasis: 'VF-21',
     powerUnit: 'Ferrari'
