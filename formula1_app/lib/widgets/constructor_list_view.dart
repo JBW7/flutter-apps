@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:formula1_app/models/constructors_model.dart';
+import 'package:formula1_app/screen/constructor_bio_screen.dart';
 
 class ConstructorListView extends StatelessWidget {
 
@@ -14,7 +15,10 @@ class ConstructorListView extends StatelessWidget {
           Constructor constructor = constructors[index];
           return GestureDetector(
             onTap: () {
-
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (_) => ConstructorBioScreen(constructor: constructor,))
+              );
             },
             child: Container(
               margin: EdgeInsets.fromLTRB(8, 8, 8, 0),
