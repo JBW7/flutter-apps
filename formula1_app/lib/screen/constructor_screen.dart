@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:formula1_app/widgets/constructor_list_view.dart';
 
 class ConstructorScreen extends StatefulWidget {
 
@@ -12,6 +13,7 @@ class _ConstructorScreenState extends State<ConstructorScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Constructors Standings'),
+        backgroundColor: Colors.grey[850],
       ),
       body: SafeArea(
         child: ListView(
