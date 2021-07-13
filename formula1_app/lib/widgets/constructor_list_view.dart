@@ -45,9 +45,32 @@ class ConstructorListView extends StatelessWidget {
                           height: 50, 
                           color: Colors.blue[800],
                         ),
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            constructor.name,
+                            style: TextStyle(
+                              fontSize: 24,
+                              fontWeight: FontWeight.bold
+                            ),
+                          ),
+                          Text(
+                            '${constructor.driver1_lname} / ${constructor.driver2_lname}',
+                            style: TextStyle(
+                              fontSize: 15,
+                            ),
+                          ),
+                        ],
                       )
                     ],
-                  )
+                  ),
+                  
                 ],
               ),
             ),
