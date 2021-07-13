@@ -11,14 +11,14 @@ class DriverScreen extends StatefulWidget {
 
 class _DriverScreenState extends State<DriverScreen> {
 
-  int currentTab = 0;
+  int currentTab = 1;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('Driver Standings'),
-        backgroundColor: Colors.blue[700],
+        backgroundColor: Colors.grey[850],
       ),
       body: SafeArea(
         child: ListView(
@@ -28,20 +28,22 @@ class _DriverScreenState extends State<DriverScreen> {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.grey[850],
+        unselectedItemColor: Colors.white,
+        selectedItemColor: Colors.blue[500],
         currentIndex: currentTab,
-
         onTap: (int value) {
           setState(() { 
-            currentTab = value;  
+            currentTab = value;
+            print(currentTab);  
           });
         },
-
-
         items: [
           BottomNavigationBarItem(
             icon: Icon(
               Icons.groups,
               size: 30,
+              //color: Colors.white,
               ),
             label: ''
           ),
@@ -49,6 +51,7 @@ class _DriverScreenState extends State<DriverScreen> {
             icon: Icon(
               Icons.people,
               size: 30,
+              //color: Colors.white,
               ),
             label: ''
           ),
@@ -56,6 +59,7 @@ class _DriverScreenState extends State<DriverScreen> {
             icon: Icon(
               Icons.flag,
               size: 30,
+              //color: Colors.white,
               ),
             label: ''
           )
