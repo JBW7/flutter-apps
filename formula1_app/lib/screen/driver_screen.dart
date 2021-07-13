@@ -27,43 +27,46 @@ class _DriverScreenState extends State<DriverScreen> {
           ],
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.grey[850],
-        unselectedItemColor: Colors.white,
-        selectedItemColor: Colors.blue[500],
-        currentIndex: currentTab,
-        onTap: (int value) {
-          setState(() { 
-            currentTab = value;
-            print(currentTab);  
-          });
-        },
-        items: [
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.groups,
-              size: 30,
-              //color: Colors.white,
-              ),
-            label: ''
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.people,
-              size: 30,
-              //color: Colors.white,
-              ),
-            label: ''
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.flag,
-              size: 30,
-              //color: Colors.white,
-              ),
-            label: ''
-          )
-        ],
+      bottomNavigationBar: SizedBox(
+        //height: 80,
+        child: BottomNavigationBar(
+          backgroundColor: Colors.grey[850],
+          unselectedItemColor: Colors.white,
+          selectedItemColor: Colors.blue[500],
+          currentIndex: currentTab,
+          onTap: (int value) {
+            setState(() { 
+              currentTab = value;
+              print(currentTab);  
+            });
+          },
+          items: [
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.groups,
+                size: 30,
+                //color: Colors.white,
+                ),
+              label: ''
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.people,
+                size: 30,
+                //color: Colors.white,
+                ),
+              label: ''
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.flag,
+                size: 30,
+                //color: Colors.white,
+                ),
+              label: ''
+            )
+          ],
+        ),
       ),
     );
   }
