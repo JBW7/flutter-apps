@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:formula1_app/models/driver_model.dart';
 
-
 class DriverBioScreen extends StatefulWidget {
 
   final Driver driver;
@@ -123,153 +122,146 @@ class _DriverBioScreenState extends State<DriverBioScreen> {
               ],
             ),
           ),
-          Padding(
-            padding: EdgeInsets.only(top: 20),
-            child: Column(
-              children: [
-                Container(
-                  // height: 1500,
-                  // width: MediaQuery.of(context).size.width,
-                  child: Column(
+          Column(
+            children: [
+              Column(
+                children: [
+                  Text(
+                    "Achievements",
+                    style: TextStyle(
+                      fontSize: 32,
+                      fontWeight: FontWeight.bold
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(top: 0, left: 20),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          height: 400,
+                          width: 228,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Text(
+                                'Victories',
+                                style: TextStyle(
+                                  fontSize: 30,
+                                  fontWeight: FontWeight.bold
+                                ),
+                              ),
+                              Text(
+                                'Podiums',
+                                style: TextStyle(
+                                  fontSize: 30,
+                                  fontWeight: FontWeight.bold
+                                ),
+                              ),
+                              Text(
+                                'DHL Fastest Laps',
+                                style: TextStyle(
+                                  fontSize: 25,
+                                  fontWeight: FontWeight.bold
+                                ),
+                              ),
+                              Text(
+                                'Grands Prix Entered',
+                                style: TextStyle(
+                                  fontSize: 25,
+                                  fontWeight: FontWeight.bold
+                                ),
+                              ),
+                              Text(
+                                'World Championships',
+                                style: TextStyle(
+                                  fontSize: 25,
+                                  fontWeight: FontWeight.bold
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(left: 80),
+                          child: Container(
+                            height: 400,
+                            width: 100,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Padding(
+                                  padding: EdgeInsets.only(top: 29),
+                                  child: Text(
+                                    (widget.driver.wins),
+                                    style: TextStyle(
+                                      fontSize: 30
+                                    ),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(top: 29),
+                                  child: Text(
+                                    widget.driver.podiums,
+                                    style: TextStyle(
+                                      fontSize: 30
+                                    ),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(top: 25),
+                                  child: Text(
+                                    widget.driver.fastestLap,
+                                    style: TextStyle(
+                                      fontSize: 30
+                                    ),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(top: 40),
+                                  child: Text(
+                                    widget.driver.gpEntered,
+                                    style: TextStyle(
+                                      fontSize: 30
+                                    ),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(top: 59),
+                                  child: Text(
+                                    widget.driver.worldchampionships,
+                                    style: TextStyle(
+                                      fontSize: 30,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                  Column(
                     children: [
                       Text(
-                        "Achievements",
+                        'Team',
                         style: TextStyle(
                           fontSize: 32,
                           fontWeight: FontWeight.bold
                         ),
                       ),
-                      Padding(
-                        padding: EdgeInsets.only(top: 0, left: 20),
-                        child: Row(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Container(
-                              height: 400,
-                              width: 228,
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                                children: [
-                                  Text(
-                                    'Wins',
-                                    style: TextStyle(
-                                      fontSize: 30,
-                                      fontWeight: FontWeight.bold
-                                    ),
-                                  ),
-                                  Text(
-                                    'Podiums',
-                                    style: TextStyle(
-                                      fontSize: 30,
-                                      fontWeight: FontWeight.bold
-                                    ),
-                                  ),
-                                  Text(
-                                    'DHL Fastest Laps',
-                                    style: TextStyle(
-                                      fontSize: 25,
-                                      fontWeight: FontWeight.bold
-                                    ),
-                                  ),
-                                  Text(
-                                    'Grands Prix Entered',
-                                    style: TextStyle(
-                                      fontSize: 25,
-                                      fontWeight: FontWeight.bold
-                                    ),
-                                  ),
-                                  Text(
-                                    'World Championships',
-                                    style: TextStyle(
-                                      fontSize: 25,
-                                      fontWeight: FontWeight.bold
-                                    ),
-                                  )
-                                ],
-                              ),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(left: 80),
-                              child: Container(
-                                height: 400,
-                                width: 100,
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Padding(
-                                      padding: EdgeInsets.only(top: 29),
-                                      child: Text(
-                                        (widget.driver.wins),
-                                        style: TextStyle(
-                                          fontSize: 30
-                                        ),
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: EdgeInsets.only(top: 29),
-                                      child: Text(
-                                        widget.driver.podiums,
-                                        style: TextStyle(
-                                          fontSize: 30
-                                        ),
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: EdgeInsets.only(top: 25),
-                                      child: Text(
-                                        widget.driver.fastestLap,
-                                        style: TextStyle(
-                                          fontSize: 30
-                                        ),
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: EdgeInsets.only(top: 40),
-                                      child: Text(
-                                        widget.driver.gpEntered,
-                                        style: TextStyle(
-                                          fontSize: 30
-                                        ),
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: EdgeInsets.only(top: 59),
-                                      child: Text(
-                                        widget.driver.worldchampionships,
-                                        style: TextStyle(
-                                          fontSize: 30,
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                      Column(
-                        children: [
-                          Text(
-                            'Team',
-                            style: TextStyle(
-                              fontSize: 32,
-                              fontWeight: FontWeight.bold
-                            ),
-                          ),
-                          // Image(
-                          //   image: AssetImage(widget.driver.team),
-                          // )
-                        ],
-                      ),
-
+                      // Image(
+                      //   image: AssetImage(widget.driver.team),
+                      // )
                     ],
                   ),
-                ),
-              ],
-            ),
-          )
+              
+                ],
+              ),
+            ],
+          )///,
         ],
       )
     );
