@@ -30,7 +30,6 @@ class _ConstructorBioScreenState extends State<ConstructorBioScreen> {
                     decoration: BoxDecoration(
                       color: Colors.blue,
                       borderRadius: BorderRadius.circular(30)
-                    
                     ),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(30),
@@ -111,7 +110,6 @@ class _ConstructorBioScreenState extends State<ConstructorBioScreen> {
                 ], 
               ),
             ),
-            
           ],
         ),
       ),
