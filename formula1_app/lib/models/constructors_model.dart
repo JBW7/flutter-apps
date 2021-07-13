@@ -170,6 +170,10 @@ List<Constructor> constructors = [
     driver2: 'Lance Stroll',
     driver1Url: 'assets/images/SebastianVettel_img.png',
     driver2Url: 'assets/images/LanceStroll_img',
+    driver1_fname: 'Sebastian ',
+    driver1_lname: 'Vettel',
+    driver2_fname: 'Lance ',
+    driver2_lname: 'Stroll',
     teamChief: 'Otmar Szafnauer',
     chasis: 'AMR21',
     powerUnit: 'Mercedes'
