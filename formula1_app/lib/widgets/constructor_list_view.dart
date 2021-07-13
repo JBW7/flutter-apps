@@ -70,7 +70,45 @@ class ConstructorListView extends StatelessWidget {
                       )
                     ],
                   ),
-                  
+                  Row(
+                    children: [
+                      Container(
+                        width: 70,
+                        height: 22,
+                        decoration: BoxDecoration(
+                          color: Colors.grey[300],
+                          borderRadius: BorderRadius.circular(10)
+                        ),
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              constructor.points,
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold
+                              ),
+                            ),
+                            Text(
+                              'PTS',
+                              style: TextStyle(
+                                fontSize: 15
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(left: 4, right: 8),
+                        child: Icon(
+                          Icons.arrow_forward_ios,
+                          color: Colors.blue[800],
+                          size: 16,
+                        ),
+                      )
+                    ],
+                  )
                 ],
               ),
             ),
