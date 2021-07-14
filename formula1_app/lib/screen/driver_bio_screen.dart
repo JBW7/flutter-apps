@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:formula1_app/models/driver_model.dart';
+import 'package:formula1_app/widgets/driver_picture_carousel.dart';
 
 class DriverBioScreen extends StatefulWidget {
 
@@ -17,7 +18,7 @@ class _DriverBioScreenState extends State<DriverBioScreen> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
-          height: 1500,
+          height: 2500,
           width: MediaQuery.of(context).size.width,
           color: Colors.white,
           child: Column(
@@ -260,10 +261,7 @@ class _DriverBioScreenState extends State<DriverBioScreen> {
                         children: [
                           Padding(
                             padding: EdgeInsets.only(top: 40),
-                            child: Image(
-                              image: AssetImage(widget.driver.teamCarUrl),
-                              width: 410,
-                            ),
+                            child: DriverPictureCarousel(),
                           ),
                           Padding(
                             padding: EdgeInsets.only(top: 40),
@@ -274,6 +272,21 @@ class _DriverBioScreenState extends State<DriverBioScreen> {
                                 fontWeight: FontWeight.bold,
                                 color: Colors.black
                               ),
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(top: 20, left: 15, right: 15),
+                            child: Text(
+                              widget.driver.biography,
+                              style: TextStyle(
+                                fontSize: 18
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 50),
+                            child: Image(
+                              image: AssetImage(widget.driver.teamImageUrl),
                             ),
                           )
                         ],
