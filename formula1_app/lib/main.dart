@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Formula 1',
-      home: DriverScreen(),
+      home: ConstructorScreen(),
       // theme: ThemeData(fontFamily: 'Rajdhani'),
     );
   }
