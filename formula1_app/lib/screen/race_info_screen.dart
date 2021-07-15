@@ -13,8 +13,14 @@ class RaceInfoScreen extends StatefulWidget {
 class _RaceInfoScreenState extends State<RaceInfoScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      
+    return Scaffold(
+      body: SingleChildScrollView(
+        child: Container(
+          height: 2000,
+          width: MediaQuery.of(context).size.width,
+          color: Colors.blue,
+        ),
+      ),
     );
   }
 }
