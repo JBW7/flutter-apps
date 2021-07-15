@@ -37,6 +37,16 @@ class _RaceInfoScreenState extends State<RaceInfoScreen> {
                         fit: BoxFit.cover,
                       ),
                     ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.symmetric(vertical: 30, horizontal: 20),
+                    child: IconButton(
+                      icon: Icon(Icons.arrow_back),
+                      color: Colors.white,
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                    ),
                   )
                 ],
               )
