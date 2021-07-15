@@ -49,7 +49,7 @@ class DriverListView extends StatelessWidget {
                           child: Container(
                             width: 4,
                             height: 50,
-                            color: Colors.blue[800],
+                            color: driver.color,
                           ),
                         ),
                         SizedBox(
@@ -107,7 +107,7 @@ class DriverListView extends StatelessWidget {
                           padding: EdgeInsets.only(left: 4, right: 8),
                           child: Icon(
                             Icons.arrow_forward_ios,
-                            color: Colors.blue[800],
+                            color: driver.color,
                             size: 16,
                           ),
                         ),
