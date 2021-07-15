@@ -1,7 +1,11 @@
+import 'package:flutter/material.dart';
+import 'dart:ui';
+
 class Constructor {
   String name;
   String rank;
   String points;
+  Color? color;
   String logoUrl;
   String carUrl;
   String constructorChampionships;
@@ -24,6 +28,7 @@ class Constructor {
     required this.name,
     required this.rank,
     required this.points,
+    required this.color,
     required this.logoUrl,
     required this.carUrl,
     required this.constructorChampionships,
@@ -50,6 +55,7 @@ List<Constructor> constructors = [
     name: 'Red Bull Racing',
     rank: '1',
     points: '286',
+    color: Colors.blue[800],
     logoUrl: 'assets/images/RedBull_img.png',
     carUrl: 'assets/images/RedBull_car.png',
     constructorChampionships: '4',
@@ -72,6 +78,7 @@ List<Constructor> constructors = [
     name: 'Mercedes',
     rank: '2',
     points: '242',
+    color: Colors.tealAccent,
     logoUrl: 'assets/images/Mercedes_img.png',
     carUrl: 'assets/images/Mercedes_car.png',
     constructorChampionships: '7',
@@ -94,6 +101,7 @@ List<Constructor> constructors = [
     name: 'McLaren',
     rank: '3',
     points: '141',
+    color: Colors.yellow[700],
     logoUrl: 'assets/images/Mclaren_img.png',
     carUrl: 'assets/images/McLaren_car.png',
     constructorChampionships: '8',
@@ -116,6 +124,7 @@ List<Constructor> constructors = [
     name: 'Ferrari',
     rank: '4',
     points: '122',
+    color: Colors.red[600],
     logoUrl: 'assets/images/Ferrari_img.png',
     carUrl: 'assets/images/Ferrari_car.png',
     constructorChampionships: '16',
@@ -138,6 +147,7 @@ List<Constructor> constructors = [
     name: 'AlphaTauri',
     rank: '5',
     points: '48',
+    color: Colors.grey[900],
     logoUrl: 'assets/images/AlphaTauri_img.png',
     carUrl: 'assets/images/AlphaTauri_car.png',
     constructorChampionships: '0',
@@ -160,6 +170,7 @@ List<Constructor> constructors = [
     name: 'Aston Martin',
     rank: '6',
     points: '44',
+    color: Colors.green[900],
     logoUrl: 'assets/images/AstonMartingRacing_img.png',
     carUrl: 'assets/images/AstonMartin_car.png',
     constructorChampionships: '0',
@@ -182,6 +193,7 @@ List<Constructor> constructors = [
     name: 'Alpine',
     rank: '7',
     points: '32',
+    color: Colors.lightBlue,
     logoUrl: 'assets/images/Alpine_img.png',
     carUrl: 'assets/images/Alpine_car.png',
     constructorChampionships: '2',
@@ -204,6 +216,7 @@ List<Constructor> constructors = [
     name: 'Alfa Romeo Racing',
     rank: '8',
     points: '2',
+    color: Colors.red[900],
     logoUrl: 'assets/images/AlfaRomeo_img.png',
     carUrl: 'assets/images/AlfaRomeoRacing_car.png',
     constructorChampionships: '0',
@@ -226,6 +239,7 @@ List<Constructor> constructors = [
     name: 'Williams',
     rank: '9',
     points: '0',
+    color: Colors.blue[700],
     logoUrl: 'assets/images/Williams_img.png',
     carUrl: 'assets/images/Williams_car.png',
     constructorChampionships: '9',
@@ -248,6 +262,7 @@ List<Constructor> constructors = [
     name: 'Haas F1 Team',
     rank: '10',
     points: '0',
+    color: Colors.grey[400],
     logoUrl: 'assets/images/Haas_img.png',
     carUrl: 'assets/images/Haas_car.png',
     constructorChampionships: '0',
