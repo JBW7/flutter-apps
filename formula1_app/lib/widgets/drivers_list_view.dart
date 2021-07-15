@@ -107,7 +107,7 @@ class DriverListView extends StatelessWidget {
                           padding: EdgeInsets.only(left: 4, right: 8),
                           child: Icon(
                             Icons.arrow_forward_ios,
-                            color: driver.color,
+                            color: Colors.grey[600],
                             size: 16,
                           ),
                         ),
