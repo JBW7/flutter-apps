@@ -114,7 +114,7 @@ class ConstructorListView extends StatelessWidget {
                         padding: EdgeInsets.only(left: 4, right: 8),
                         child: Icon(
                           Icons.arrow_forward_ios,
-                          color: Colors.grey[600],
+                          color: Colors.red,
                           size: 16,
                         ),
                       )

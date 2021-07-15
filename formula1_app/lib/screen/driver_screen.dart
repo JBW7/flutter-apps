@@ -17,7 +17,7 @@ class _DriverScreenState extends State<DriverScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Driver Standings'),
-        backgroundColor: Colors.grey[850],
+        backgroundColor: Colors.red,
       ),
       body: SafeArea(
         child: ListView(
@@ -29,9 +29,9 @@ class _DriverScreenState extends State<DriverScreen> {
       bottomNavigationBar: SizedBox(
         //height: 80,
         child: BottomNavigationBar(
-          backgroundColor: Colors.grey[850],
-          unselectedItemColor: Colors.white,
-          selectedItemColor: Colors.blue[500],
+          backgroundColor: Colors.white,
+          unselectedItemColor: Colors.grey[300],
+          selectedItemColor: Colors.red,
           currentIndex: currentTab,
           onTap: (int value) {
             setState(() { 

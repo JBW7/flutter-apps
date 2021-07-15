@@ -13,7 +13,7 @@ class _RacingScreenState extends State<RacingScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Racing'),
-        backgroundColor: Colors.grey[850],
+        backgroundColor: Colors.red,
       ),
       body: SafeArea(
         child: RacingListView(),
