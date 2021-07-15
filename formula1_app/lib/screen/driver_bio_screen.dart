@@ -67,7 +67,7 @@ class _DriverBioScreenState extends State<DriverBioScreen> {
                                     Container(
                                       height: 80,
                                       width: 4,
-                                      color: Colors.blue[800],
+                                      color: widget.driver.color,
                                     ),
                                     Padding(
                                       padding: EdgeInsets.only(left: 10),
