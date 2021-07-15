@@ -93,8 +93,13 @@ class RacingListView extends StatelessWidget {
                     ),
                   ],
                 ),
-                Icon(
-                  
+                Padding(
+                  padding: EdgeInsets.only(right: 8),
+                  child: Icon(
+                    Icons.arrow_forward_ios,
+                    color: Colors.red,
+                    size: 16,
+                  ),
                 )
               ],
             ),
