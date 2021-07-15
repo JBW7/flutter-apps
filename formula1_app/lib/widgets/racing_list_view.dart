@@ -20,6 +20,59 @@ class RacingListView extends StatelessWidget {
               color: Colors.white,
               borderRadius: BorderRadius.circular(10)
             ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Row(
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.only(left: 15),
+                          child: Container(
+                            height: 50,
+                            width: 70,
+                            color: Colors.white,
+                            child: Column(
+                              children: [
+                                Text(
+                                  race.date,
+                                  style: TextStyle(
+                                    fontSize: 19
+                                  ),
+                                ),
+                                Container(
+                                  height: 22,
+                                  decoration: BoxDecoration(
+                                    color: Colors.grey[300],
+                                    borderRadius: BorderRadius.circular(10)
+                                  ),
+                                  child: Padding(
+                                    padding: EdgeInsets.symmetric(horizontal: 6, vertical: 3),
+                                    child: Text(
+                                      race.month
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(left: 7),
+                          child: Container(
+                            height: 50,
+                            width: 2,
+                            color: Colors.grey[300],
+                          ),
+                        )
+                      ],
+                    ),
+                  ],
+                )
+              ],
+            ),
           );
         },
       ),
