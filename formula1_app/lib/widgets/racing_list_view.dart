@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:formula1_app/models/race_model.dart';
+import 'package:formula1_app/screen/race_info_screen.dart';
 
 class RacingListView extends StatelessWidget {
 
@@ -16,7 +17,7 @@ class RacingListView extends StatelessWidget {
             onTap: () {
              Navigator.push(
                context,
-               MaterialPageRoute(builder: (_) => TestInfoScreen(race: race))
+               MaterialPageRoute(builder: (_) => RaceInfoScreen(race: race))
              );
             },
             child: Container(
