@@ -16,7 +16,7 @@ class _RaceInfoScreenState extends State<RaceInfoScreen> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
-          height: 2000,
+          height: 1250,
           width: MediaQuery.of(context).size.width,
           color: Colors.white,
           child: Column(
@@ -64,7 +64,7 @@ class _RaceInfoScreenState extends State<RaceInfoScreen> {
                           widget.race.location,
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 32,
+                            fontSize: 40,
                             fontWeight: FontWeight.bold
                           ),
                         ),
@@ -81,51 +81,58 @@ class _RaceInfoScreenState extends State<RaceInfoScreen> {
                 ],
               ),
               Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Row(
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.only(top: 30, left: 20),
-                        child: Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15),
-                            border: Border.all(
-                              width: 1
-                            )
-                          ),
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(15),
-                            child: Image(
-                              image: AssetImage(widget.race.flagUrl),
-                              width: 85,
+                  Padding(
+                    padding: EdgeInsets.only(top: 20),
+                    child: Container(
+                      height: 70,
+                      color: Colors.white,
+                      width: MediaQuery.of(context).size.width,
+                      child: Row(
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.only(left: 20),
+                            child: Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(15),
+                                border: Border.all(
+                                  width: 1
+                                )
+                              ),
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(15),
+                                child: Image(
+                                  image: AssetImage(widget.race.flagUrl),
+                                  width: 85,
+                                ),
+                              ),
                             ),
                           ),
-                        ),
+                          Text(
+                            widget.race.venue,
+                            style: TextStyle(
+                              fontSize: 22,
+                              fontWeight: FontWeight.bold
+                            ),
+                          ),
+                        ],
                       ),
-                      Text(
-                        widget.race.venue,
-                        style: TextStyle(
-                          fontSize: 22,
-                          fontWeight: FontWeight.bold
-                        ),
-                      ),
-                    ],
+                    ),
                   )
                 ],
               ),
               Padding(
-                padding: EdgeInsets.only(top: 25),
+                padding: EdgeInsets.only(top: 40, bottom: 20),
                 child: Image(
                   image: AssetImage(widget.race.trackUrl),
                 ),
               ),
               Padding(
-                padding: EdgeInsets.only(top: 35),
+                padding: EdgeInsets.only(top: 50),
                 child: Container(
-                  height: 200,
+                  height: 500,
                   width: MediaQuery.of(context).size.width,
-                  color: Colors.blue,
+                  color: Colors.white,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -135,24 +142,113 @@ class _RaceInfoScreenState extends State<RaceInfoScreen> {
                           fontSize: 20
                         ),
                       ),
-                      Row(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Text(
-                            widget.race.circuitLength,
-                            style: TextStyle(
-                              fontSize: 40,
-                              fontWeight: FontWeight.bold
+                      Container(
+                        height: 40,
+                        color: Colors.white,
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: [
+                            Text(
+                              widget.race.circuitLength,
+                              style: TextStyle(
+                                fontSize: 40,
+                                fontWeight: FontWeight.bold
+                              ),
                             ),
-                          ),
-                          Text(
-                            'km',
-                            style: TextStyle(
-                              fontSize: 20
-                            ),
-                          )
-                        ],
+                            Text(
+                              'km',
+                              style: TextStyle(
+                                fontSize: 20
+                              ),
+                            )
+                          ],
+                        ),
                       ),
+                      Padding(
+                        padding: EdgeInsets.only(top: 30),
+                        child: Text(
+                          'First Grand Prix',
+                          style: TextStyle(
+                            fontSize: 20
+                          ),
+                        ),
+                      ),
+                      Text(
+                        widget.race.firstGp,
+                        style: TextStyle(
+                          fontSize: 40,
+                          fontWeight: FontWeight.bold
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(top: 30),
+                        child: Text(
+                          'Number of Laps',
+                          style: TextStyle(
+                            fontSize: 20,
+                          ),
+                        ),
+                      ),
+                      Text(
+                        widget.race.noLaps,
+                        style: TextStyle(
+                          fontSize: 40,
+                          fontWeight: FontWeight.bold
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(top: 30),
+                        child: Text(
+                          'Race Distance',
+                          style: TextStyle(
+                            fontSize: 20,
+                          ),
+                        ),
+                      ),
+                      Container(
+                        height: 40,
+                        color: Colors.white,
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: [
+                            Text(
+                              widget.race.raceDistance,
+                              style: TextStyle(
+                                fontSize: 40,
+                                fontWeight: FontWeight.bold
+                              ),
+                            ),
+                            Text(
+                              'km',
+                              style: TextStyle(
+                                fontSize: 20
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(top: 30),
+                        child: Text(
+                          'Lap Record',
+                          style: TextStyle(
+                            fontSize: 20,
+                          ),
+                        ),
+                      ),
+                      Text(
+                        widget.race.lapRecordTime,
+                        style: TextStyle(
+                          fontSize: 40, 
+                          fontWeight: FontWeight.bold
+                        ),
+                      ),
+                      Text(
+                        widget.race.lapRecordHolderYear,
+                        style: TextStyle(
+                          fontSize: 15,
+                        ),
+                      )
                     ],
                   ),
                 ),
