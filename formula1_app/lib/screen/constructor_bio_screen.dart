@@ -217,13 +217,6 @@ class _ConstructorBioScreenState extends State<ConstructorBioScreen> {
                     ],
                   ),
                   Padding(
-                    padding: EdgeInsets.only(top: 20, bottom: 30),
-                    child: Image(
-                      image: AssetImage(widget.constructor.carUrl),
-                      width: 400,
-                    ),
-                  ),
-                  Padding(
                     padding: EdgeInsets.only(bottom: 25),
                     child: Text(
                       'Team',
@@ -233,87 +226,145 @@ class _ConstructorBioScreenState extends State<ConstructorBioScreen> {
                       ),
                     ),
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      GestureDetector(
-                        onTap: () {
-                          print('clicked');
-                        },
-                        child: Container(
-                          width: 200,
-                          height: 275,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15),
-                            color: Colors.grey[200]
-                          ),
-                          child: Column(
-                            children: [
-                              Image(
-                                image: AssetImage(widget.constructor.driver1Url),
-                                height: 200,
-                                width: 200,
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          GestureDetector(
+                            onTap: () {
+                              print('clicked');
+                            },
+                            child: Container(
+                              width: 200,
+                              height: 275,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(15),
+                                color: Colors.grey[200]
                               ),
-                              Padding(
-                                padding: EdgeInsets.only(top: 10),
-                                child: Text(
-                                  widget.constructor.driver1_fname,
-                                  style: TextStyle(
-                                    fontSize: 20
+                              child: Column(
+                                children: [
+                                  Image(
+                                    image: AssetImage(widget.constructor.driver1Url),
+                                    height: 200,
+                                    width: 200,
                                   ),
-                                ),
-                              ),
-                              Text(
-                                widget.constructor.driver1_lname,
-                                style: TextStyle(
-                                  fontSize: 24,
-                                  fontWeight: FontWeight.bold
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                      GestureDetector(
-                        onTap: () {
-                          print('clicked');
-                        },
-                        child: Container(
-                          width: 200,
-                          height: 275,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            color: Colors.grey[200]
-                          ),
-                          child: Column(
-                            children: [
-                              Image(
-                                image: AssetImage(widget.constructor.driver2Url),
-                                height: 200,
-                                width: 200,
-                              ),
-                              Padding(
-                                padding: EdgeInsets.only(top: 10),
-                                child: Text(
-                                  widget.constructor.driver2_fname,
-                                  style: TextStyle(
-                                    fontSize: 20
+                                  Padding(
+                                    padding: EdgeInsets.only(top: 10),
+                                    child: Text(
+                                      widget.constructor.driver1_fname,
+                                      style: TextStyle(
+                                        fontSize: 20
+                                      ),
+                                    ),
                                   ),
-                                ),
+                                  Text(
+                                    widget.constructor.driver1_lname,
+                                    style: TextStyle(
+                                      fontSize: 24,
+                                      fontWeight: FontWeight.bold
+                                    ),
+                                  )
+                                ],
                               ),
-                              Text(
-                                widget.constructor.driver2_lname,
-                                style: TextStyle(
-                                  fontSize: 24,
-                                  fontWeight: FontWeight.bold
-                                ),
-                              )
-                            ],
+                            ),
                           ),
-                        ),
+                          GestureDetector(
+                            onTap: () {
+                              print('clicked');
+                            },
+                            child: Container(
+                              width: 200,
+                              height: 275,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(10),
+                                color: Colors.grey[200]
+                              ),
+                              child: Column(
+                                children: [
+                                  Image(
+                                    image: AssetImage(widget.constructor.driver2Url),
+                                    height: 200,
+                                    width: 200,
+                                  ),
+                                  Padding(
+                                    padding: EdgeInsets.only(top: 10),
+                                    child: Text(
+                                      widget.constructor.driver2_fname,
+                                      style: TextStyle(
+                                        fontSize: 20
+                                      ),
+                                    ),
+                                  ),
+                                  Text(
+                                    widget.constructor.driver2_lname,
+                                    style: TextStyle(
+                                      fontSize: 24,
+                                      fontWeight: FontWeight.bold
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.only(top: 50),
+                            child: Text(
+                              'Team Chief',
+                              style: TextStyle(
+                                fontSize: 22
+                              ),
+                            ),
+                          ),
+                          Text(
+                            widget.constructor.teamChief,
+                            style: TextStyle(
+                              fontSize: 32,
+                              fontWeight: FontWeight.bold
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(top: 20),
+                            child: Text(
+                              'Chasis',
+                              style: TextStyle(
+                                fontSize: 22,
+                              ),
+                            ),
+                          ),
+                          Text(
+                            widget.constructor.chasis,
+                            style: TextStyle(
+                              fontSize: 32,
+                              fontWeight: FontWeight.bold
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 20),
+                            child: Text(
+                              'Power Unit',
+                              style: TextStyle(
+                                fontSize: 22,
+                              ),
+                            ),
+                          ),
+                          Text(
+                            widget.constructor.powerUnit,
+                            style: TextStyle(
+                              fontSize: 32,
+                              fontWeight: FontWeight.bold
+                            ),
+                          ),
+                        ],
+                      )
                     ],
-                  )
+                  ),
                 ],
               ),
             ),
