@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:formula1_app/models/driver_model.dart';
 import 'package:formula1_app/models/driver_picture_carousel_model.dart';
 
 class DriverPictureCarousel extends StatelessWidget {
