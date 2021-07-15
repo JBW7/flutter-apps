@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:formula1_app/widgets/drivers_list_view.dart';
 
+import 'constructor_screen.dart';
+
 class DriverScreen extends StatefulWidget {
 
   @override
@@ -36,7 +38,13 @@ class _DriverScreenState extends State<DriverScreen> {
           onTap: (int value) {
             setState(() { 
               currentTab = value;
-              print(currentTab);  
+              print(currentTab);
+              if(currentTab == 0)  {
+                Navigator.push(
+                  context, 
+                  MaterialPageRoute(builder: (_) => ConstructorScreen())
+                );
+              }
             });
           },
           items: [
