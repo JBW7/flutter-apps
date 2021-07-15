@@ -19,7 +19,7 @@ class _ConstructorBioScreenState extends State<ConstructorBioScreen> {
         child: Column(
           children: [
             Container(
-              height: 1500,
+              height: 1650,
               width: MediaQuery.of(context).size.width,
               color: Colors.white,
               child: Column(
@@ -217,7 +217,7 @@ class _ConstructorBioScreenState extends State<ConstructorBioScreen> {
                     ],
                   ),
                   Padding(
-                    padding: EdgeInsets.only(bottom: 25),
+                    padding: EdgeInsets.only(bottom: 25, top: 25),
                     child: Text(
                       'Team',
                       style: TextStyle(
@@ -227,141 +227,167 @@ class _ConstructorBioScreenState extends State<ConstructorBioScreen> {
                     ),
                   ),
                   Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          GestureDetector(
-                            onTap: () {
-                              print('clicked');
-                            },
-                            child: Container(
-                              width: 200,
-                              height: 275,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(15),
-                                color: Colors.grey[200]
-                              ),
-                              child: Column(
-                                children: [
-                                  Image(
-                                    image: AssetImage(widget.constructor.driver1Url),
-                                    height: 200,
-                                    width: 200,
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsets.only(top: 10),
-                                    child: Text(
-                                      widget.constructor.driver1_fname,
-                                      style: TextStyle(
-                                        fontSize: 20
-                                      ),
-                                    ),
-                                  ),
-                                  Text(
-                                    widget.constructor.driver1_lname,
-                                    style: TextStyle(
-                                      fontSize: 24,
-                                      fontWeight: FontWeight.bold
-                                    ),
-                                  )
-                                ],
-                              ),
-                            ),
-                          ),
-                          GestureDetector(
-                            onTap: () {
-                              print('clicked');
-                            },
-                            child: Container(
-                              width: 200,
-                              height: 275,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                color: Colors.grey[200]
-                              ),
-                              child: Column(
-                                children: [
-                                  Image(
-                                    image: AssetImage(widget.constructor.driver2Url),
-                                    height: 200,
-                                    width: 200,
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsets.only(top: 10),
-                                    child: Text(
-                                      widget.constructor.driver2_fname,
-                                      style: TextStyle(
-                                        fontSize: 20
-                                      ),
-                                    ),
-                                  ),
-                                  Text(
-                                    widget.constructor.driver2_lname,
-                                    style: TextStyle(
-                                      fontSize: 24,
-                                      fontWeight: FontWeight.bold
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Padding(
-                            padding: EdgeInsets.only(top: 50),
-                            child: Text(
-                              'Team Chief',
-                              style: TextStyle(
-                                fontSize: 22
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              GestureDetector(
+                                onTap: () {
+                                  print('clicked');
+                                },
+                                child: Container(
+                                  width: 200,
+                                  height: 275,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(15),
+                                    color: Colors.grey[200]
+                                  ),
+                                  child: Column(
+                                    children: [
+                                      Image(
+                                        image: AssetImage(widget.constructor.driver1Url),
+                                        height: 200,
+                                        width: 200,
+                                      ),
+                                      Padding(
+                                        padding: EdgeInsets.only(top: 10),
+                                        child: Text(
+                                          widget.constructor.driver1_fname,
+                                          style: TextStyle(
+                                            fontSize: 20
+                                          ),
+                                        ),
+                                      ),
+                                      Text(
+                                        widget.constructor.driver1_lname,
+                                        style: TextStyle(
+                                          fontSize: 24,
+                                          fontWeight: FontWeight.bold
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                ),
                               ),
-                            ),
-                          ),
-                          Text(
-                            widget.constructor.teamChief,
-                            style: TextStyle(
-                              fontSize: 32,
-                              fontWeight: FontWeight.bold
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.only(top: 20),
-                            child: Text(
-                              'Chasis',
-                              style: TextStyle(
-                                fontSize: 22,
+                              GestureDetector(
+                                onTap: () {
+                                  print('clicked');
+                                },
+                                child: Container(
+                                  width: 200,
+                                  height: 275,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(10),
+                                    color: Colors.grey[200]
+                                  ),
+                                  child: Column(
+                                    children: [
+                                      Image(
+                                        image: AssetImage(widget.constructor.driver2Url),
+                                        height: 200,
+                                        width: 200,
+                                      ),
+                                      Padding(
+                                        padding: EdgeInsets.only(top: 10),
+                                        child: Text(
+                                          widget.constructor.driver2_fname,
+                                          style: TextStyle(
+                                            fontSize: 20
+                                          ),
+                                        ),
+                                      ),
+                                      Text(
+                                        widget.constructor.driver2_lname,
+                                        style: TextStyle(
+                                          fontSize: 24,
+                                          fontWeight: FontWeight.bold
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
                               ),
-                            ),
+                            ],
                           ),
-                          Text(
-                            widget.constructor.chasis,
-                            style: TextStyle(
-                              fontSize: 32,
-                              fontWeight: FontWeight.bold
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(top: 20),
-                            child: Text(
-                              'Power Unit',
-                              style: TextStyle(
-                                fontSize: 22,
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.symmetric(horizontal: 20, vertical: 50),
+                                child: Image(
+                                  image: AssetImage(
+                                    widget.constructor.carUrl
+                                  ),
+                                ),
                               ),
-                            ),
-                          ),
-                          Text(
-                            widget.constructor.powerUnit,
-                            style: TextStyle(
-                              fontSize: 32,
-                              fontWeight: FontWeight.bold
-                            ),
-                          ),
+                              Padding(
+                                padding: EdgeInsets.only(left: 20),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Padding(
+                                      padding: EdgeInsets.only(top: 0),
+                                      child: Text(
+                                        'Team Chief',
+                                        style: TextStyle(
+                                          fontSize: 22
+                                        ),
+                                      ),
+                                    ),
+                                    Text(
+                                      widget.constructor.teamChief,
+                                      style: TextStyle(
+                                        fontSize: 32,
+                                        fontWeight: FontWeight.bold
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsets.only(top: 20),
+                                      child: Text(
+                                        'Chasis',
+                                        style: TextStyle(
+                                          fontSize: 22,
+                                        ),
+                                      ),
+                                    ),
+                                    Text(
+                                      widget.constructor.chasis,
+                                      style: TextStyle(
+                                        fontSize: 32,
+                                        fontWeight: FontWeight.bold
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 20),
+                                      child: Text(
+                                        'Power Unit',
+                                        style: TextStyle(
+                                          fontSize: 22,
+                                        ),
+                                      ),
+                                    ),
+                                    Text(
+                                      widget.constructor.powerUnit,
+                                      style: TextStyle(
+                                        fontSize: 32,
+                                        fontWeight: FontWeight.bold
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          )
                         ],
+                      ),
+                      Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 50),
+                        child: Image(
+                          image: AssetImage(widget.constructor.logoUrl),
+                        ),
                       )
                     ],
                   ),
