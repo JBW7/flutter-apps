@@ -67,7 +67,7 @@ class _ConstructorBioScreenState extends State<ConstructorBioScreen> {
                                       Container(
                                         height: 88,
                                         width: 4,
-                                        color: Colors.blue[800],
+                                        color: widget.constructor.color,
                                       ),
                                       Padding(
                                         padding: EdgeInsets.only(left: 10),

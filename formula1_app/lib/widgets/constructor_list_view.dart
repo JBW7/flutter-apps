@@ -34,20 +34,27 @@ class ConstructorListView extends StatelessWidget {
                   Row(
                     children: [
                       Padding(
-                        padding: EdgeInsets.only(left: 15),
-                        child: Text(
-                          constructor.rank,
-                          style: TextStyle(
-                            fontSize: 22,
+                        padding: EdgeInsets.only(left: 20),
+                        child: Container(
+                          color: Colors.white,
+                          width: 25,
+                          child: Padding(
+                            padding: EdgeInsets.only(left: 0),
+                            child: Text(
+                              constructor.rank,
+                              style: TextStyle(
+                                fontSize: 22,
+                              ),
+                            ),
                           ),
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsets.only(left: 15),
+                        padding: EdgeInsets.only(left: 5),
                         child: Container(
                           width: 4,
                           height: 50, 
-                          color: Colors.blue[800],
+                          color: constructor.color,
                         ),
                       ),
                       SizedBox(
@@ -107,7 +114,7 @@ class ConstructorListView extends StatelessWidget {
                         padding: EdgeInsets.only(left: 4, right: 8),
                         child: Icon(
                           Icons.arrow_forward_ios,
-                          color: Colors.blue[800],
+                          color: Colors.grey[600],
                           size: 16,
                         ),
                       )
