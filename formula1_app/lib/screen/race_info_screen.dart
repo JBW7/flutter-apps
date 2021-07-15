@@ -57,18 +57,105 @@ class _RaceInfoScreenState extends State<RaceInfoScreen> {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(30)
                     ),
-                    child: Center(
-                      child: Text(
-                        widget.race.location,
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 32,
-                          fontWeight: FontWeight.bold
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          widget.race.location,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 32,
+                            fontWeight: FontWeight.bold
+                          ),
                         ),
-                      ),
+                        Text(
+                          '2021',
+                          style: TextStyle(
+                            fontSize: 32,
+                            color: Colors.white
+                          ),
+                        )
+                      ],
                     ),
                   )
                 ],
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.only(top: 30, left: 20),
+                        child: Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15),
+                            border: Border.all(
+                              width: 1
+                            )
+                          ),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(15),
+                            child: Image(
+                              image: AssetImage(widget.race.flagUrl),
+                              width: 85,
+                            ),
+                          ),
+                        ),
+                      ),
+                      Text(
+                        widget.race.venue,
+                        style: TextStyle(
+                          fontSize: 22,
+                          fontWeight: FontWeight.bold
+                        ),
+                      ),
+                    ],
+                  )
+                ],
+              ),
+              Padding(
+                padding: EdgeInsets.only(top: 25),
+                child: Image(
+                  image: AssetImage(widget.race.trackUrl),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(top: 35),
+                child: Container(
+                  height: 200,
+                  width: MediaQuery.of(context).size.width,
+                  color: Colors.blue,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Circuit Length',
+                        style: TextStyle(
+                          fontSize: 20
+                        ),
+                      ),
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Text(
+                            widget.race.circuitLength,
+                            style: TextStyle(
+                              fontSize: 40,
+                              fontWeight: FontWeight.bold
+                            ),
+                          ),
+                          Text(
+                            'km',
+                            style: TextStyle(
+                              fontSize: 20
+                            ),
+                          )
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
               )
             ],
           ),
