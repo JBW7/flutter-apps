@@ -36,16 +36,20 @@ class DriverListView extends StatelessWidget {
                     Row(
                       children: [
                         Padding(
-                          padding: EdgeInsets.only(left: 15),
-                          child: Text(
-                            driver.rank,
-                            style: TextStyle(
-                              fontSize: 22,
+                          padding: EdgeInsets.only(left: 20),
+                          child: Container(
+                            color: Colors.white,
+                            width: 28,
+                            child: Text(
+                              driver.rank,
+                              style: TextStyle(
+                                fontSize: 22,
+                              ),
                             ),
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsets.only(left: 15),
+                          padding: EdgeInsets.only(left: 5),
                           child: Container(
                             width: 4,
                             height: 50,
