@@ -29,7 +29,7 @@ class RacingListView extends StatelessWidget {
                     Row(
                       children: [
                         Padding(
-                          padding: EdgeInsets.only(left: 15),
+                          padding: EdgeInsets.only(left: 10),
                           child: Container(
                             height: 50,
                             width: 70,
@@ -66,10 +66,35 @@ class RacingListView extends StatelessWidget {
                             width: 2,
                             color: Colors.grey[300],
                           ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(left: 10),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                race.round,
+                                style: TextStyle(
+                                  fontSize: 18,
+                                  color: Colors.red
+                                ),
+                              ),
+                              Text(
+                                race.location,
+                                style: TextStyle(
+                                  fontSize: 22,
+                                  fontWeight: FontWeight.bold
+                                ),
+                              )
+                            ],
+                          ),
                         )
                       ],
                     ),
                   ],
+                ),
+                Icon(
+                  
                 )
               ],
             ),
