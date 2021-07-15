@@ -36,7 +36,7 @@ List <Race> races = [
   Race(
     round: 'Testing',
     date: '12-14',
-    month: 'March',
+    month: 'Mar',
     backgroundUrl: 'assets/images/preseason_bg.jpg',
     location: 'Pre-Season Test',
     venue: 'Bahrain International Circuit',
@@ -52,7 +52,7 @@ List <Race> races = [
   Race(
     round: 'Round 1',
     date: '26-28',
-    month: 'March',
+    month: 'Mar',
     backgroundUrl: 'assets/images/bahrain_bg.jpg',
     location: 'Bahrain',
     venue: 'Bahrain International Circuit',
@@ -68,7 +68,7 @@ List <Race> races = [
   Race(
     round: 'Round 2',
     date: '16-18',
-    month: 'April',
+    month: 'Apr',
     backgroundUrl: 'assets/images/italy_bg.jpg',
     location: 'Italy',
     venue: 'Autodromo Enzo e Dino Ferrari',
@@ -84,7 +84,7 @@ List <Race> races = [
   Race(
     round: 'Round 3',
     date: '30-02',
-    month: 'April-May',
+    month: 'Apr-May',
     backgroundUrl: 'assets/images/portugal_bg.jpg',
     location: 'Portugal',
     venue: 'Autódromo Internacional do Algarve',
@@ -132,7 +132,7 @@ List <Race> races = [
   Race(
     round: 'Round 6',
     date: '04-06',
-    month: 'June',
+    month: 'Jun',
     backgroundUrl: 'assets/images/azerbaijan_bg.jpg',
     location: 'Azerbaijan',
     venue: 'Baku City Circuit',
@@ -148,7 +148,7 @@ List <Race> races = [
   Race(
     round: 'Round 7',
     date: '18-20',
-    month: 'June',
+    month: 'Jun',
     backgroundUrl: 'assets/images/france_bg.jpg',
     location: 'France',
     venue: 'Circuit Paul Ricard',
@@ -164,7 +164,7 @@ List <Race> races = [
   Race(
     round: 'Round 8',
     date: '25-27',
-    month: 'June',
+    month: 'Jun',
     backgroundUrl: 'assets/images/austria_bg.jpg',
     location: 'Austria',
     venue: 'Red Bull Ring',
@@ -180,7 +180,7 @@ List <Race> races = [
   Race(
     round: 'Round 9',
     date: '02-04',
-    month: 'July',
+    month: 'Jul',
     backgroundUrl: 'assets/images/austria2_bg.jpg',
     location: 'Austria',
     venue: 'Red Bull Ring',
@@ -196,7 +196,7 @@ List <Race> races = [
   Race(
     round: 'Round 10',
     date: '16-18',
-    month: 'July',
+    month: 'Jul',
     backgroundUrl: 'assets/images/greatBritain_bg.jpg',
     location: 'Great Britain',
     venue: 'Silverstone Circuit',
@@ -212,7 +212,7 @@ List <Race> races = [
   Race(
     round: 'Round 11',
     date: '30-01',
-    month: 'July-August',
+    month: 'Jul-Aug',
     backgroundUrl: 'assets/images/hungary_bg.jpg',
     location: 'Hungary',
     venue: 'Hungaroring',
@@ -228,7 +228,7 @@ List <Race> races = [
   Race(
     round: 'Round 12',
     date: '27-29',
-    month: 'August',
+    month: 'Aug',
     backgroundUrl: 'assets/images/belgium_bg.jpg',
     location: 'Belgium',
     venue: 'Circuit de Spa-Francorchamps',
@@ -244,7 +244,7 @@ List <Race> races = [
   Race(
     round: 'Round 13',
     date: '03-05',
-    month: 'September',
+    month: 'Sep',
     backgroundUrl: 'assets/images/netherlands_bg.jpg',
     location: 'Netherlands',
     venue: 'Circuit Zandvoort',
@@ -260,7 +260,7 @@ List <Race> races = [
   Race(
     round: 'Round 14',
     date: '10-12',
-    month: 'September',
+    month: 'Sep',
     backgroundUrl: 'assets/images/italy2_bg.jpg',
     location: 'Italy',
     venue: 'Autodromo Nazionale Monza',
@@ -276,7 +276,7 @@ List <Race> races = [
   Race(
     round: 'Round 15',
     date: '24-26',
-    month: 'September',
+    month: 'Sep',
     backgroundUrl: 'assets/images/russia_bg.jpg',
     location: 'Russia',
     venue: 'Sochi Autodrom',
@@ -292,7 +292,7 @@ List <Race> races = [
   Race(
     round: 'Round 16',
     date: '01-03',
-    month: 'October',
+    month: 'Oct',
     backgroundUrl: 'assets/images/turkey_bg.jpg',
     location: 'Turkey',
     venue: 'Intercity Istanbul Park',
@@ -308,7 +308,7 @@ List <Race> races = [
   Race(
     round: 'Round 17',
     date: '08-10',
-    month: 'October',
+    month: 'Oct',
     backgroundUrl: 'assets/images/japan_bg.jpg',
     location: 'Japan',
     venue: 'Suzuka International Racing Course',
@@ -324,7 +324,7 @@ List <Race> races = [
   Race(
     round: 'Round 18',
     date: '22-24',
-    month: 'October',
+    month: 'Oct',
     backgroundUrl: 'assets/images/us_bg.jpg',
     location: 'United States',
     venue: 'Suzuka International Racing Course',
@@ -340,7 +340,7 @@ List <Race> races = [
   Race(
     round: 'Round 19',
     date: '29-31',
-    month: 'October',
+    month: 'Oct',
     backgroundUrl: 'assets/images/mexico_bg.jpg',
     location: 'Mexico',
     venue: 'Autódromo Hermanos Rodríguez',
@@ -356,7 +356,7 @@ List <Race> races = [
   Race(
     round: 'Round 20',
     date: '05-07',
-    month: 'November',
+    month: 'Nov',
     backgroundUrl: 'assets/images/brazil_bg.jpg',
     location: 'Brazil',
     venue: 'Autódromo José Carlos Pace',
@@ -372,7 +372,7 @@ List <Race> races = [
   Race(
     round: 'Round 22',
     date: '03-05',
-    month: 'December',
+    month: 'Dec',
     backgroundUrl: 'assets/images/saudiArabia_bg.jpg',
     location: 'Saudi Arabia',
     venue: 'Jeddah Street Circuit',
@@ -388,7 +388,7 @@ List <Race> races = [
   Race(
     round: 'Round 23',
     date: '10-12',
-    month: 'December',
+    month: 'Dec',
     backgroundUrl: 'assets/images/abuDhabi_bg.jpg',
     location: 'Abu Dhabi',
     venue: 'Yas Marina Circuit',
