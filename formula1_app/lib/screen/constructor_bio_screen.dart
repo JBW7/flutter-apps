@@ -112,7 +112,7 @@ class _ConstructorBioScreenState extends State<ConstructorBioScreen> {
                     ], 
                   ),
                   Padding(
-                    padding: EdgeInsets.only(top: 20, bottom: 20),
+                    padding: EdgeInsets.only(top: 15, bottom: 10),
                     child: Text(
                       'Achievements',
                       style: TextStyle(
@@ -126,11 +126,12 @@ class _ConstructorBioScreenState extends State<ConstructorBioScreen> {
                       Padding(
                         padding: EdgeInsets.only(left: 20),
                         child: Container(
-                          height: 320,
+                          height: 280,
                           width: 228,
-                          color: Colors.blue,
+                          color: Colors.white,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
                               Text(
                                 'Victories',
@@ -156,7 +157,7 @@ class _ConstructorBioScreenState extends State<ConstructorBioScreen> {
                               Text(
                                 'Constructor Championships',
                                 style: TextStyle(
-                                  fontSize: 30,
+                                  fontSize: 28,
                                   fontWeight: FontWeight.bold
                                 ),
                               )
@@ -167,11 +168,150 @@ class _ConstructorBioScreenState extends State<ConstructorBioScreen> {
                       Padding(
                         padding: EdgeInsets.only(left: 80),
                         child: Container(
-                          height: 320,
+                          height: 280,
                           width: 100,
-                          color: Colors.red,
+                          color: Colors.white,
+                          child: Column(
+                            //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.only(top: 22),
+                                child: Text(
+                                  widget.constructor.wins,
+                                  style: TextStyle(
+                                    fontSize: 30,
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.only(top: 22),
+                                child: Text(
+                                  widget.constructor.polePositions,
+                                  style: TextStyle(
+                                    fontSize: 30,
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.only(top: 22),
+                                child: Text(
+                                  widget.constructor.fastestLaps,
+                                  style: TextStyle(
+                                    fontSize: 30, 
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.only(top: 30),
+                                child: Text(
+                                  widget.constructor.constructorChampionships,
+                                  style: TextStyle(
+                                    fontSize: 30,
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
                         ),
                       )
+                    ],
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(top: 20, bottom: 30),
+                    child: Image(
+                      image: AssetImage(widget.constructor.carUrl),
+                      width: 400,
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(bottom: 25),
+                    child: Text(
+                      'Team',
+                      style: TextStyle(
+                        fontSize: 32,
+                        fontWeight: FontWeight.bold
+                      ),
+                    ),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      GestureDetector(
+                        onTap: () {
+                          print('clicked');
+                        },
+                        child: Container(
+                          width: 200,
+                          height: 275,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15),
+                            color: Colors.grey[200]
+                          ),
+                          child: Column(
+                            children: [
+                              Image(
+                                image: AssetImage(widget.constructor.driver1Url),
+                                height: 200,
+                                width: 200,
+                              ),
+                              Padding(
+                                padding: EdgeInsets.only(top: 10),
+                                child: Text(
+                                  widget.constructor.driver1_fname,
+                                  style: TextStyle(
+                                    fontSize: 20
+                                  ),
+                                ),
+                              ),
+                              Text(
+                                widget.constructor.driver1_lname,
+                                style: TextStyle(
+                                  fontSize: 24,
+                                  fontWeight: FontWeight.bold
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          print('clicked');
+                        },
+                        child: Container(
+                          width: 200,
+                          height: 275,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: Colors.grey[200]
+                          ),
+                          child: Column(
+                            children: [
+                              Image(
+                                image: AssetImage(widget.constructor.driver2Url),
+                                height: 200,
+                                width: 200,
+                              ),
+                              Padding(
+                                padding: EdgeInsets.only(top: 10),
+                                child: Text(
+                                  widget.constructor.driver2_fname,
+                                  style: TextStyle(
+                                    fontSize: 20
+                                  ),
+                                ),
+                              ),
+                              Text(
+                                widget.constructor.driver2_lname,
+                                style: TextStyle(
+                                  fontSize: 24,
+                                  fontWeight: FontWeight.bold
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
                     ],
                   )
                 ],
