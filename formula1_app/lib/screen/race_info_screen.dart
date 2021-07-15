@@ -48,7 +48,7 @@ class _RaceInfoScreenState extends State<RaceInfoScreen> {
                       color: Colors.white,
                       onPressed: () {
                         Navigator.pop(context);
-                      },
+                      }
                     ),
                   ),
                   Container(
@@ -128,7 +128,7 @@ class _RaceInfoScreenState extends State<RaceInfoScreen> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.only(top: 50),
+                padding: EdgeInsets.only(top: 50, left: 15),
                 child: Container(
                   height: 500,
                   width: MediaQuery.of(context).size.width,
