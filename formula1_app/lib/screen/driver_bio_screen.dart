@@ -18,7 +18,7 @@ class _DriverBioScreenState extends State<DriverBioScreen> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
-          height: 2500,
+          height: 2200,
           width: MediaQuery.of(context).size.width,
           color: Colors.white,
           child: Column(
