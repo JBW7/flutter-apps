@@ -18,7 +18,30 @@ class _RaceInfoScreenState extends State<RaceInfoScreen> {
         child: Container(
           height: 2000,
           width: MediaQuery.of(context).size.width,
-          color: Colors.blue,
+          color: Colors.white,
+          child: Column(
+            children: [
+              Stack(
+                children: [
+                  Container(
+                    height: 250,
+                    width: MediaQuery.of(context).size.width,
+                    decoration: BoxDecoration(
+                      color: Colors.blue,
+                      borderRadius: BorderRadius.circular(30)
+                    ),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(30),
+                      child: Image(
+                        image: AssetImage(widget.race.backgroundUrl),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  )
+                ],
+              )
+            ],
+          ),
         ),
       ),
     );
