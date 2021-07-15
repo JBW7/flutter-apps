@@ -28,13 +28,16 @@ class _RaceInfoScreenState extends State<RaceInfoScreen> {
                     width: MediaQuery.of(context).size.width,
                     decoration: BoxDecoration(
                       color: Colors.blue,
-                      borderRadius: BorderRadius.circular(30)
+                      borderRadius: BorderRadius.circular(30),
                     ),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(30),
-                      child: Image(
-                        image: AssetImage(widget.race.backgroundUrl),
-                        fit: BoxFit.cover,
+                      child: ColorFiltered(
+                        colorFilter: ColorFilter.mode(Colors.black38, BlendMode.colorBurn),
+                        child: Image(
+                          image: AssetImage(widget.race.backgroundUrl),
+                          fit: BoxFit.cover,
+                        ),
                       ),
                     ),
                   ),
@@ -46,6 +49,23 @@ class _RaceInfoScreenState extends State<RaceInfoScreen> {
                       onPressed: () {
                         Navigator.pop(context);
                       },
+                    ),
+                  ),
+                  Container(
+                    height: 250,
+                    width: MediaQuery.of(context).size.width,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(30)
+                    ),
+                    child: Center(
+                      child: Text(
+                        widget.race.location,
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 32,
+                          fontWeight: FontWeight.bold
+                        ),
+                      ),
                     ),
                   )
                 ],
