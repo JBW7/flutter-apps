@@ -41,16 +41,6 @@ class _RaceInfoScreenState extends State<RaceInfoScreen> {
                       ),
                     ),
                   ),
-                  Padding(
-                    padding: EdgeInsets.symmetric(vertical: 30, horizontal: 20),
-                    child: IconButton(
-                      icon: Icon(Icons.arrow_back),
-                      color: Colors.white,
-                      onPressed: () {
-                        Navigator.pop(context);
-                      }
-                    ),
-                  ),
                   Container(
                     height: 250,
                     width: MediaQuery.of(context).size.width,
@@ -77,7 +67,17 @@ class _RaceInfoScreenState extends State<RaceInfoScreen> {
                         )
                       ],
                     ),
-                  )
+                  ),
+                  Padding(
+                    padding: EdgeInsets.symmetric(vertical: 30, horizontal: 20),
+                    child: IconButton(
+                      icon: Icon(Icons.arrow_back),
+                      color: Colors.white,
+                      onPressed: () {
+                        Navigator.pop(context);
+                      }
+                    ),
+                  ),
                 ],
               ),
               Column(
