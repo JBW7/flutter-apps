@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 import 'package:formula1_app/models/driver_model.dart';
 
@@ -44,41 +46,49 @@ class DriverPictureCarousel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 230,
+      height: 200,
       color: Colors.white,
       child: ListView(
         scrollDirection: Axis.horizontal,
         children: [
-          Container(
-          width: 300,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10)
+          Padding(
+            padding: EdgeInsets.only(left: 20),
+            child: Container(
+            width: 270,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10)
+            ),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(10),
+              child: Image(
+                image: AssetImage(
+                  driver.image1url
+                ),
+                fit: BoxFit.cover,
+              ),
+            ),
+        ),
           ),
-          child: ClipRRect(
-            borderRadius: BorderRadius.circular(10),
-            child: Image(
-              image: AssetImage(
-                driver.image1url
+        Padding(
+          padding: EdgeInsets.only(left: 10, right: 10),
+          child: Container(
+            width: 270,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10)
+            ),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(10),
+              child: Image(
+                image: AssetImage(
+                  driver.image2url
+                ),
+                fit: BoxFit.cover,
               ),
             ),
           ),
         ),
         Container(
-          width: 300,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10)
-          ),
-          child: ClipRRect(
-            borderRadius: BorderRadius.circular(10),
-            child: Image(
-              image: AssetImage(
-                driver.image2url
-              ),
-            ),
-          ),
-        ),
-        Container(
-          width: 300,
+          width: 270,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10)
           ),
@@ -88,25 +98,30 @@ class DriverPictureCarousel extends StatelessWidget {
               image: AssetImage(
                 driver.image3url
               ),
+              fit: BoxFit.cover,
             ),
           ),
         ),
-        Container(
-          width: 300,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10)
-          ),
-          child: ClipRRect(
-            borderRadius: BorderRadius.circular(10),
-            child: Image(
-              image: AssetImage(
-                driver.image4url
+        Padding(
+          padding: EdgeInsets.only(left: 10, right: 10),
+          child: Container(
+            width: 270,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10)
+            ),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(10),
+              child: Image(
+                image: AssetImage(
+                  driver.image4url
+                ),
+                fit: BoxFit.cover,
               ),
             ),
           ),
         ),
         Container(
-          width: 300,
+          width: 270,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10)
           ),
@@ -116,19 +131,24 @@ class DriverPictureCarousel extends StatelessWidget {
               image: AssetImage(
                 driver.image5url
               ),
+              fit: BoxFit.cover,
             ),
           ),
         ),
-        Container(
-          width: 300,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10)
-          ),
-          child: ClipRRect(
-            borderRadius: BorderRadius.circular(10),
-            child: Image(
-              image: AssetImage(
-                driver.image6url
+        Padding(
+          padding: EdgeInsets.only(left: 10, right: 20),
+          child: Container(
+            width: 270,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10)
+            ),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(10),
+              child: Image(
+                image: AssetImage(
+                  driver.image6url
+                ),
+                fit: BoxFit.cover,
               ),
             ),
           ),
