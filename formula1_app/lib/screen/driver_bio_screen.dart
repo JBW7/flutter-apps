@@ -389,7 +389,8 @@ class _DriverBioScreenState extends State<DriverBioScreen> {
                             child: Text(
                               widget.driver.biography,
                               style: TextStyle(
-                                fontSize: 18
+                                fontSize: 18,
+                                fontFamily: 'Roboto'
                               ),
                             ),
                           ),
