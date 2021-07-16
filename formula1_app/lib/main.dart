@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:formula1_app/screen/constructor_screen.dart';
-import 'package:formula1_app/screen/driver_screen.dart';
-import 'screen/racing_screen.dart';
+import 'package:formula1_app/bottom_navabr.dart';
 
-void main() => runApp(MaterialApp(home: DriverScreen()));
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
 
@@ -11,8 +9,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Formula 1',
-      home: DriverScreen(),
-      // theme: ThemeData(fontFamily: 'Rajdhani'),
+      home: BottomNavBar(),
+      //theme: ThemeData(fontFamily: 'Rajdhani')
     );
   }
 }
