@@ -16,7 +16,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
     ConstructorScreen(), DriverScreen(), RacingScreen(),
   ];
 
-    int _selectedIndex = 1;
+    int _selectedIndex = 0;
 
   void _onPageChanged (int index) {
     setState(() {
