@@ -261,7 +261,7 @@ class _DriverBioScreenState extends State<DriverBioScreen> {
                         children: [
                           Padding(
                             padding: EdgeInsets.only(top: 30),
-                            child: DriverPictureCarousel(),
+                            child: DriverPictureCarousel(driver: drivers[0],),
                           ),
                           Padding(
                             padding: EdgeInsets.only(top: 40),
