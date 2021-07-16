@@ -3,9 +3,8 @@ import 'package:formula1_app/screen/constructor_screen.dart';
 import 'package:formula1_app/screen/driver_screen.dart';
 import 'screen/racing_screen.dart';
 
-void main() {
-  runApp(MyApp());
-}
+void main() => runApp(MaterialApp(home: DriverScreen()));
+
 class MyApp extends StatelessWidget {
 
   @override
