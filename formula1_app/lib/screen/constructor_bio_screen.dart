@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:formula1_app/models/constructors_model.dart';
-import 'package:formula1_app/screen/driver_bio_screen.dart';
 
 class ConstructorBioScreen extends StatefulWidget {
 
