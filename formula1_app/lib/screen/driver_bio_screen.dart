@@ -261,7 +261,117 @@ class _DriverBioScreenState extends State<DriverBioScreen> {
                         children: [
                           Padding(
                             padding: EdgeInsets.only(top: 30),
-                            child: DriverPictureCarousel(driver: drivers[0],),
+                            child: Container(
+                              height: 200,
+                              color: Colors.white,
+                              child: ListView(
+                                scrollDirection: Axis.horizontal,
+                                children: [
+                                  Padding(
+                                    padding: EdgeInsets.only(left: 20),
+                                    child: Container(
+                                    width: 270,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10)
+                                    ),
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.circular(10),
+                                      child: Image(
+                                        image: AssetImage(
+                                          widget.driver.image1url
+                                        ),
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
+                                ),
+                                  ),
+                                Padding(
+                                  padding: EdgeInsets.only(left: 10, right: 10),
+                                  child: Container(
+                                    width: 270,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10)
+                                    ),
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.circular(10),
+                                      child: Image(
+                                        image: AssetImage(
+                                          widget.driver.image2url
+                                        ),
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                Container(
+                                  width: 270,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(10)
+                                  ),
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(10),
+                                    child: Image(
+                                      image: AssetImage(
+                                        widget.driver.image3url
+                                      ),
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(left: 10, right: 10),
+                                  child: Container(
+                                    width: 270,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10)
+                                    ),
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.circular(10),
+                                      child: Image(
+                                        image: AssetImage(
+                                          widget.driver.image4url
+                                        ),
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                Container(
+                                  width: 270,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(10)
+                                  ),
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(10),
+                                    child: Image(
+                                      image: AssetImage(
+                                        widget.driver.image5url
+                                      ),
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(left: 10, right: 20),
+                                  child: Container(
+                                    width: 270,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10)
+                                    ),
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.circular(10),
+                                      child: Image(
+                                        image: AssetImage(
+                                          widget.driver.image6url
+                                        ),
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                ],
+                              )
+                            ),
                           ),
                           Padding(
                             padding: EdgeInsets.only(top: 40),
