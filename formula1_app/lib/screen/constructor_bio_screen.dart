@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:formula1_app/models/constructors_model.dart';
+import 'package:formula1_app/screen/driver_bio_screen.dart';
 
 class ConstructorBioScreen extends StatefulWidget {
 
@@ -236,7 +237,10 @@ class _ConstructorBioScreenState extends State<ConstructorBioScreen> {
                             children: [
                               GestureDetector(
                                 onTap: () {
-                                  print('clicked');
+                                  // Navigator.push(
+                                  //   context,
+                                  //   MaterialPageRoute(builder: (_) => DriverBioScreen(driver: driver))
+                                  // );
                                 },
                                 child: Container(
                                   width: 200,
@@ -274,7 +278,10 @@ class _ConstructorBioScreenState extends State<ConstructorBioScreen> {
                               ),
                               GestureDetector(
                                 onTap: () {
-                                  print('clicked');
+                                  // Navigator.push(
+                                  //   context,
+                                  //   MaterialPageRoute(builder: (_) => DriverBioScreen(driver: driver))
+                                  // );
                                 },
                                 child: Container(
                                   width: 200,
