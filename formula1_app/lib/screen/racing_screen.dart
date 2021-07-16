@@ -12,11 +12,15 @@ class _RacingScreenState extends State<RacingScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Racing'),
+        title: Text('Racing Schedule'),
         backgroundColor: Colors.red,
       ),
       body: SafeArea(
-        child: RacingListView(),
+        child: ListView(
+          children: [
+            RacingListView(),
+          ],
+        ),
       ),
     );
   }

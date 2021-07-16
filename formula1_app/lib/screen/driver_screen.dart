@@ -12,8 +12,6 @@ class DriverScreen extends StatefulWidget {
 
 class _DriverScreenState extends State<DriverScreen> {
 
-  int currentTab = 1;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,53 +23,6 @@ class _DriverScreenState extends State<DriverScreen> {
         child: ListView(
           children: [
             DriverListView(),
-          ],
-        ),
-      ),
-      bottomNavigationBar: SizedBox(
-        //height: 80,
-        child: BottomNavigationBar(
-          backgroundColor: Colors.white,
-          unselectedItemColor: Colors.grey[300],
-          selectedItemColor: Colors.red,
-          currentIndex: currentTab,
-          onTap: (int value) {
-            setState(() { 
-              currentTab = value;
-              print(currentTab);
-              if(currentTab == 0)  {
-                Navigator.push(
-                  context, 
-                  MaterialPageRoute(builder: (_) => ConstructorScreen())
-                );
-              }
-            });
-          },
-          items: [
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.groups,
-                size: 30,
-                //color: Colors.white,
-                ),
-              label: ''
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.people,
-                size: 30,
-                //color: Colors.white,
-                ),
-              label: ''
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.flag,
-                size: 30,
-                //color: Colors.white,
-                ),
-              label: ''
-            )
           ],
         ),
       ),
