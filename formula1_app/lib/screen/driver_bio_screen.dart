@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:formula1_app/models/driver_model.dart';
-import 'package:formula1_app/widgets/driver_picture_carousel.dart';
 
 class DriverBioScreen extends StatefulWidget {
 
