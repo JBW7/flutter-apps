@@ -21,6 +21,12 @@ class Driver {
   String teamCarUrl;
   String biography;
   String carousel;
+  String image1url;
+  String image2url;
+  String image3url;
+  String image4url;
+  String image5url;
+  String image6url;
 
   Driver({
     required this.name,
@@ -63,7 +69,7 @@ List <Driver> drivers = [
     driverImageUrl: 'assets/images/MaxVerstappen_img.png',
     teamImageUrl: 'assets/images/RedBull_img.png',
     teamCarUrl: 'assets/images/RedBull_car.png',
-    carousel: pictureCarousels[0].maxVerstappen,
+    carousel: pictureCarousels[2].image1url,
     biography: 
     "He’s Max by name, and max by nature. \n\n"
     "Arriving as Formula 1’s youngest ever competitor at just 17 years old, Verstappen pushed his car, his rivals and the sport’s record books to the limit. The baby-faced Dutchman with the heart of a lion took the Toro Rosso – and then the Red Bull – by the horns with his instinctive racing style. \n\n"
@@ -89,7 +95,7 @@ List <Driver> drivers = [
     driverImageUrl: 'assets/images/LewisHamilton_img.png',
     teamImageUrl: 'assets/images/Mercedes_img.png',
     teamCarUrl: 'assets/images/Mercedes_car.png',
-    carousel: pictureCarousels[0].lewisHamilton,
+    carousel: pictureCarousels[1].image1url,
     biography:
     "‘Still I Rise’ – these are the words emblazoned across the back of Lewis Hamilton’s helmet and tattooed across his shoulders, and ever since annihilating expectations with one of the greatest rookie performances in F1 history in 2007, that’s literally all he’s done: risen to the top of the all-time pole positions list ahead of his hero Ayrton Senna, surged into first place in the wins column surpassing the inimitable Michael Schumacher, and then matched the legendary German’s seven world titles.\n\n"
     "Is he the G.O.A.T? Few would deny that he’s in the conversation – and what’s more he’s got there his way, twinning his relentless speed with a refusal to conform to stereotypes for how a racing driver should think, dress or behave.\n\n"
@@ -112,7 +118,7 @@ List <Driver> drivers = [
     driverImageUrl: 'assets/images/SergioPerez_img.png',
     teamImageUrl: 'formula1_app/assets/images/RedBull_img.png',
     teamCarUrl: 'assets/images/RedBull_car.png',
-    carousel: pictureCarousels[0].sergioPerez,
+    carousel: pictureCarousels[3].image1url,
     biography: 
     "He’s the fighter with a gentle touch from the land of the Lucha Libre.\n\n"
     "Perez’s reputation in F1 has been built on opposite approaches to Grand Prix racing. On the one hand, he is a punchy combatant who wrestles his way through the pack and into the points. Never afraid to add a bit of spice to his on-track encounters, even his team mates don’t always escape the Mexican’s heat.\n\n"
@@ -137,7 +143,7 @@ List <Driver> drivers = [
     driverImageUrl: 'assets/images/LandoNorris_img.png',
     teamImageUrl: 'assets/images/Mclaren_img.png',
     teamCarUrl: 'assets/images/McLaren_car.png',
-    carousel: pictureCarousels[0].landoNorris,
+    carousel: pictureCarousels[4].image1url,
     biography:
     "Lando Norris may not be named after Star Wars rebel Lando Calrissian - his Mum just liked the moniker - but he has flair and fighting spirit in bountiful supply.\n\n"
     "McLaren had the British teenager on their books for two years before fast-tracking him into F1’s galaxy of stars in 2019. A firecracker in his junior career, with a penchant for pole positions and wheel-to-wheel tussles, Norris didn’t let them down.\n\n"
@@ -162,7 +168,7 @@ List <Driver> drivers = [
     driverImageUrl: 'assets/images/ValtteriBottas_img.png',
     teamImageUrl: 'assets/images/Mercedes_img.png',
     teamCarUrl: 'assets/images/Mercedes_car.png',
-    carousel: pictureCarousels[0].valterriBottas,
+    carousel: pictureCarousels[5].image1url,
     biography: 
     "Learning his craft on Finnish roads of ice and snow, he was born to be a Grand Prix racer.\n\n"
     "Bottas explains that if you can drive on the frozen roads of his homeland then you can drive anywhere. Then there’s the Finnish mentality –reserved, diligent and calm the fast lane of F1 doesn’t faze him. \n\n"
@@ -188,7 +194,7 @@ List <Driver> drivers = [
     driverImageUrl: 'assets/images/CharlesLeclerc_img.png',
     teamImageUrl: 'assets/images/Ferrari_img.png',
     teamCarUrl: 'assets/images/Ferrari_car.png',
-    carousel: pictureCarousels[0].charlesLeclerc,
+    carousel: pictureCarousels[6].image1url,
     biography: 
     "Born in the Mediterranean idyll of Monaco, Leclerc arrived in F1 on a tidal wave of expectation.\n\n"
     "Practically peerless on his way to the GP3 and Formula 2 crowns, he showcased a dazzling array of skills from scorching pole positions, commanding victories – even when his car caught fire twice at Silverstone – to an ability to muscle his way through the pack. Winning back-to-back championships also taught Leclerc how to handle pressure, another useful tool in the big pond of Formula 1 racing. \n\n"
@@ -215,7 +221,7 @@ List <Driver> drivers = [
     driverImageUrl: 'assets/images/CarlosSainz_img.png',
     teamImageUrl: 'assets/images/Ferrari_img.png',
     teamCarUrl: 'assets/images/Ferrari_car.png',
-    carousel: pictureCarousels[0].carlosSainz,
+    carousel: pictureCarousels[0].image1url,
     biography:
     "He’s the matador from Madrid racing royalty. \n\n"
     "Entering F1’s Bull Ring paired alongside Max Verstappen at Toro Rosso in 2015, Sainz quickly showed his fighting spirit. A tenacious racer, Sainz puts the car on the edge as he hustles his way through the pack. No wonder he’s earned the nickname Chilli.\n\n"
@@ -240,7 +246,7 @@ List <Driver> drivers = [
     driverImageUrl: 'assets/images/DanielRicciardo_img.png',
     teamImageUrl: 'assets/images/Mclaren_img.png',
     teamCarUrl: 'assets/images/McLaren_car.png',
-    carousel: pictureCarousels[0].danielRicciardo,
+    carousel: pictureCarousels[7].image1url,
     biography: 
     "The self-styled “Honey Badger” is fuzzy on the outside and feisty on the inside. Drivers beware because behind Ricciardo’s laidback persona and big grin is a razor-sharp racer with a bite.\n\n"
     "The Australian combines all-out speed with impressive race craft. Never afraid to push to the limits if it means pulling off a pass, Ricciardo is a proven race-winner for Red Bull, capable of consistently finishing at the business end of the championship table.\n\n"
@@ -265,7 +271,7 @@ List <Driver> drivers = [
     driverImageUrl: 'assets/images/PierreGasly_img.png',
     teamImageUrl: 'assets/images/Alphatauri_img.png',
     teamCarUrl: 'assets/images/AlphaTauri_car.png',
-    carousel: pictureCarousels[0].pierreGasly,
+    carousel: pictureCarousels[8].image1url,
     biography: 
     "If there’s one man who knows how big a rollercoaster ride an F1 driver’s career can be, it’s Pierre Gasly!\n\n"
     "The flying Frenchman was called up to make his 2017 debut in Malaysia in place of Daniil Kvyat and, after proving his mettle, he was named a Toro Rosso driver the following year.  A further 21 races into his fledgling career, Gasly was moved up again – this time to replace Red Bull big gun Daniel Ricciardo.\n\n"
@@ -291,7 +297,7 @@ List <Driver> drivers = [
     driverImageUrl: 'assets/images/SebastianVettel_img.png',
     teamImageUrl: 'assets/images/AstonMartinRacing_img.png',
     teamCarUrl: 'assets/images/AstonMartin_car.png',
-    carousel: pictureCarousels[0].sebastianVettel,
+    carousel: pictureCarousels[9].image1url,
     biography: 
     "Born and raised a Bull, then a Prancing Horse, and now the face of Aston Martin’s Formula 1 revival, F1's poster boy of early achievement had won more than all but two drivers in history by the time he was just 26, including back-to-back world titles between 2010 and 2013.\n\n"
     "Vettel’s trademark is pure pace – and of course his one-finger victory salute. In the chase to the chequered flag, he likes to lead from the front and just like his hero, Michael Schumacher. But for all his competitive streak, Vettel has a playful side too and has been known to let loose with a spot of Beatles karaoke - and baby can he drive a car.\n\n"
@@ -316,7 +322,7 @@ List <Driver> drivers = [
     driverImageUrl: 'assets/images/FernandoAlonso_img.png',
     teamImageUrl: 'assets/images/Alpine_img.png',
     teamCarUrl: 'assets/images/Alpine_car.png',
-    carousel: pictureCarousels[0].fernandoAlonso,
+    carousel: pictureCarousels[0].image1url,
     biography:
     "Michael Schumacher was the undisputed king of Formula 1 in the early 2000s, picking up wins and championships at a rate that was simply unheard of at the time. It was going to take someone very special to topple the Ferrari legend from his throne – and that it was Fernando Alonso who did it, tells you all you need to know about the Spaniard.\n\n"
     "Fiercely competitive, Alonso is not shy about his talent, rating himself as 9/10 “in everything”, and few in the know would disagree, with his performances in F1 characterised by blistering speed, brilliant tactical thinking, exemplary race craft, a razor-sharp eye for detail and a relentless determination to win.\n\n"
@@ -340,7 +346,7 @@ List <Driver> drivers = [
     driverImageUrl: 'assets/images/LanceStroll_img.png',
     teamImageUrl: 'assets/images/AstonMartinRacing_img.png',
     teamCarUrl: 'assets/images/AstonMartin_car.png',
-    carousel: pictureCarousels[0].lanceStroll,
+    carousel: pictureCarousels[0].image1url,
     biography: 
     "There is no such thing as too much too soon for Stroll, a teenage sensation with a wet weather predilection. One of the cool kids on the grid, Stroll was unveiled shortly after his 18th birthday by Williams – before he finished high school and got his road licence. \n\n"
     "Stroll meant business in his debut 2017 season, setting records on the way. An opportunistic racer he bounded onto the podium in Baku, the youngest rookie to do so. As the son of a wealthy entrepreneur, Stroll is used to a champagne lifestyle but now he knows the fizz tastes all the sweeter on the rostrum. Then in Monza he mastered the downpours to become the youngest driver in history to line up on the front row."
@@ -362,7 +368,7 @@ List <Driver> drivers = [
     driverImageUrl: 'assets/images/EstebanOcon_img.png',
     teamImageUrl: 'assets/images/Alpine_img.png',
     teamCarUrl: 'assets/images/Alpine_car.png',
-    carousel: pictureCarousels[0].estebanOcon,
+    carousel: pictureCarousels[0].image1url,
     biography: 
     "If there’s one word that dominates Esteban Ocon’s career, it’s ‘sacrifice’.\n\n"
     "Back when he was just a promising karter, Ocon’s parents sold their house, put their jobs on hold, and began a life on the road, living in a caravan and travelling from circuit to circuit to support their son’s burgeoning career.\n\n"
@@ -387,7 +393,7 @@ List <Driver> drivers = [
     driverImageUrl: 'assets/images/YukiTsunoda_img.png',
     teamImageUrl: 'assets/images/Alphatauri_img.png',
     teamCarUrl: 'assets/images/AlphaTauri_car.png',
-    carousel: pictureCarousels[0].yukiTsunoda,
+    carousel: pictureCarousels[0].image1url,
     biography: 
     "In the entire history of Formula 1, no Japanese driver has ever won a World Championship Grand Prix. Could Yuki Tsunoda be the first? Red Bull certainly think so, with the youngster very much on the path to their senior team if he continues to impress as he has done over the past few years.\n\n"
     "Tsunoda's ascent to the top tier of motorsport has been astonishingly rapid: he’s gone from racing in Japanese F4 to a Formula 1 seat with AlphaTauri in just over three years, having arrived in Europe in 2019 with no knowledge of the circuits.\n\n"
@@ -411,7 +417,7 @@ List <Driver> drivers = [
     driverImageUrl: 'assets/images/KimiRaikonen_img.png',
     teamImageUrl: 'assets/images/AlfaRomeo_img.png',
     teamCarUrl: 'assets/images/AlfaRomeoRacing_car.png',
-    carousel: pictureCarousels[0].kimiRaikkonen,
+    carousel: pictureCarousels[0].image1url,
     biography: 
     "He’s the world-famous racing driver who just wants to be left alone. \n\n"
     "Raikkonen has a cult status in F1 like no other driver of his generation, but if you ask him why he just shrugs.\n\n"
@@ -436,7 +442,7 @@ List <Driver> drivers = [
     driverImageUrl: 'assets/images/AntonioGiovinazzi_img.png',
     teamImageUrl: 'assets/images/AlfaRomeo_img.png',
     teamCarUrl: 'assets/images/AlfaRomeoRacing_car.png',
-    carousel: pictureCarousels[0].antonioGiovinazzi,
+    carousel: pictureCarousels[0].image1url,
     biography: 
     "He’s the Italian steed with speed from the stable of the Prancing Horse. Antonio Giovinazzi flies the flag for Italy as the motorsport mad nation champs at the bit for its next F1 star.\n\n"
     "The pilota from Puglia can punch his way through the pack and pull off a plucky pass. He showcased this natural racing acumen during a blistering 2016 GP2 campaign where he finished a close runner-up to team mate Pierre Gasly.\n\n"
@@ -461,7 +467,7 @@ List <Driver> drivers = [
     driverImageUrl: 'assets/images/GeorgeRussel_img.png',
     teamImageUrl: 'assets/images/Williams_img.png',
     teamCarUrl: 'assets/images/Williams_car.png',
-    carousel: pictureCarousels[0].georgeRussel,
+    carousel: pictureCarousels[0].image1url,
     biography: 
     "He’s the driver with the motto: “If in doubt, go flat out”.\n\n"
     "George Russell has lived by it in his F1 career to date, out-qualifying seasoned team mate Robert Kubica at all 21 Grands Prix in his rookie season, and repeating the feat against Nicolas Latifi in 2020 - and proving Williams right in identifying him as a hard worker and a tenacious talent.\n\n"
@@ -489,7 +495,7 @@ List <Driver> drivers = [
     driverImageUrl: 'assets/images/MickSchumacher_img.png',
     teamImageUrl: 'assets/images/Williams_img.png',
     teamCarUrl: 'assets/images/Haas_car.png',
-    carousel: pictureCarousels[0].mickSchumacher,
+    carousel: pictureCarousels[0].image1url,
     biography: 
     "Plenty of sons of former F1 drivers have joined the sport over the years – two have even emulated their fathers to become world champions – but carrying the Schumacher name is surely an extra level of pressure for Mick, given his father Michael’s extraordinary achievements in Formula 1.\n\n"
     "But Schumacher Junior, a member of the Ferrari Driver Academy, arrives in F1 with Haas after clinching the F2 title in 2020, to add to the F3 championship he won in 2018 – so there is zero suggestion he has been elevated to the top level of motorsport because of his name. \n\n"
@@ -512,7 +518,7 @@ List <Driver> drivers = [
     driverImageUrl: 'assets/images/NikitaMazepin_img.png',
     teamImageUrl: 'assets/images/Haas_img.png',
     teamCarUrl: 'assets/images/Haas_car.png',
-    carousel: pictureCarousels[0].nikitaMazepin,
+    carousel: pictureCarousels[0].image1url,
     biography: 
     "Nikita Mazepin might be bringing a healthy chunk of budget with him to the Haas team, but don’t be fooled into thinking he hasn’t also got the driving chops to go with it.\n\n"
     "The Russian – the fourth to compete in F1 after Vitaly Petrov, Sergey Sirotkin and Daniil Kvyat – has an impressive CV in the junior formulas, finishing runner-up in the 2018 GP3 championship with four race wins.\n\n"
@@ -536,7 +542,7 @@ List <Driver> drivers = [
     driverImageUrl: 'assets/images/NicholasLatiffi_img.png',
     teamImageUrl: 'assets/images/Williams_img.png',
     teamCarUrl: 'assets/images/Williams_car.png',
-    carousel: pictureCarousels[0].nicholasLatifi,
+    carousel: pictureCarousels[0].image1url,
     biography: 
     "Thirteen is an advanced age to begin your karting career these days. But that’s how old Toronto native Nicholas Latifi was when he took his first steps in motorsport. Just 11 years later, he became a fully-fledged Formula 1 driver.\n\n"
     "That ascension into racing's top category was largely thanks to his most impressive season to date in Formula 2 in 2019, with Latifi – who’d finished a disappointing ninth in the series’ 2018 standings – pulling up his bootstraps to claim second in the championship. That result, combined with the Williams/Robert Kubica union failing to mesh in 2019, meant Williams made the call to promote their affable Canadian reserve driver to a full-time drive alongside George Russell for 2020.\n\n"
