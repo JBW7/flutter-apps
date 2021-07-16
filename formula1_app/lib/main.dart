@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:formula1_app/models/driver_model.dart';
-import 'package:formula1_app/screen/constructor_bio_screen.dart';
 import 'package:formula1_app/screen/constructor_screen.dart';
 import 'package:formula1_app/screen/driver_screen.dart';
 import 'screen/racing_screen.dart';
