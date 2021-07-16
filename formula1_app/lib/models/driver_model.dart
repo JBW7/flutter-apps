@@ -134,7 +134,7 @@ List <Driver> drivers = [
     gpEntered: '202',
     worldchampionships: '0',
     driverImageUrl: 'assets/images/SergioPerez_img.png',
-    teamImageUrl: 'formula1_app/assets/images/RedBull_img.png',
+    teamImageUrl: 'assets/images/RedBull_img.png',
     teamCarUrl: 'assets/images/RedBull_car.png',
     carousel: pictureCarousels[3].image1url,
     biography: 
