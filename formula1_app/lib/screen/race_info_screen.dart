@@ -108,11 +108,14 @@ class _RaceInfoScreenState extends State<RaceInfoScreen> {
                               ),
                             ),
                           ),
-                          Text(
-                            widget.race.venue,
-                            style: TextStyle(
-                              fontSize: 22,
-                              fontWeight: FontWeight.bold
+                          Padding(
+                            padding: EdgeInsets.only(left: 10),
+                            child: Text(
+                              widget.race.venue,
+                              style: TextStyle(
+                                fontSize: 22,
+                                fontWeight: FontWeight.bold
+                              ),
                             ),
                           ),
                         ],
