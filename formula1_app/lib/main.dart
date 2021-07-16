@@ -10,7 +10,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Formula 1',
       home: BottomNavBar(),
-      //theme: ThemeData(fontFamily: 'Rajdhani')
     );
   }
 }
