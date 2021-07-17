@@ -2,6 +2,8 @@ import 'dart:io';
 import 'package:desktop_window/desktop_window.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:spotify_UI_app/data/data.dart';
+import 'package:spotify_UI_app/screens/playlist_screen.dart';
 
 import 'widgets/widgets.dart';
 
@@ -67,8 +69,12 @@ class Shell extends StatelessWidget {
           Expanded(
             child: Row(
               children: [
-                SideMenu()
-                // playlist screen
+                SideMenu(),
+                Expanded(
+                  child: PlaylistScreen(
+                    playlist: lofihiphopPlaylist
+                  )
+                ),
               ],
             ),
           ),
