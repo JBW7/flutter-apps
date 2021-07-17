@@ -97,6 +97,7 @@ class _LibraryPlaylistState extends State<LibraryPlaylist> {
         physics: const ClampingScrollPhysics(), // remove bouncing effect of scrolling,
         children: [
           Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
@@ -107,6 +108,32 @@ class _LibraryPlaylistState extends State<LibraryPlaylist> {
                 ),
               ),
               ...yourLibrary.map(
+                (e) => ListTile(
+                dense: true,
+                title: Text(e, 
+                style: Theme.of(context).textTheme.bodyText2,
+                overflow: TextOverflow.ellipsis,
+                ),
+                onTap: () {},
+                )
+              ).toList()
+            ],
+          ),
+          SizedBox(
+            height: 24,
+          ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                child: Text(
+                  'Playlists',
+                  style: Theme.of(context).textTheme.headline4,
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+              ...playlists.map(
                 (e) => ListTile(
                 dense: true,
                 title: Text(e, 
