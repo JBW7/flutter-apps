@@ -2,10 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:spotify_UI_app/data/data.dart';
 
 class PlaylistHeader extends StatelessWidget {
-
   final Playlist playlist;
 
-  const PlaylistHeader({ Key? key , required this.playlist}) : super(key: key);
+  const PlaylistHeader({Key? key, required this.playlist}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -31,10 +30,9 @@ class PlaylistHeader extends StatelessWidget {
                   Text(
                     'Playlist',
                     style: Theme.of(context)
-                    .textTheme.overline!
-                    .copyWith(
-                      fontSize: 12
-                    ),
+                        .textTheme
+                        .overline!
+                        .copyWith(fontSize: 12),
                   ),
                   const SizedBox(
                     height: 12,
@@ -72,10 +70,9 @@ class PlaylistHeader extends StatelessWidget {
 }
 
 class _PlaylistButtons extends StatelessWidget {
-
   final String followers;
 
-  const _PlaylistButtons({ Key? key, required this.followers}) : super(key: key);
+  const _PlaylistButtons({Key? key, required this.followers}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -84,24 +81,36 @@ class _PlaylistButtons extends StatelessWidget {
         TextButton(
           onPressed: () {},
           style: TextButton.styleFrom(
-            padding: const EdgeInsets.symmetric(
-              horizontal: 48, vertical: 20
-            ),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20)
-            ),
+            padding: const EdgeInsets.symmetric(horizontal: 48, vertical: 20),
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
             backgroundColor: Theme.of(context).accentColor,
             primary: Theme.of(context).iconTheme.color,
             textStyle: Theme.of(context)
-            .textTheme.caption!
-            .copyWith(
-              fontSize: 12, 
-              letterSpacing: 2
-            ),
+                .textTheme
+                .caption!
+                .copyWith(fontSize: 12, letterSpacing: 2),
           ),
-          child: const Text(
-            'Play'
-          ),
+          child: const Text('Play'),
+        ),
+        const SizedBox(
+          width: 8,
+        ),
+        IconButton(
+          icon: const Icon(Icons.favorite_border),
+          iconSize: 30,
+          onPressed: () {},
+        ),
+        IconButton(
+          icon: const Icon(Icons.more_horiz),
+          iconSize: 30,
+          onPressed: () {},
+        ),
+        const Spacer(),
+        Text(
+          'Followers\n$followers',
+          style: Theme.of(context).textTheme.overline!.copyWith(fontSize: 12),
+          textAlign: TextAlign.right,
         )
       ],
     );
