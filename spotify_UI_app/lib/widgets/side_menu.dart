@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spotify_UI_app/data/data.dart';
 
 class SideMenu extends StatelessWidget {
 
@@ -37,6 +38,10 @@ class SideMenu extends StatelessWidget {
             title: 'Radio',
             onTap: () {}
           ),
+          SizedBox(
+            height: 12,
+          ),
+          LibraryPlaylist(),
         ],
       ),
     );
@@ -75,3 +80,47 @@ class SideMenuIconTab extends StatelessWidget {
     );
   }
 }
+
+class LibraryPlaylist extends StatefulWidget {
+  const LibraryPlaylist({ Key? key }) : super(key: key);
+
+  @override
+  _LibraryPlaylistState createState() => _LibraryPlaylistState();
+}
+
+class _LibraryPlaylistState extends State<LibraryPlaylist> {
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      child: ListView(
+        padding: const EdgeInsets.symmetric(vertical: 12),
+        physics: const ClampingScrollPhysics(), // remove bouncing effect of scrolling,
+        children: [
+          Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                child: Text(
+                  'Your Library',
+                  style: Theme.of(context).textTheme.headline4,
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+              ...yourLibrary.map(
+                (e) => ListTile(
+                dense: true,
+                title: Text(e, 
+                style: Theme.of(context).textTheme.bodyText2,
+                overflow: TextOverflow.ellipsis,
+                ),
+                onTap: () {},
+                )
+              ).toList()
+            ],
+          )
+        ],
+      ),
+    );
+  }
+}
+
