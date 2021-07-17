@@ -129,7 +129,8 @@ class _PlaylistScreenState extends State<PlaylistScreen> {
               vertical: 60
             ),
             children: [
-              PlaylistHeader(playlist : widget.playlist)
+              PlaylistHeader(playlist : widget.playlist),
+              TrackList(tracks: widget.playlist.songs),
             ],
           ),
         ),
