@@ -43,7 +43,39 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      home: Scaffold(),
+      home: Shell(),
+    );
+  }
+}
+
+class Shell extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Column(
+        children: [
+          Expanded(
+            child: Row(
+              children: [
+                // side container
+                Container(
+                  height: double.infinity, // fills parents height
+                  width: 280,
+                  color: Colors.green,
+                ),
+                // playlist screen
+              ],
+            ),
+          ),
+          // bottom container
+          Container(
+            height: 84,
+            width: double.infinity,
+            color: Colors.blue,
+          )
+        ],
+      ),
     );
   }
 }
