@@ -18,7 +18,49 @@ class _PlaylistScreenState extends State<PlaylistScreen> {
       extendBodyBehindAppBar: true,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
+        leadingWidth: 140,
         elevation: 0,
+        leading: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 16),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              InkWell(
+                customBorder:  const CircleBorder(),
+                onTap: () {},
+                child: Container(
+                  padding: const EdgeInsets.all(6),
+                  decoration: BoxDecoration(
+                    color: Colors.black26, 
+                    shape: BoxShape.circle,
+                  ),
+                  child: Icon(
+                    Icons.chevron_left,
+                    size: 28,
+                  ),
+                ),
+              ),
+              const SizedBox(
+                width: 16,
+              ),
+              InkWell(
+                customBorder:  const CircleBorder(),
+                onTap: () {},
+                child: Container(
+                  padding: const EdgeInsets.all(6),
+                  decoration: BoxDecoration(
+                    color: Colors.black26, 
+                    shape: BoxShape.circle,
+                  ),
+                  child: Icon(
+                    Icons.chevron_right,
+                    size: 28,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
       body: Container(
         width: double.infinity,
