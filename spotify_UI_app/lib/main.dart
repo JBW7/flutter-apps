@@ -3,9 +3,11 @@ import 'package:desktop_window/desktop_window.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
+import 'widgets/widgets.dart';
+
 void main()  async {
   WidgetsFlutterBinding.ensureInitialized();
-  if (!kIsWeb && (Platform.isMacOS || Platform.isLinux || Platform.isWindows)) {
+  if (!kIsWeb && (Platform.isMacOS || Platform.isLinux || Platform.isWindows)) { // so doesnt crash when run on web
     await DesktopWindow.setMinWindowSize(const Size(600, 800)); 
   }
   runApp(MyApp());
@@ -65,12 +67,7 @@ class Shell extends StatelessWidget {
           Expanded(
             child: Row(
               children: [
-                // side container
-                Container(
-                  height: double.infinity, // fills parents height
-                  width: 280,
-                  color: Colors.green,
-                ),
+                SideMenu()
                 // playlist screen
               ],
             ),
