@@ -61,6 +61,34 @@ class _PlaylistScreenState extends State<PlaylistScreen> {
             ],
           ),
         ),
+        actions: [
+          TextButton.icon(
+            style: TextButton.styleFrom(primary: Theme.of(context).iconTheme.color),
+            onPressed: () {}, 
+            icon: Icon(
+              Icons.account_circle_outlined,
+              size: 30,
+            ),
+            label: Text(
+              'Elon Musk',
+            ),
+          ),
+          SizedBox(
+            width: 8,
+          ),
+          Padding(
+            padding: const EdgeInsets.all(0),
+            child: IconButton(
+              icon: Icon(Icons.keyboard_arrow_down, 
+              size: 30,
+            ),
+            onPressed: () {},
+            ),
+          ),
+          SizedBox(
+            width: 20,
+          )
+        ],
       ),
       body: Container(
         width: double.infinity,
