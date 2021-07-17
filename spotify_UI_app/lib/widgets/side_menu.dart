@@ -89,63 +89,82 @@ class LibraryPlaylist extends StatefulWidget {
 }
 
 class _LibraryPlaylistState extends State<LibraryPlaylist> {
+  ScrollController? _scrollController;
+
+  @override
+  void initState() {
+    super.initState();
+    _scrollController = ScrollController();
+  }
+
+  @override
+  void dispose() {
+    _scrollController?.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Expanded(
-      child: ListView(
-        padding: const EdgeInsets.symmetric(vertical: 12),
-        physics: const ClampingScrollPhysics(), // remove bouncing effect of scrolling,
-        children: [
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                child: Text(
-                  'Your Library',
-                  style: Theme.of(context).textTheme.headline4,
+      child: Scrollbar(
+        isAlwaysShown: true,
+        controller: _scrollController,
+        child: ListView(
+          controller: _scrollController,
+          padding: const EdgeInsets.symmetric(vertical: 12),
+          physics: const ClampingScrollPhysics(), // remove bouncing effect of scrolling,
+          children: [
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                  child: Text(
+                    'Your Library',
+                    style: Theme.of(context).textTheme.headline4,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ),
+                ...yourLibrary.map(
+                  (e) => ListTile(
+                  dense: true,
+                  title: Text(e, 
+                  style: Theme.of(context).textTheme.bodyText2,
                   overflow: TextOverflow.ellipsis,
+                  ),
+                  onTap: () {},
+                  )
+                ).toList()
+              ],
+            ),
+            SizedBox(
+              height: 24,
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                  child: Text(
+                    'Playlists',
+                    style: Theme.of(context).textTheme.headline4,
+                    overflow: TextOverflow.ellipsis,
+                  ),
                 ),
-              ),
-              ...yourLibrary.map(
-                (e) => ListTile(
-                dense: true,
-                title: Text(e, 
-                style: Theme.of(context).textTheme.bodyText2,
-                overflow: TextOverflow.ellipsis,
-                ),
-                onTap: () {},
-                )
-              ).toList()
-            ],
-          ),
-          SizedBox(
-            height: 24,
-          ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                child: Text(
-                  'Playlists',
-                  style: Theme.of(context).textTheme.headline4,
+                ...playlists.map(
+                  (e) => ListTile(
+                  dense: true,
+                  title: Text(e, 
+                  style: Theme.of(context).textTheme.bodyText2,
                   overflow: TextOverflow.ellipsis,
-                ),
-              ),
-              ...playlists.map(
-                (e) => ListTile(
-                dense: true,
-                title: Text(e, 
-                style: Theme.of(context).textTheme.bodyText2,
-                overflow: TextOverflow.ellipsis,
-                ),
-                onTap: () {},
-                )
-              ).toList()
-            ],
-          )
-        ],
+                  ),
+                  onTap: () {},
+                  )
+                ).toList()
+              ],
+            )
+          ],
+        ),
       ),
     );
   }
