@@ -48,6 +48,17 @@ class PlaylistHeader extends StatelessWidget {
                 playlist.description,
                 style: Theme.of(context).textTheme.subtitle1,
               ),
+              const SizedBox(
+                height: 16,
+              ),
+              Text(
+                'Created by ${playlist.creator} • ${playlist.songs.length} songs, ${playlist.duration}',
+                style: Theme.of(context).textTheme.subtitle1,
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              _PlaylistButtons(followers: playlist.followers)
             ],
           ),
         )
