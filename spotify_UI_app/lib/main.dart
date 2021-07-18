@@ -84,12 +84,7 @@ class Shell extends StatelessWidget {
               ],
             ),
           ),
-          // bottom container
-          Container(
-            height: 84,
-            width: double.infinity,
-            color: Colors.blue,
-          )
+          CurrentTrack()
         ],
       ),
     );
