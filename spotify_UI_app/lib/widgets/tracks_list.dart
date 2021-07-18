@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:spotify_UI_app/data/data.dart';
+import 'package:provider/provider.dart';
+import 'package:spotify_UI_app/models/current_track.dart';
 
 class TrackList extends StatelessWidget {
   
@@ -10,6 +12,7 @@ class TrackList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DataTable(
+      showCheckboxColumn: false,
       columns: const [
         DataColumn(
           label: Text('Title')
@@ -25,41 +28,42 @@ class TrackList extends StatelessWidget {
         ),
       ],
       rows: tracks.map((e) { // e is the song
+      final selected =
+            context.watch<CurrentTrackModel>().selected?.id == e.id;
+      final textStyle = TextStyle(
+        color: selected
+            ? Theme.of(context).accentColor
+            : Theme.of(context).iconTheme.color,
+      );
         return DataRow(
           cells: [
             DataCell(
               Text(
                 e.title,
-                style: TextStyle(
-                  color: Theme.of(context).iconTheme.color,
-                )
+                style: textStyle
               )
             ),
             DataCell(
               Text(
                 e.artist,
-                style: TextStyle(
-                  color: Theme.of(context).iconTheme.color,
-                )
+                style: textStyle
               )
             ),
             DataCell(
               Text(
                 e.album,
-                style: TextStyle(
-                  color: Theme.of(context).iconTheme.color,
-                )
+                style: textStyle
               )
             ),
             DataCell(
               Text(
                 e.duration,
-                style: TextStyle(
-                  color: Theme.of(context).iconTheme.color,
-                )
+                style: textStyle
               )
             )
-          ]
+          ],
+          selected: selected,
+          onSelectChanged: (_) => context.read<CurrentTrackModel>().selectTrack(e)
         );
       }).toList()
     );
