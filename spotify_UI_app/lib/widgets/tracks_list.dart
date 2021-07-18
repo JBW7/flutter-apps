@@ -12,6 +12,8 @@ class TrackList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DataTable(
+      headingTextStyle: Theme.of(context).textTheme.overline!.copyWith(fontSize: 12),
+      dataRowHeight: 54,
       showCheckboxColumn: false,
       columns: const [
         DataColumn(
