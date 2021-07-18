@@ -60,6 +60,12 @@ class _TrackInfo extends StatelessWidget {
               ),
             )
           ],
+        ),
+        IconButton(
+          icon: Icon(
+            Icons.favorite_border,
+          ),
+          onPressed: () {},
         )
       ],
     );
