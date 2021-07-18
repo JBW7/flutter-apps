@@ -16,6 +16,7 @@ class CurrentTrack extends StatelessWidget {
         child: Row(
           children: [
             _TrackInfo()
+            _PlayerControls()
           ],
         ),
       ),
@@ -66,6 +67,87 @@ class _TrackInfo extends StatelessWidget {
             Icons.favorite_border,
           ),
           onPressed: () {},
+        )
+      ],
+    );
+  }
+}
+
+class _PlayerControls extends StatelessWidget {
+  const _PlayerControls({ Key? key }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final selected = context.watch<CurrentTrackModel>().selected;
+    return Column(
+      children: [
+        Row(
+          children: [
+            IconButton(
+              padding: const EdgeInsets.only(),
+              icon: Icon(
+                Icons.shuffle
+              ),
+              iconSize: 20,
+              onPressed: () {},
+            ),
+            IconButton(
+              padding: const EdgeInsets.only(),
+              icon: Icon(
+                Icons.skip_previous_outlined
+              ),
+              iconSize: 20,
+              onPressed: () {},
+            ),
+            IconButton(
+              padding: const EdgeInsets.only(),
+              icon: Icon(
+                Icons.play_circle_fill_outlined
+              ),
+              iconSize: 34,
+              onPressed: () {},
+            ),
+            IconButton(
+              padding: const EdgeInsets.only(),
+              icon: Icon(
+                Icons.skip_next_outlined
+              ),
+              iconSize: 20,
+              onPressed: () {},
+            ),
+            IconButton(
+              padding: const EdgeInsets.only(),
+              icon: Icon(
+                Icons.repeat
+              ),
+              iconSize: 20,
+              onPressed: () {},
+            ),
+          ],
+        ),
+        const SizedBox(
+          height: 4,
+        ),
+        Row(
+          children: [
+            Text(
+              '0:00',
+              style: Theme.of(context).textTheme.caption,
+            ),
+            const SizedBox(
+              width: 8,
+            ),
+            Container(
+              height: 5,
+              width: MediaQuery.of(context).size.width * 0.3,
+              decoration: BoxDecoration(
+                
+              ),
+            ),
+            const SizedBox(
+              width: 8,
+            ),
+          ],
         )
       ],
     );
