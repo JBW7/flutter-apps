@@ -19,6 +19,8 @@ class CurrentTrack extends StatelessWidget {
             const Spacer(),
             _PlayerControls(),
             const Spacer(),
+            if (MediaQuery.of(context).size.width > 800)
+            _MoreControls(),
           ],
         ),
       ),
@@ -159,6 +161,49 @@ class _PlayerControls extends StatelessWidget {
             )
           ],
         )
+      ],
+    );
+  }
+}
+
+class _MoreControls extends StatelessWidget {
+  const _MoreControls({ Key? key }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        IconButton(
+          icon: Icon(
+            Icons.devices_outlined,
+          ),
+          onPressed: () {},
+          iconSize: 20,
+        ),
+        Row(
+          children: [
+            IconButton(
+              icon: Icon(
+                Icons.volume_up_outlined
+              ),
+              onPressed: () {},
+            ),
+            Container(
+              height: 5,
+              width: 70,
+              decoration: BoxDecoration(
+                color: Colors.grey[800],
+                borderRadius: BorderRadius.circular(2.5)
+              ),
+            )
+          ],
+        ),
+        IconButton(
+          icon: Icon(
+            Icons.fullscreen_outlined,
+          ),
+          onPressed: () {},
+        ),
       ],
     );
   }
