@@ -15,8 +15,10 @@ class CurrentTrack extends StatelessWidget {
         padding: EdgeInsets.all(12),
         child: Row(
           children: [
-            _TrackInfo()
-            _PlayerControls()
+            _TrackInfo(),
+            const Spacer(),
+            _PlayerControls(),
+            const Spacer(),
           ],
         ),
       ),
@@ -61,6 +63,9 @@ class _TrackInfo extends StatelessWidget {
               ),
             )
           ],
+        ),
+        const SizedBox(
+          width: 12,
         ),
         IconButton(
           icon: Icon(
@@ -141,12 +146,17 @@ class _PlayerControls extends StatelessWidget {
               height: 5,
               width: MediaQuery.of(context).size.width * 0.3,
               decoration: BoxDecoration(
-                
+                color: Colors.grey[800],
+                borderRadius: BorderRadius.circular(2.5)
               ),
             ),
             const SizedBox(
               width: 8,
             ),
+            Text(
+              selected?.duration?? '0:00',
+              style: Theme.of(context).textTheme.caption,
+            )
           ],
         )
       ],
